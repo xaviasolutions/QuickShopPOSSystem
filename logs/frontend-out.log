@@ -1,0 +1,170 @@
+2026-03-24 00:21:14: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-24 00:21:14: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 00:21:14: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 00:21:14: 
+2026-03-24 00:21:14: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 00:21:14: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 00:21:14: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 00:21:14: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 00:21:14: 
+2026-03-24 00:26:11: [dotenv@17.3.1] injecting env (12) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-24 00:26:11: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 00:26:11: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 00:26:11: 
+2026-03-24 00:26:11: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 00:26:11: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 00:26:11: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 00:26:11: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 00:26:11: 
+2026-03-24 01:02:32: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2026-03-24 01:02:33: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 01:02:33: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 01:02:33: 
+2026-03-24 01:02:33: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 01:02:33: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 01:02:33: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 01:02:33: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 01:02:33: 
+2026-03-24 01:04:43: [dotenv@17.3.1] injecting env (12) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-24 01:04:43: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 01:04:43: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 01:04:43: 
+2026-03-24 01:04:43: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 01:04:43: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 01:04:43: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 01:04:43: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 01:04:43: 
+2026-03-24 01:10:16: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-24 01:10:17: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 01:10:17: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 01:10:17: 
+2026-03-24 01:10:17: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 01:10:17: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 01:10:17: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 01:10:17: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 01:10:17: 
+2026-03-24 01:14:24: [dotenv@17.3.1] injecting env (12) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-24 01:14:24: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 01:14:24: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 01:14:24: 
+2026-03-24 01:14:24: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 01:14:24: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 01:14:24: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 01:14:24: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 01:14:24: 
+2026-03-24 01:19:54: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-24 01:19:54: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 01:19:54: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 01:19:54: 
+2026-03-24 01:19:54: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 01:19:54: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 01:19:54: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 01:19:54: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 01:19:54: 
+2026-03-24 10:49:28: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-24 10:49:28: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 10:49:28: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 10:49:28: 
+2026-03-24 10:49:28: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 10:49:28: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 10:49:28: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 10:49:28: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 10:49:28: 
+2026-03-24 16:25:20: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-24 16:25:21: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 16:25:21: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 16:25:21: 
+2026-03-24 16:25:21: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 16:25:21: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 16:25:21: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 16:25:21: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 16:25:21: 
+2026-03-24 17:54:53: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-24 17:54:53: [HPM] Proxy created: /  -> http://localhost:3005
+2026-03-24 17:54:53: [HPM] Proxy created: /  -> http://localhost:3000
+2026-03-24 17:54:53: 
+2026-03-24 17:54:53: [server-runner] ✅ Frontend  → http://localhost:8001
+2026-03-24 17:54:53: [server-runner] ✅ API       → http://localhost:3000  (proxied via /pos)
+2026-03-24 17:54:53: [server-runner] ✅ WebSocket → http://localhost:3005   (proxied via /socket.io)
+2026-03-24 17:54:53: [server-runner] ✅ Uploads   → http://localhost:8001/uploads
+2026-03-24 17:54:53: 
+2026-03-26 01:46:50: [dotenv@17.3.1] injecting env (15) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-26 01:46:50: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:46:50: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:46:50: 
+2026-03-26 01:46:50: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:46:50: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:46:50: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:46:50: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:46:50: 
+2026-03-26 01:50:36: [dotenv@17.3.1] injecting env (15) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-26 01:50:36: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:50:36: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:50:36: 
+2026-03-26 01:50:36: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:50:36: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:50:36: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:50:36: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:50:36: 
+2026-03-26 01:51:26: [dotenv@17.3.1] injecting env (15) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-26 01:51:27: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:51:27: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:51:27: 
+2026-03-26 01:51:27: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:51:27: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:51:27: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:51:27: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:51:27: 
+2026-03-26 01:51:51: [dotenv@17.3.1] injecting env (15) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-26 01:51:52: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:51:52: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:51:52: 
+2026-03-26 01:51:52: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:51:52: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:51:52: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:51:52: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:51:52: 
+2026-03-26 01:55:49: [dotenv@17.3.1] injecting env (15) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-26 01:55:49: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:55:49: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:55:49: 
+2026-03-26 01:55:49: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:55:49: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:55:49: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:55:49: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:55:49: 
+2026-03-26 01:56:15: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:18: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-26 01:58:18: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 01:58:18: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 01:58:18: 
+2026-03-26 01:58:18: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 01:58:18: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 01:58:18: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 01:58:18: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 01:58:18: 
+2026-03-26 01:58:20: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:25: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:28: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:32: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:38: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:44: [HPM] Upgrading to WebSocket
+2026-03-26 01:58:50: [HPM] Upgrading to WebSocket
+2026-03-26 02:00:32: [dotenv@17.3.1] injecting env (12) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-26 02:00:32: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 02:00:32: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 02:00:32: 
+2026-03-26 02:00:32: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 02:00:32: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 02:00:32: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 02:00:32: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 02:00:32: 
+2026-03-26 02:19:59: [dotenv@17.3.1] injecting env (12) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-26 02:19:59: [HPM] Proxy created: /  -> http://localhost:3058
+2026-03-26 02:19:59: [HPM] Proxy created: /  -> http://localhost:3055
+2026-03-26 02:19:59: 
+2026-03-26 02:19:59: [server-runner] ✅ Frontend  → http://localhost:3056
+2026-03-26 02:19:59: [server-runner] ✅ API       → http://localhost:3055  (proxied via /pos)
+2026-03-26 02:19:59: [server-runner] ✅ WebSocket → http://localhost:3058   (proxied via /socket.io)
+2026-03-26 02:19:59: [server-runner] ✅ Uploads   → http://localhost:3056/uploads
+2026-03-26 02:19:59: 

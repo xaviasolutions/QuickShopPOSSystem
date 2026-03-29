@@ -1,0 +1,23 @@
+@echo off
+cd /d "%~dp0"
+
+echo [QuickShopPOS] Checking node_modules...
+if not exist "node_modules" (
+    echo [QuickShopPOS] node_modules not found, running npm install...
+    call npm install
+)
+
+echo [QuickShopPOS] Stopping any existing PM2 processes...
+call pm2 delete all 2>nul
+
+echo [QuickShopPOS] Starting services via PM2...
+call pm2 start ecosystem.config.js
+
+echo [QuickShopPOS] Waiting for server to start...
+timeout /t 5 /nobreak >nul
+
+echo [QuickShopPOS] Opening browser...
+start "" "http://localhost:8001"
+
+echo [QuickShopPOS] Done! Showing logs...
+call pm2 logs
