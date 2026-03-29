@@ -5,7 +5,7 @@ const isWindows = os.platform() === 'win32';
 
 const ROOT = isWindows
   ? path.join('C:\\laragon\\www\\QuickShopPOS\\server-runner')
-  : '/home/ec2-user/main/dev/QuickShopPOS/server-runner/';
+  : '/home/ec2-user/main/dev/QuickShopPOSSystem';
 
 // ── Shared base ───────────────────────────────────────────────────────────────
 const base = {
