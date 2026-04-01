@@ -41,6 +41,7 @@ const apiProxy = createProxyMiddleware({
   },
 });
 
+
 app.use('/pos', (req, res, next) => {
   // When browser hard-refreshes /pos it sends Accept: text/html
   // Skip the API proxy so the SPA fallback serves index.html instead
