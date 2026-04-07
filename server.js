@@ -82,6 +82,7 @@ if (PROTOCOL === 'https') {
   server = http.createServer(app);
 }
 
+
 server.listen(FRONTEND_PORT, () => {
   console.log('\n[server-runner] Frontend  -> ' + BASE_URL);
   console.log('[server-runner] API       -> ' + BASE_URL + '/pos  (proxied to :' + API_PORT + ')');
