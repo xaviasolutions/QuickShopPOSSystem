@@ -53,6 +53,7 @@ app.use('/pos', (req, res, next) => {
 // 4. Frontend static files
 app.use(express.static(FRONTEND_DIST));
 
+
 // 5. SPA fallback
 app.get('*', (req, res) => {
   res.sendFile(path.join(FRONTEND_DIST, 'index.html'));
