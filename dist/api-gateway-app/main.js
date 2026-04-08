@@ -42,9 +42,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __webpack_require__(1);
 const api_gateway_app_module_1 = __webpack_require__(2);
 const config_1 = __webpack_require__(5);
-const fs = __importStar(__webpack_require__(137));
-const path = __importStar(__webpack_require__(138));
-const common_1 = __webpack_require__(139);
+const fs = __importStar(__webpack_require__(144));
+const path = __importStar(__webpack_require__(145));
+const common_1 = __webpack_require__(146);
 const common_2 = __webpack_require__(3);
 async function bootstrap() {
     const appContext = await core_1.NestFactory.createApplicationContext(api_gateway_app_module_1.AppModule);
@@ -195,40 +195,41 @@ const config_1 = __webpack_require__(5);
 const jwt_1 = __webpack_require__(8);
 const core_1 = __webpack_require__(1);
 const database_module_1 = __webpack_require__(9);
-const pos_user_repository_1 = __webpack_require__(61);
-const pos_service_1 = __webpack_require__(97);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_users_controller_1 = __webpack_require__(101);
-const pos_categories_controller_1 = __webpack_require__(104);
-const pos_units_controller_1 = __webpack_require__(105);
-const pos_products_controller_1 = __webpack_require__(106);
-const pos_suppliers_controller_1 = __webpack_require__(110);
-const pos_purchases_controller_1 = __webpack_require__(111);
-const pos_customers_controller_1 = __webpack_require__(112);
-const pos_sales_controller_1 = __webpack_require__(113);
-const pos_sale_returns_controller_1 = __webpack_require__(114);
-const pos_stock_controller_1 = __webpack_require__(115);
-const pos_expenses_controller_1 = __webpack_require__(116);
-const pos_reports_controller_1 = __webpack_require__(117);
-const pos_discount_rules_controller_1 = __webpack_require__(118);
-const pos_settings_controller_1 = __webpack_require__(119);
-const pos_notifications_controller_1 = __webpack_require__(120);
-const pos_supplier_payments_controller_1 = __webpack_require__(121);
-const pos_purchase_returns_controller_1 = __webpack_require__(122);
-const pos_roles_controller_1 = __webpack_require__(123);
-const pos_permissions_controller_1 = __webpack_require__(124);
-const pos_user_roles_controller_1 = __webpack_require__(125);
-const pos_audit_logs_controller_1 = __webpack_require__(126);
-const pos_loyalty_controller_1 = __webpack_require__(127);
-const pos_brands_controller_1 = __webpack_require__(128);
-const pos_product_variants_controller_1 = __webpack_require__(129);
-const pos_inventory_forecast_controller_1 = __webpack_require__(130);
-const pos_supplier_orders_controller_1 = __webpack_require__(131);
-const pos_projects_controller_1 = __webpack_require__(132);
-const pos_services_controller_1 = __webpack_require__(133);
-const pos_quotations_controller_1 = __webpack_require__(134);
-const pos_delivery_orders_controller_1 = __webpack_require__(135);
-const pos_companies_controller_1 = __webpack_require__(136);
+const pos_user_repository_1 = __webpack_require__(64);
+const pos_service_1 = __webpack_require__(103);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_users_controller_1 = __webpack_require__(107);
+const pos_categories_controller_1 = __webpack_require__(110);
+const pos_units_controller_1 = __webpack_require__(111);
+const pos_products_controller_1 = __webpack_require__(112);
+const pos_suppliers_controller_1 = __webpack_require__(116);
+const pos_purchases_controller_1 = __webpack_require__(117);
+const pos_customers_controller_1 = __webpack_require__(118);
+const pos_sales_controller_1 = __webpack_require__(119);
+const pos_sale_returns_controller_1 = __webpack_require__(120);
+const pos_stock_controller_1 = __webpack_require__(121);
+const pos_expenses_controller_1 = __webpack_require__(122);
+const pos_reports_controller_1 = __webpack_require__(123);
+const pos_discount_rules_controller_1 = __webpack_require__(124);
+const pos_settings_controller_1 = __webpack_require__(125);
+const pos_notifications_controller_1 = __webpack_require__(126);
+const pos_supplier_payments_controller_1 = __webpack_require__(127);
+const pos_purchase_returns_controller_1 = __webpack_require__(128);
+const pos_roles_controller_1 = __webpack_require__(129);
+const pos_permissions_controller_1 = __webpack_require__(130);
+const pos_user_roles_controller_1 = __webpack_require__(131);
+const pos_audit_logs_controller_1 = __webpack_require__(132);
+const pos_loyalty_controller_1 = __webpack_require__(133);
+const pos_brands_controller_1 = __webpack_require__(134);
+const pos_product_variants_controller_1 = __webpack_require__(135);
+const pos_inventory_forecast_controller_1 = __webpack_require__(136);
+const pos_supplier_orders_controller_1 = __webpack_require__(137);
+const pos_projects_controller_1 = __webpack_require__(138);
+const pos_services_controller_1 = __webpack_require__(139);
+const pos_quotations_controller_1 = __webpack_require__(140);
+const pos_delivery_orders_controller_1 = __webpack_require__(141);
+const pos_companies_controller_1 = __webpack_require__(142);
+const pos_ledger_controller_1 = __webpack_require__(143);
 let PosModule = class PosModule {
 };
 exports.PosModule = PosModule;
@@ -294,6 +295,7 @@ exports.PosModule = PosModule = __decorate([
             pos_quotations_controller_1.PosQuotationsController,
             pos_delivery_orders_controller_1.PosDeliveryOrdersController,
             pos_companies_controller_1.PosCompaniesController,
+            pos_ledger_controller_1.PosLedgerController,
         ],
     })
 ], PosModule);
@@ -329,7 +331,7 @@ const sequelize_1 = __webpack_require__(10);
 const config_1 = __webpack_require__(5);
 const config_module_1 = __webpack_require__(4);
 const model_1 = __webpack_require__(11);
-const repository_1 = __webpack_require__(59);
+const repository_1 = __webpack_require__(62);
 let DatabaseModule = class DatabaseModule {
 };
 exports.DatabaseModule = DatabaseModule;
@@ -390,38 +392,41 @@ const purchase_item_model_1 = __webpack_require__(21);
 const purchase_return_model_1 = __webpack_require__(25);
 const supplier_payment_model_1 = __webpack_require__(26);
 const customer_model_1 = __webpack_require__(27);
-const customer_payment_model_1 = __webpack_require__(35);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const customer_payment_model_1 = __webpack_require__(37);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 const sale_model_1 = __webpack_require__(28);
 const sale_item_model_1 = __webpack_require__(29);
-const sale_return_model_1 = __webpack_require__(32);
-const stock_adjustment_model_1 = __webpack_require__(36);
-const expense_model_1 = __webpack_require__(37);
-const audit_log_model_1 = __webpack_require__(38);
-const fbr_invoice_log_model_1 = __webpack_require__(39);
-const tax_setting_model_1 = __webpack_require__(40);
-const sale_payment_model_1 = __webpack_require__(31);
+const sale_return_model_1 = __webpack_require__(34);
+const stock_adjustment_model_1 = __webpack_require__(38);
+const expense_model_1 = __webpack_require__(39);
+const audit_log_model_1 = __webpack_require__(40);
+const fbr_invoice_log_model_1 = __webpack_require__(41);
+const tax_setting_model_1 = __webpack_require__(42);
+const sale_payment_model_1 = __webpack_require__(33);
 const discount_rule_model_1 = __webpack_require__(30);
-const loyalty_points_log_model_1 = __webpack_require__(34);
-const supplier_ledger_transaction_model_1 = __webpack_require__(41);
-const store_setting_model_1 = __webpack_require__(42);
-const terminal_model_1 = __webpack_require__(43);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
-const cron_job_log_model_1 = __webpack_require__(45);
-const pos_role_model_1 = __webpack_require__(46);
-const pos_permission_model_1 = __webpack_require__(47);
-const pos_role_permission_model_1 = __webpack_require__(48);
-const pos_user_role_model_1 = __webpack_require__(49);
-const pos_notification_model_1 = __webpack_require__(50);
+const loyalty_points_log_model_1 = __webpack_require__(36);
+const supplier_ledger_transaction_model_1 = __webpack_require__(43);
+const store_setting_model_1 = __webpack_require__(44);
+const terminal_model_1 = __webpack_require__(45);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
+const cron_job_log_model_1 = __webpack_require__(47);
+const pos_role_model_1 = __webpack_require__(48);
+const pos_permission_model_1 = __webpack_require__(49);
+const pos_role_permission_model_1 = __webpack_require__(50);
+const pos_user_role_model_1 = __webpack_require__(51);
+const pos_notification_model_1 = __webpack_require__(52);
 const product_image_model_1 = __webpack_require__(24);
-const reorder_alert_model_1 = __webpack_require__(51);
-const supplier_order_model_1 = __webpack_require__(52);
-const project_model_1 = __webpack_require__(53);
-const service_model_1 = __webpack_require__(54);
+const reorder_alert_model_1 = __webpack_require__(53);
+const supplier_order_model_1 = __webpack_require__(54);
+const project_model_1 = __webpack_require__(32);
+const service_model_1 = __webpack_require__(31);
 const quotation_model_1 = __webpack_require__(55);
 const currency_setting_model_1 = __webpack_require__(57);
 const delivery_order_model_1 = __webpack_require__(58);
 const company_model_1 = __webpack_require__(56);
+const chart_of_account_model_1 = __webpack_require__(59);
+const journal_entry_model_1 = __webpack_require__(60);
+const journal_line_model_1 = __webpack_require__(61);
 exports.ALL_MODELS = [
     pos_user_model_1.PosUser,
     category_model_1.Category,
@@ -474,6 +479,9 @@ exports.ALL_MODELS = [
     delivery_order_model_1.DeliveryOrder,
     delivery_order_model_1.DeliveryOrderItem,
     company_model_1.Company,
+    chart_of_account_model_1.ChartOfAccount,
+    journal_entry_model_1.JournalEntry,
+    journal_line_model_1.JournalLine,
 ];
 
 
@@ -1506,8 +1514,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Customer = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const sale_model_1 = __webpack_require__(28);
-const udhaar_transaction_model_1 = __webpack_require__(33);
-const loyalty_points_log_model_1 = __webpack_require__(34);
+const udhaar_transaction_model_1 = __webpack_require__(35);
+const loyalty_points_log_model_1 = __webpack_require__(36);
 let Customer = class Customer extends sequelize_typescript_1.Model {
     sales;
     udhaarTransactions;
@@ -1595,8 +1603,8 @@ const sequelize_typescript_1 = __webpack_require__(13);
 const customer_model_1 = __webpack_require__(27);
 const pos_user_model_1 = __webpack_require__(12);
 const sale_item_model_1 = __webpack_require__(29);
-const sale_payment_model_1 = __webpack_require__(31);
-const sale_return_model_1 = __webpack_require__(32);
+const sale_payment_model_1 = __webpack_require__(33);
+const sale_return_model_1 = __webpack_require__(34);
 let Sale = class Sale extends sequelize_typescript_1.Model {
     customer;
     createdByUser;
@@ -1730,7 +1738,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f, _g;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SaleItem = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
@@ -1739,12 +1747,16 @@ const product_model_1 = __webpack_require__(17);
 const product_variant_model_1 = __webpack_require__(22);
 const batch_model_1 = __webpack_require__(18);
 const discount_rule_model_1 = __webpack_require__(30);
+const service_model_1 = __webpack_require__(31);
+const project_model_1 = __webpack_require__(32);
 let SaleItem = class SaleItem extends sequelize_typescript_1.Model {
     sale;
     product;
     variant;
     batch;
     discountRule;
+    service;
+    project;
 };
 exports.SaleItem = SaleItem;
 __decorate([
@@ -1753,10 +1765,24 @@ __decorate([
     __metadata("design:type", Number)
 ], SaleItem.prototype, "saleId", void 0);
 __decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('product', 'service'), allowNull: false, defaultValue: 'product' }),
+    __metadata("design:type", String)
+], SaleItem.prototype, "itemType", void 0);
+__decorate([
     (0, sequelize_typescript_1.ForeignKey)(() => product_model_1.Product),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
     __metadata("design:type", Number)
 ], SaleItem.prototype, "productId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => service_model_1.Service),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], SaleItem.prototype, "serviceId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => project_model_1.Project),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], SaleItem.prototype, "projectId", void 0);
 __decorate([
     (0, sequelize_typescript_1.ForeignKey)(() => product_variant_model_1.ProductVariant),
     (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
@@ -1836,6 +1862,14 @@ __decorate([
     (0, sequelize_typescript_1.BelongsTo)(() => discount_rule_model_1.DiscountRule, 'discountRuleId'),
     __metadata("design:type", typeof (_e = typeof discount_rule_model_1.DiscountRule !== "undefined" && discount_rule_model_1.DiscountRule) === "function" ? _e : Object)
 ], SaleItem.prototype, "discountRule", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => service_model_1.Service, 'serviceId'),
+    __metadata("design:type", typeof (_f = typeof service_model_1.Service !== "undefined" && service_model_1.Service) === "function" ? _f : Object)
+], SaleItem.prototype, "service", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => project_model_1.Project, 'projectId'),
+    __metadata("design:type", typeof (_g = typeof project_model_1.Project !== "undefined" && project_model_1.Project) === "function" ? _g : Object)
+], SaleItem.prototype, "project", void 0);
 exports.SaleItem = SaleItem = __decorate([
     (0, sequelize_typescript_1.Table)({ tableName: 'sale_items', timestamps: false, underscored: true })
 ], SaleItem);
@@ -1938,6 +1972,147 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Service = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const supplier_model_1 = __webpack_require__(19);
+let Service = class Service extends sequelize_typescript_1.Model {
+    supplier;
+};
+exports.Service = Service;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
+    __metadata("design:type", String)
+], Service.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], Service.prototype, "supplierId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
+    __metadata("design:type", typeof (_a = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _a : Object)
+], Service.prototype, "supplier", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], Service.prototype, "unitPrice", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(5, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], Service.prototype, "vatPercent", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "unitOfMeasure", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "notes", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], Service.prototype, "isActive", void 0);
+exports.Service = Service = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'services', timestamps: true, underscored: true })
+], Service);
+
+
+/***/ }),
+/* 32 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a, _b;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Project = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const customer_model_1 = __webpack_require__(27);
+const supplier_model_1 = __webpack_require__(19);
+let Project = class Project extends sequelize_typescript_1.Model {
+    customer;
+    supplier;
+};
+exports.Project = Project;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
+    __metadata("design:type", String)
+], Project.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: true }),
+    __metadata("design:type", Number)
+], Project.prototype, "estimatedCost", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "startDate", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "endDate", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => customer_model_1.Customer),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Number)
+], Project.prototype, "customerId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], Project.prototype, "supplierId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "notes", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], Project.prototype, "isActive", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => customer_model_1.Customer, 'customerId'),
+    __metadata("design:type", typeof (_a = typeof customer_model_1.Customer !== "undefined" && customer_model_1.Customer) === "function" ? _a : Object)
+], Project.prototype, "customer", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
+    __metadata("design:type", typeof (_b = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _b : Object)
+], Project.prototype, "supplier", void 0);
+exports.Project = Project = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'projects', timestamps: true, underscored: true })
+], Project);
+
+
+/***/ }),
+/* 33 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SalePayment = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const sale_model_1 = __webpack_require__(28);
@@ -1972,7 +2147,7 @@ exports.SalePayment = SalePayment = __decorate([
 
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2100,7 +2275,7 @@ exports.SaleReturn = SaleReturn = __decorate([
 
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2176,7 +2351,7 @@ exports.UdhaarTransaction = UdhaarTransaction = __decorate([
 
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2259,7 +2434,7 @@ exports.LoyaltyPointsLog = LoyaltyPointsLog = __decorate([
 
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2336,7 +2511,7 @@ exports.CustomerPayment = CustomerPayment = __decorate([
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2414,7 +2589,7 @@ exports.StockAdjustment = StockAdjustment = __decorate([
 
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2474,7 +2649,7 @@ exports.Expense = Expense = __decorate([
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2531,7 +2706,7 @@ exports.AuditLog = AuditLog = __decorate([
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2600,7 +2775,7 @@ exports.FbrInvoiceLog = FbrInvoiceLog = __decorate([
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2672,7 +2847,7 @@ exports.TaxSetting = TaxSetting = __decorate([
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2755,7 +2930,7 @@ exports.SupplierLedgerTransaction = SupplierLedgerTransaction = __decorate([
 
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2864,7 +3039,7 @@ exports.StoreSetting = StoreSetting = __decorate([
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2915,7 +3090,7 @@ exports.Terminal = Terminal = __decorate([
 
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2985,7 +3160,7 @@ exports.SmsWhatsappLog = SmsWhatsappLog = __decorate([
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3038,7 +3213,7 @@ exports.CronJobLog = CronJobLog = __decorate([
 
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3083,7 +3258,7 @@ exports.PosRole = PosRole = __decorate([
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3132,7 +3307,7 @@ exports.PosPermission = PosPermission = __decorate([
 
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3149,8 +3324,8 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermission = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
-const pos_role_model_1 = __webpack_require__(46);
-const pos_permission_model_1 = __webpack_require__(47);
+const pos_role_model_1 = __webpack_require__(48);
+const pos_permission_model_1 = __webpack_require__(49);
 let PosRolePermission = class PosRolePermission extends sequelize_typescript_1.Model {
     role;
     permission;
@@ -3185,7 +3360,7 @@ exports.PosRolePermission = PosRolePermission = __decorate([
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3203,7 +3378,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRole = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_role_model_1 = __webpack_require__(46);
+const pos_role_model_1 = __webpack_require__(48);
 let PosUserRole = class PosUserRole extends sequelize_typescript_1.Model {
     user;
     role;
@@ -3238,7 +3413,7 @@ exports.PosUserRole = PosUserRole = __decorate([
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3311,7 +3486,7 @@ exports.PosNotification = PosNotification = __decorate([
 
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3380,7 +3555,7 @@ exports.ReorderAlert = ReorderAlert = __decorate([
 
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3490,147 +3665,6 @@ __decorate([
 exports.SupplierOrderItem = SupplierOrderItem = __decorate([
     (0, sequelize_typescript_1.Table)({ tableName: 'supplier_order_items', timestamps: false, underscored: true })
 ], SupplierOrderItem);
-
-
-/***/ }),
-/* 53 */
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var _a, _b;
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Project = void 0;
-const sequelize_typescript_1 = __webpack_require__(13);
-const customer_model_1 = __webpack_require__(27);
-const supplier_model_1 = __webpack_require__(19);
-let Project = class Project extends sequelize_typescript_1.Model {
-    customer;
-    supplier;
-};
-exports.Project = Project;
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
-    __metadata("design:type", String)
-], Project.prototype, "name", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "description", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: true }),
-    __metadata("design:type", Number)
-], Project.prototype, "estimatedCost", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "startDate", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "endDate", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => customer_model_1.Customer),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Number)
-], Project.prototype, "customerId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Object)
-], Project.prototype, "supplierId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "notes", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
-    __metadata("design:type", Boolean)
-], Project.prototype, "isActive", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => customer_model_1.Customer, 'customerId'),
-    __metadata("design:type", typeof (_a = typeof customer_model_1.Customer !== "undefined" && customer_model_1.Customer) === "function" ? _a : Object)
-], Project.prototype, "customer", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
-    __metadata("design:type", typeof (_b = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _b : Object)
-], Project.prototype, "supplier", void 0);
-exports.Project = Project = __decorate([
-    (0, sequelize_typescript_1.Table)({ tableName: 'projects', timestamps: true, underscored: true })
-], Project);
-
-
-/***/ }),
-/* 54 */
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var _a;
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Service = void 0;
-const sequelize_typescript_1 = __webpack_require__(13);
-const supplier_model_1 = __webpack_require__(19);
-let Service = class Service extends sequelize_typescript_1.Model {
-    supplier;
-};
-exports.Service = Service;
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
-    __metadata("design:type", String)
-], Service.prototype, "name", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Object)
-], Service.prototype, "supplierId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
-    __metadata("design:type", typeof (_a = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _a : Object)
-], Service.prototype, "supplier", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "description", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: false, defaultValue: 0 }),
-    __metadata("design:type", Number)
-], Service.prototype, "unitPrice", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(5, 2), allowNull: false, defaultValue: 0 }),
-    __metadata("design:type", Number)
-], Service.prototype, "vatPercent", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "unitOfMeasure", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "notes", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
-    __metadata("design:type", Boolean)
-], Service.prototype, "isActive", void 0);
-exports.Service = Service = __decorate([
-    (0, sequelize_typescript_1.Table)({ tableName: 'services', timestamps: true, underscored: true })
-], Service);
 
 
 /***/ }),
@@ -4175,48 +4209,227 @@ exports.DeliveryOrderItem = DeliveryOrderItem = __decorate([
 
 /***/ }),
 /* 59 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChartOfAccount = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+let ChartOfAccount = class ChartOfAccount extends sequelize_typescript_1.Model {
+};
+exports.ChartOfAccount = ChartOfAccount;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(10), allowNull: false, unique: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "code", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: false }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('asset', 'liability', 'equity', 'revenue', 'expense'), allowNull: false }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "type", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "category", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], ChartOfAccount.prototype, "isActive", void 0);
+exports.ChartOfAccount = ChartOfAccount = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'chart_of_accounts', timestamps: true, underscored: true })
+], ChartOfAccount);
+
+
+/***/ }),
+/* 60 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalEntry = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const pos_user_model_1 = __webpack_require__(12);
+const journal_line_model_1 = __webpack_require__(61);
+let JournalEntry = class JournalEntry extends sequelize_typescript_1.Model {
+    createdByUser;
+    lines;
+};
+exports.JournalEntry = JournalEntry;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(60), allowNull: false, unique: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "journalId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: false }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "date", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('sale', 'purchase', 'payment', 'expense', 'adjustment', 'manual'), allowNull: false, defaultValue: 'manual' }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "type", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "reference", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('draft', 'posted', 'reversed'), allowNull: false, defaultValue: 'posted' }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "status", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => pos_user_model_1.PosUser),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Number)
+], JournalEntry.prototype, "createdBy", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => pos_user_model_1.PosUser, 'createdBy'),
+    __metadata("design:type", typeof (_a = typeof pos_user_model_1.PosUser !== "undefined" && pos_user_model_1.PosUser) === "function" ? _a : Object)
+], JournalEntry.prototype, "createdByUser", void 0);
+__decorate([
+    (0, sequelize_typescript_1.HasMany)(() => journal_line_model_1.JournalLine, 'entryId'),
+    __metadata("design:type", Array)
+], JournalEntry.prototype, "lines", void 0);
+exports.JournalEntry = JournalEntry = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'journal_entries', timestamps: true, underscored: true })
+], JournalEntry);
+
+
+/***/ }),
+/* 61 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a, _b;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalLine = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const journal_entry_model_1 = __webpack_require__(60);
+const chart_of_account_model_1 = __webpack_require__(59);
+let JournalLine = class JournalLine extends sequelize_typescript_1.Model {
+    entry;
+    account;
+};
+exports.JournalLine = JournalLine;
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => journal_entry_model_1.JournalEntry),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "entryId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => chart_of_account_model_1.ChartOfAccount),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "accountId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(14, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "debit", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(14, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "credit", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], JournalLine.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => journal_entry_model_1.JournalEntry, 'entryId'),
+    __metadata("design:type", typeof (_a = typeof journal_entry_model_1.JournalEntry !== "undefined" && journal_entry_model_1.JournalEntry) === "function" ? _a : Object)
+], JournalLine.prototype, "entry", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => chart_of_account_model_1.ChartOfAccount, 'accountId'),
+    __metadata("design:type", typeof (_b = typeof chart_of_account_model_1.ChartOfAccount !== "undefined" && chart_of_account_model_1.ChartOfAccount) === "function" ? _b : Object)
+], JournalLine.prototype, "account", void 0);
+exports.JournalLine = JournalLine = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'journal_lines', timestamps: false, underscored: true })
+], JournalLine);
+
+
+/***/ }),
+/* 62 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ALL_REPOSITORY = void 0;
-const brand_repository_1 = __webpack_require__(60);
-const pos_user_repository_1 = __webpack_require__(61);
-const category_repository_1 = __webpack_require__(62);
-const unit_repository_1 = __webpack_require__(63);
-const product_repository_1 = __webpack_require__(64);
-const batch_repository_1 = __webpack_require__(65);
-const supplier_repository_1 = __webpack_require__(66);
-const purchase_repository_1 = __webpack_require__(67);
-const purchase_item_repository_1 = __webpack_require__(68);
-const customer_repository_1 = __webpack_require__(69);
-const customer_payment_repository_1 = __webpack_require__(70);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const sale_repository_1 = __webpack_require__(72);
-const sale_item_repository_1 = __webpack_require__(73);
-const sale_return_repository_1 = __webpack_require__(74);
-const stock_adjustment_repository_1 = __webpack_require__(75);
-const expense_repository_1 = __webpack_require__(76);
-const audit_log_repository_1 = __webpack_require__(77);
-const fbr_invoice_log_repository_1 = __webpack_require__(78);
-const sale_payment_repository_1 = __webpack_require__(79);
-const discount_rule_repository_1 = __webpack_require__(80);
-const loyalty_points_log_repository_1 = __webpack_require__(81);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
-const supplier_payment_repository_1 = __webpack_require__(83);
-const purchase_return_repository_1 = __webpack_require__(84);
-const pos_role_repository_1 = __webpack_require__(85);
-const pos_permission_repository_1 = __webpack_require__(86);
-const pos_role_permission_repository_1 = __webpack_require__(87);
-const pos_user_role_repository_1 = __webpack_require__(88);
-const product_variant_repository_1 = __webpack_require__(89);
-const supplier_order_repository_1 = __webpack_require__(90);
-const project_repository_1 = __webpack_require__(91);
-const service_repository_1 = __webpack_require__(92);
-const quotation_repository_1 = __webpack_require__(93);
-const currency_setting_repository_1 = __webpack_require__(94);
-const delivery_order_repository_1 = __webpack_require__(95);
-const company_repository_1 = __webpack_require__(96);
+const brand_repository_1 = __webpack_require__(63);
+const pos_user_repository_1 = __webpack_require__(64);
+const category_repository_1 = __webpack_require__(65);
+const unit_repository_1 = __webpack_require__(66);
+const product_repository_1 = __webpack_require__(67);
+const batch_repository_1 = __webpack_require__(68);
+const supplier_repository_1 = __webpack_require__(69);
+const purchase_repository_1 = __webpack_require__(70);
+const purchase_item_repository_1 = __webpack_require__(71);
+const customer_repository_1 = __webpack_require__(72);
+const customer_payment_repository_1 = __webpack_require__(73);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const sale_repository_1 = __webpack_require__(75);
+const sale_item_repository_1 = __webpack_require__(76);
+const sale_return_repository_1 = __webpack_require__(77);
+const stock_adjustment_repository_1 = __webpack_require__(78);
+const expense_repository_1 = __webpack_require__(79);
+const audit_log_repository_1 = __webpack_require__(80);
+const fbr_invoice_log_repository_1 = __webpack_require__(81);
+const sale_payment_repository_1 = __webpack_require__(82);
+const discount_rule_repository_1 = __webpack_require__(83);
+const loyalty_points_log_repository_1 = __webpack_require__(84);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
+const supplier_payment_repository_1 = __webpack_require__(86);
+const purchase_return_repository_1 = __webpack_require__(87);
+const pos_role_repository_1 = __webpack_require__(88);
+const pos_permission_repository_1 = __webpack_require__(89);
+const pos_role_permission_repository_1 = __webpack_require__(90);
+const pos_user_role_repository_1 = __webpack_require__(91);
+const product_variant_repository_1 = __webpack_require__(92);
+const supplier_order_repository_1 = __webpack_require__(93);
+const project_repository_1 = __webpack_require__(94);
+const service_repository_1 = __webpack_require__(95);
+const quotation_repository_1 = __webpack_require__(96);
+const currency_setting_repository_1 = __webpack_require__(97);
+const delivery_order_repository_1 = __webpack_require__(98);
+const company_repository_1 = __webpack_require__(99);
+const chart_of_account_repository_1 = __webpack_require__(100);
+const journal_entry_repository_1 = __webpack_require__(101);
+const journal_line_repository_1 = __webpack_require__(102);
 exports.ALL_REPOSITORY = [
     brand_repository_1.BrandRepository,
     pos_user_repository_1.PosUserRepository,
@@ -4260,11 +4473,14 @@ exports.ALL_REPOSITORY = [
     delivery_order_repository_1.DeliveryOrderRepository,
     delivery_order_repository_1.DeliveryOrderItemRepository,
     company_repository_1.CompanyRepository,
+    chart_of_account_repository_1.ChartOfAccountRepository,
+    journal_entry_repository_1.JournalEntryRepository,
+    journal_line_repository_1.JournalLineRepository,
 ];
 
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4316,7 +4532,7 @@ exports.BrandRepository = BrandRepository = __decorate([
 
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4377,7 +4593,7 @@ exports.PosUserRepository = PosUserRepository = __decorate([
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4438,7 +4654,7 @@ exports.CategoryRepository = CategoryRepository = __decorate([
 
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4496,7 +4712,7 @@ exports.UnitRepository = UnitRepository = __decorate([
 
 
 /***/ }),
-/* 64 */
+/* 67 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4557,7 +4773,7 @@ exports.ProductRepository = ProductRepository = __decorate([
 
 
 /***/ }),
-/* 65 */
+/* 68 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4618,7 +4834,7 @@ exports.BatchRepository = BatchRepository = __decorate([
 
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4679,7 +4895,7 @@ exports.SupplierRepository = SupplierRepository = __decorate([
 
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4740,7 +4956,7 @@ exports.PurchaseRepository = PurchaseRepository = __decorate([
 
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4785,7 +5001,7 @@ exports.PurchaseItemRepository = PurchaseItemRepository = __decorate([
 
 
 /***/ }),
-/* 69 */
+/* 72 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4846,7 +5062,7 @@ exports.CustomerRepository = CustomerRepository = __decorate([
 
 
 /***/ }),
-/* 70 */
+/* 73 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4866,7 +5082,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CustomerPaymentRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const customer_payment_model_1 = __webpack_require__(35);
+const customer_payment_model_1 = __webpack_require__(37);
 let CustomerPaymentRepository = class CustomerPaymentRepository {
     model;
     constructor(model) {
@@ -4891,7 +5107,7 @@ exports.CustomerPaymentRepository = CustomerPaymentRepository = __decorate([
 
 
 /***/ }),
-/* 71 */
+/* 74 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4911,7 +5127,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UdhaarTransactionRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 let UdhaarTransactionRepository = class UdhaarTransactionRepository {
     model;
     constructor(model) {
@@ -4936,7 +5152,7 @@ exports.UdhaarTransactionRepository = UdhaarTransactionRepository = __decorate([
 
 
 /***/ }),
-/* 72 */
+/* 75 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4990,7 +5206,7 @@ exports.SaleRepository = SaleRepository = __decorate([
 
 
 /***/ }),
-/* 73 */
+/* 76 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5032,7 +5248,7 @@ exports.SaleItemRepository = SaleItemRepository = __decorate([
 
 
 /***/ }),
-/* 74 */
+/* 77 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5052,7 +5268,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SaleReturnRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const sale_return_model_1 = __webpack_require__(32);
+const sale_return_model_1 = __webpack_require__(34);
 let SaleReturnRepository = class SaleReturnRepository {
     saleReturnModel;
     constructor(saleReturnModel) {
@@ -5080,7 +5296,7 @@ exports.SaleReturnRepository = SaleReturnRepository = __decorate([
 
 
 /***/ }),
-/* 75 */
+/* 78 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5100,7 +5316,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StockAdjustmentRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const stock_adjustment_model_1 = __webpack_require__(36);
+const stock_adjustment_model_1 = __webpack_require__(38);
 let StockAdjustmentRepository = class StockAdjustmentRepository {
     stockAdjModel;
     constructor(stockAdjModel) {
@@ -5125,7 +5341,7 @@ exports.StockAdjustmentRepository = StockAdjustmentRepository = __decorate([
 
 
 /***/ }),
-/* 76 */
+/* 79 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5145,7 +5361,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExpenseRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const expense_model_1 = __webpack_require__(37);
+const expense_model_1 = __webpack_require__(39);
 let ExpenseRepository = class ExpenseRepository {
     expenseModel;
     constructor(expenseModel) {
@@ -5186,7 +5402,7 @@ exports.ExpenseRepository = ExpenseRepository = __decorate([
 
 
 /***/ }),
-/* 77 */
+/* 80 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5206,7 +5422,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuditLogRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const audit_log_model_1 = __webpack_require__(38);
+const audit_log_model_1 = __webpack_require__(40);
 let AuditLogRepository = class AuditLogRepository {
     auditLogModel;
     constructor(auditLogModel) {
@@ -5231,7 +5447,7 @@ exports.AuditLogRepository = AuditLogRepository = __decorate([
 
 
 /***/ }),
-/* 78 */
+/* 81 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5251,7 +5467,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FbrInvoiceLogRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const fbr_invoice_log_model_1 = __webpack_require__(39);
+const fbr_invoice_log_model_1 = __webpack_require__(41);
 let FbrInvoiceLogRepository = class FbrInvoiceLogRepository {
     fbrLogModel;
     constructor(fbrLogModel) {
@@ -5282,7 +5498,7 @@ exports.FbrInvoiceLogRepository = FbrInvoiceLogRepository = __decorate([
 
 
 /***/ }),
-/* 79 */
+/* 82 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5302,7 +5518,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SalePaymentRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const sale_payment_model_1 = __webpack_require__(31);
+const sale_payment_model_1 = __webpack_require__(33);
 let SalePaymentRepository = class SalePaymentRepository {
     model;
     constructor(model) {
@@ -5327,7 +5543,7 @@ exports.SalePaymentRepository = SalePaymentRepository = __decorate([
 
 
 /***/ }),
-/* 80 */
+/* 83 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5384,7 +5600,7 @@ exports.DiscountRuleRepository = DiscountRuleRepository = __decorate([
 
 
 /***/ }),
-/* 81 */
+/* 84 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5404,7 +5620,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LoyaltyPointsLogRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const loyalty_points_log_model_1 = __webpack_require__(34);
+const loyalty_points_log_model_1 = __webpack_require__(36);
 let LoyaltyPointsLogRepository = class LoyaltyPointsLogRepository {
     model;
     constructor(model) {
@@ -5429,7 +5645,7 @@ exports.LoyaltyPointsLogRepository = LoyaltyPointsLogRepository = __decorate([
 
 
 /***/ }),
-/* 82 */
+/* 85 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5449,7 +5665,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SupplierLedgerTransactionRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const supplier_ledger_transaction_model_1 = __webpack_require__(41);
+const supplier_ledger_transaction_model_1 = __webpack_require__(43);
 let SupplierLedgerTransactionRepository = class SupplierLedgerTransactionRepository {
     model;
     constructor(model) {
@@ -5474,7 +5690,7 @@ exports.SupplierLedgerTransactionRepository = SupplierLedgerTransactionRepositor
 
 
 /***/ }),
-/* 83 */
+/* 86 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5522,7 +5738,7 @@ exports.SupplierPaymentRepository = SupplierPaymentRepository = __decorate([
 
 
 /***/ }),
-/* 84 */
+/* 87 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5576,7 +5792,7 @@ exports.PurchaseReturnRepository = PurchaseReturnRepository = __decorate([
 
 
 /***/ }),
-/* 85 */
+/* 88 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5596,7 +5812,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRoleRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const pos_role_model_1 = __webpack_require__(46);
+const pos_role_model_1 = __webpack_require__(48);
 let PosRoleRepository = class PosRoleRepository {
     model;
     constructor(model) {
@@ -5634,7 +5850,7 @@ exports.PosRoleRepository = PosRoleRepository = __decorate([
 
 
 /***/ }),
-/* 86 */
+/* 89 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5654,7 +5870,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const pos_permission_model_1 = __webpack_require__(47);
+const pos_permission_model_1 = __webpack_require__(49);
 let PosPermissionRepository = class PosPermissionRepository {
     model;
     constructor(model) {
@@ -5686,7 +5902,7 @@ exports.PosPermissionRepository = PosPermissionRepository = __decorate([
 
 
 /***/ }),
-/* 87 */
+/* 90 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5706,7 +5922,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermissionRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const pos_role_permission_model_1 = __webpack_require__(48);
+const pos_role_permission_model_1 = __webpack_require__(50);
 let PosRolePermissionRepository = class PosRolePermissionRepository {
     model;
     constructor(model) {
@@ -5738,7 +5954,7 @@ exports.PosRolePermissionRepository = PosRolePermissionRepository = __decorate([
 
 
 /***/ }),
-/* 88 */
+/* 91 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5758,7 +5974,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRoleRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const pos_user_role_model_1 = __webpack_require__(49);
+const pos_user_role_model_1 = __webpack_require__(51);
 let PosUserRoleRepository = class PosUserRoleRepository {
     model;
     constructor(model) {
@@ -5790,7 +6006,7 @@ exports.PosUserRoleRepository = PosUserRoleRepository = __decorate([
 
 
 /***/ }),
-/* 89 */
+/* 92 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5851,7 +6067,7 @@ exports.ProductVariantRepository = ProductVariantRepository = __decorate([
 
 
 /***/ }),
-/* 90 */
+/* 93 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5871,8 +6087,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SupplierOrderItemRepository = exports.SupplierOrderRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const supplier_order_model_1 = __webpack_require__(52);
-const supplier_order_model_2 = __webpack_require__(52);
+const supplier_order_model_1 = __webpack_require__(54);
+const supplier_order_model_2 = __webpack_require__(54);
 let SupplierOrderRepository = class SupplierOrderRepository {
     model;
     constructor(model) {
@@ -5931,7 +6147,7 @@ exports.SupplierOrderItemRepository = SupplierOrderItemRepository = __decorate([
 
 
 /***/ }),
-/* 91 */
+/* 94 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5951,7 +6167,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ProjectRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const project_model_1 = __webpack_require__(53);
+const project_model_1 = __webpack_require__(32);
 let ProjectRepository = class ProjectRepository {
     model;
     constructor(model) {
@@ -5986,7 +6202,7 @@ exports.ProjectRepository = ProjectRepository = __decorate([
 
 
 /***/ }),
-/* 92 */
+/* 95 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6006,7 +6222,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServiceRepository = void 0;
 const common_1 = __webpack_require__(3);
 const sequelize_1 = __webpack_require__(10);
-const service_model_1 = __webpack_require__(54);
+const service_model_1 = __webpack_require__(31);
 let ServiceRepository = class ServiceRepository {
     model;
     constructor(model) {
@@ -6041,7 +6257,7 @@ exports.ServiceRepository = ServiceRepository = __decorate([
 
 
 /***/ }),
-/* 93 */
+/* 96 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6153,7 +6369,7 @@ exports.QuotationStatusLogRepository = QuotationStatusLogRepository = __decorate
 
 
 /***/ }),
-/* 94 */
+/* 97 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6205,7 +6421,7 @@ exports.CurrencySettingRepository = CurrencySettingRepository = __decorate([
 
 
 /***/ }),
-/* 95 */
+/* 98 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6274,7 +6490,7 @@ exports.DeliveryOrderItemRepository = DeliveryOrderItemRepository = __decorate([
 
 
 /***/ }),
-/* 96 */
+/* 99 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6329,7 +6545,145 @@ exports.CompanyRepository = CompanyRepository = __decorate([
 
 
 /***/ }),
-/* 97 */
+/* 100 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChartOfAccountRepository = void 0;
+const common_1 = __webpack_require__(3);
+const sequelize_1 = __webpack_require__(10);
+const chart_of_account_model_1 = __webpack_require__(59);
+let ChartOfAccountRepository = class ChartOfAccountRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async create(data) { return this.model.create(data); }
+    async findOne(options) { return this.model.findOne(options); }
+    async findAll(options) { return this.model.findAll(options); }
+    async findAndCountAll(options) { return this.model.findAndCountAll(options); }
+    async update(options, data) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('ACCOUNT_NOT_FOUND');
+        return record.update(data);
+    }
+    async delete(options) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('ACCOUNT_NOT_FOUND');
+        await record.destroy();
+        return true;
+    }
+};
+exports.ChartOfAccountRepository = ChartOfAccountRepository;
+exports.ChartOfAccountRepository = ChartOfAccountRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(chart_of_account_model_1.ChartOfAccount)),
+    __metadata("design:paramtypes", [Object])
+], ChartOfAccountRepository);
+
+
+/***/ }),
+/* 101 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalEntryRepository = void 0;
+const common_1 = __webpack_require__(3);
+const sequelize_1 = __webpack_require__(10);
+const journal_entry_model_1 = __webpack_require__(60);
+let JournalEntryRepository = class JournalEntryRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async create(data) { return this.model.create(data); }
+    async findOne(options) { return this.model.findOne(options); }
+    async findAll(options) { return this.model.findAll(options); }
+    async findAndCountAll(options) { return this.model.findAndCountAll(options); }
+    async update(options, data) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('JOURNAL_ENTRY_NOT_FOUND');
+        return record.update(data);
+    }
+};
+exports.JournalEntryRepository = JournalEntryRepository;
+exports.JournalEntryRepository = JournalEntryRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(journal_entry_model_1.JournalEntry)),
+    __metadata("design:paramtypes", [Object])
+], JournalEntryRepository);
+
+
+/***/ }),
+/* 102 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalLineRepository = void 0;
+const common_1 = __webpack_require__(3);
+const sequelize_1 = __webpack_require__(10);
+const journal_line_model_1 = __webpack_require__(61);
+let JournalLineRepository = class JournalLineRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async bulkCreate(data) { return this.model.bulkCreate(data); }
+    async findAll(options) { return this.model.findAll(options); }
+    async destroy(options) { return this.model.destroy(options); }
+};
+exports.JournalLineRepository = JournalLineRepository;
+exports.JournalLineRepository = JournalLineRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(journal_line_model_1.JournalLine)),
+    __metadata("design:paramtypes", [Object])
+], JournalLineRepository);
+
+
+/***/ }),
+/* 103 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6350,7 +6704,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosService = void 0;
 const common_1 = __webpack_require__(3);
 const microservices_1 = __webpack_require__(7);
-const rxjs_1 = __webpack_require__(98);
+const rxjs_1 = __webpack_require__(104);
 let PosService = class PosService {
     client;
     constructor(client) {
@@ -6372,13 +6726,13 @@ exports.PosService = PosService = __decorate([
 
 
 /***/ }),
-/* 98 */
+/* 104 */
 /***/ ((module) => {
 
 module.exports = require("rxjs");
 
 /***/ }),
-/* 99 */
+/* 105 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6396,7 +6750,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolesGuard = void 0;
 const common_1 = __webpack_require__(3);
 const core_1 = __webpack_require__(1);
-const pos_roles_decorator_1 = __webpack_require__(100);
+const pos_roles_decorator_1 = __webpack_require__(106);
 let PosRolesGuard = class PosRolesGuard {
     reflector;
     constructor(reflector) {
@@ -6427,7 +6781,7 @@ exports.PosRolesGuard = PosRolesGuard = __decorate([
 
 
 /***/ }),
-/* 100 */
+/* 106 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -6440,7 +6794,7 @@ exports.PosRoles = PosRoles;
 
 
 /***/ }),
-/* 101 */
+/* 107 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6460,11 +6814,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUsersController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosUsersController = class PosUsersController {
     posService;
     constructor(posService) {
@@ -6563,7 +6917,7 @@ exports.PosUsersController = PosUsersController = __decorate([
 
 
 /***/ }),
-/* 102 */
+/* 108 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6617,7 +6971,7 @@ exports.PosAuthGuard = PosAuthGuard = __decorate([
 
 
 /***/ }),
-/* 103 */
+/* 109 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -6743,6 +7097,8 @@ exports.POS_PATTERNS = {
         STOCK_STATUS: { cmd: 'report_stock_status' },
         EXPIRY_REPORT: { cmd: 'report_expiry' },
         PRODUCT_WISE_SALES: { cmd: 'report_product_wise_sales' },
+        SERVICE_WISE_SALES: { cmd: 'report_service_wise_sales' },
+        PROJECT_WISE_SALES: { cmd: 'report_project_wise_sales' },
         CUSTOMER_LEDGER: { cmd: 'report_customer_ledger' },
         SUPPLIER_LEDGER: { cmd: 'report_supplier_ledger' },
         EXPORT_SALES_EXCEL: { cmd: 'report_export_sales_excel' },
@@ -6876,11 +7232,23 @@ exports.POS_PATTERNS = {
         DELETE: { cmd: 'currency_delete' },
         SET_DEFAULT: { cmd: 'currency_set_default' },
     },
+    LEDGER: {
+        CHART_GET_ALL: { cmd: 'ledger_chart_get_all' },
+        CHART_CREATE: { cmd: 'ledger_chart_create' },
+        CHART_UPDATE: { cmd: 'ledger_chart_update' },
+        CHART_DELETE: { cmd: 'ledger_chart_delete' },
+        JOURNAL_GET_ALL: { cmd: 'ledger_journal_get_all' },
+        JOURNAL_GET_ONE: { cmd: 'ledger_journal_get_one' },
+        JOURNAL_CREATE: { cmd: 'ledger_journal_create' },
+        JOURNAL_SYNC: { cmd: 'ledger_journal_sync' },
+        TRIAL_BALANCE: { cmd: 'ledger_trial_balance' },
+        ACCOUNT_SUMMARY: { cmd: 'ledger_account_summary' },
+    },
 };
 
 
 /***/ }),
-/* 104 */
+/* 110 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6900,11 +7268,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCategoriesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosCategoriesController = class PosCategoriesController {
     posService;
     constructor(posService) {
@@ -6987,7 +7355,7 @@ exports.PosCategoriesController = PosCategoriesController = __decorate([
 
 
 /***/ }),
-/* 105 */
+/* 111 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7007,11 +7375,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUnitsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosUnitsController = class PosUnitsController {
     posService;
     constructor(posService) {
@@ -7070,7 +7438,7 @@ exports.PosUnitsController = PosUnitsController = __decorate([
 
 
 /***/ }),
-/* 106 */
+/* 112 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7090,13 +7458,13 @@ var _a, _b, _c, _d;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductsController = void 0;
 const common_1 = __webpack_require__(3);
-const platform_express_1 = __webpack_require__(107);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
-const create_product_dto_1 = __webpack_require__(108);
+const platform_express_1 = __webpack_require__(113);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
+const create_product_dto_1 = __webpack_require__(114);
 let PosProductsController = class PosProductsController {
     posService;
     constructor(posService) {
@@ -7287,13 +7655,13 @@ exports.PosProductsController = PosProductsController = __decorate([
 
 
 /***/ }),
-/* 107 */
+/* 113 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/platform-express");
 
 /***/ }),
-/* 108 */
+/* 114 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7308,7 +7676,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CreateProductDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateProductDto {
     name;
     barcode;
@@ -7383,13 +7751,13 @@ __decorate([
 
 
 /***/ }),
-/* 109 */
+/* 115 */
 /***/ ((module) => {
 
 module.exports = require("class-validator");
 
 /***/ }),
-/* 110 */
+/* 116 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7409,11 +7777,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSuppliersController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSuppliersController = class PosSuppliersController {
     posService;
     constructor(posService) {
@@ -7491,7 +7859,7 @@ exports.PosSuppliersController = PosSuppliersController = __decorate([
 
 
 /***/ }),
-/* 111 */
+/* 117 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7511,11 +7879,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchasesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosPurchasesController = class PosPurchasesController {
     posService;
     constructor(posService) {
@@ -7599,7 +7967,7 @@ exports.PosPurchasesController = PosPurchasesController = __decorate([
 
 
 /***/ }),
-/* 112 */
+/* 118 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7619,11 +7987,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCustomersController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosCustomersController = class PosCustomersController {
     posService;
     constructor(posService) {
@@ -7733,7 +8101,7 @@ exports.PosCustomersController = PosCustomersController = __decorate([
 
 
 /***/ }),
-/* 113 */
+/* 119 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7753,9 +8121,9 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSalesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSalesController = class PosSalesController {
     posService;
     constructor(posService) {
@@ -7865,7 +8233,7 @@ exports.PosSalesController = PosSalesController = __decorate([
 
 
 /***/ }),
-/* 114 */
+/* 120 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7885,10 +8253,10 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSaleReturnsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSaleReturnsController = class PosSaleReturnsController {
     posService;
     constructor(posService) {
@@ -7949,7 +8317,7 @@ exports.PosSaleReturnsController = PosSaleReturnsController = __decorate([
 
 
 /***/ }),
-/* 115 */
+/* 121 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7969,11 +8337,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosStockController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosStockController = class PosStockController {
     posService;
     constructor(posService) {
@@ -8015,7 +8383,7 @@ exports.PosStockController = PosStockController = __decorate([
 
 
 /***/ }),
-/* 116 */
+/* 122 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8035,11 +8403,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosExpensesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosExpensesController = class PosExpensesController {
     posService;
     constructor(posService) {
@@ -8108,7 +8476,7 @@ exports.PosExpensesController = PosExpensesController = __decorate([
 
 
 /***/ }),
-/* 117 */
+/* 123 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8128,12 +8496,12 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosReportsController = void 0;
 const common_1 = __webpack_require__(3);
-const rxjs_1 = __webpack_require__(98);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const rxjs_1 = __webpack_require__(104);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosReportsController = class PosReportsController {
     posService;
     constructor(posService) {
@@ -8189,6 +8557,12 @@ let PosReportsController = class PosReportsController {
     }
     getProductWiseSales(fromDate, toDate) {
         return this.posService.send(pos_patterns_1.POS_PATTERNS.REPORT.PRODUCT_WISE_SALES, { fromDate, toDate });
+    }
+    getServiceWiseSales(fromDate, toDate) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.REPORT.SERVICE_WISE_SALES, { fromDate, toDate });
+    }
+    getProjectWiseSales(fromDate, toDate) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.REPORT.PROJECT_WISE_SALES, { fromDate, toDate });
     }
     getExpiryReport(days) {
         return this.posService.send(pos_patterns_1.POS_PATTERNS.REPORT.EXPIRY_REPORT, Number(days) || 30);
@@ -8301,6 +8675,24 @@ __decorate([
 ], PosReportsController.prototype, "getProductWiseSales", null);
 __decorate([
     (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/service-wise-sales'),
+    __param(0, (0, common_1.Query)('fromDate')),
+    __param(1, (0, common_1.Query)('toDate')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", void 0)
+], PosReportsController.prototype, "getServiceWiseSales", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/project-wise-sales'),
+    __param(0, (0, common_1.Query)('fromDate')),
+    __param(1, (0, common_1.Query)('toDate')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", void 0)
+], PosReportsController.prototype, "getProjectWiseSales", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
     (0, common_1.Get)('/v1/expiry'),
     __param(0, (0, common_1.Query)('days')),
     __metadata("design:type", Function),
@@ -8315,7 +8707,7 @@ exports.PosReportsController = PosReportsController = __decorate([
 
 
 /***/ }),
-/* 118 */
+/* 124 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8335,11 +8727,11 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDiscountRulesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosDiscountRulesController = class PosDiscountRulesController {
     posService;
     constructor(posService) {
@@ -8415,7 +8807,7 @@ exports.PosDiscountRulesController = PosDiscountRulesController = __decorate([
 
 
 /***/ }),
-/* 119 */
+/* 125 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8435,11 +8827,11 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSettingsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSettingsController = class PosSettingsController {
     posService;
     constructor(posService) {
@@ -8591,7 +8983,7 @@ exports.PosSettingsController = PosSettingsController = __decorate([
 
 
 /***/ }),
-/* 120 */
+/* 126 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8611,9 +9003,9 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosNotificationsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_patterns_1 = __webpack_require__(109);
 let PosNotificationsController = class PosNotificationsController {
     posService;
     constructor(posService) {
@@ -8665,7 +9057,7 @@ exports.PosNotificationsController = PosNotificationsController = __decorate([
 
 
 /***/ }),
-/* 121 */
+/* 127 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8685,11 +9077,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierPaymentsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSupplierPaymentsController = class PosSupplierPaymentsController {
     posService;
     constructor(posService) {
@@ -8727,7 +9119,7 @@ exports.PosSupplierPaymentsController = PosSupplierPaymentsController = __decora
 
 
 /***/ }),
-/* 122 */
+/* 128 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8747,11 +9139,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchaseReturnsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosPurchaseReturnsController = class PosPurchaseReturnsController {
     posService;
     constructor(posService) {
@@ -8815,7 +9207,7 @@ exports.PosPurchaseReturnsController = PosPurchaseReturnsController = __decorate
 
 
 /***/ }),
-/* 123 */
+/* 129 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8835,11 +9227,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosRolesController = class PosRolesController {
     posService;
     constructor(posService) {
@@ -8928,7 +9320,7 @@ exports.PosRolesController = PosRolesController = __decorate([
 
 
 /***/ }),
-/* 124 */
+/* 130 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8948,11 +9340,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosPermissionsController = class PosPermissionsController {
     posService;
     constructor(posService) {
@@ -8998,7 +9390,7 @@ exports.PosPermissionsController = PosPermissionsController = __decorate([
 
 
 /***/ }),
-/* 125 */
+/* 131 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9018,11 +9410,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRolesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosUserRolesController = class PosUserRolesController {
     posService;
     constructor(posService) {
@@ -9069,7 +9461,7 @@ exports.PosUserRolesController = PosUserRolesController = __decorate([
 
 
 /***/ }),
-/* 126 */
+/* 132 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9089,11 +9481,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosAuditLogsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosAuditLogsController = class PosAuditLogsController {
     posService;
     constructor(posService) {
@@ -9142,7 +9534,7 @@ exports.PosAuditLogsController = PosAuditLogsController = __decorate([
 
 
 /***/ }),
-/* 127 */
+/* 133 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9162,11 +9554,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosLoyaltyController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosLoyaltyController = class PosLoyaltyController {
     posService;
     constructor(posService) {
@@ -9204,7 +9596,7 @@ exports.PosLoyaltyController = PosLoyaltyController = __decorate([
 
 
 /***/ }),
-/* 128 */
+/* 134 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9224,9 +9616,9 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosBrandsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_patterns_1 = __webpack_require__(109);
 let PosBrandsController = class PosBrandsController {
     posService;
     constructor(posService) {
@@ -9282,7 +9674,7 @@ exports.PosBrandsController = PosBrandsController = __decorate([
 
 
 /***/ }),
-/* 129 */
+/* 135 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9302,11 +9694,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductVariantsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosProductVariantsController = class PosProductVariantsController {
     posService;
     constructor(posService) {
@@ -9376,7 +9768,7 @@ exports.PosProductVariantsController = PosProductVariantsController = __decorate
 
 
 /***/ }),
-/* 130 */
+/* 136 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9396,11 +9788,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosInventoryForecastController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosInventoryForecastController = class PosInventoryForecastController {
     posService;
     constructor(posService) {
@@ -9469,7 +9861,7 @@ exports.PosInventoryForecastController = PosInventoryForecastController = __deco
 
 
 /***/ }),
-/* 131 */
+/* 137 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9489,11 +9881,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierOrdersController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosSupplierOrdersController = class PosSupplierOrdersController {
     posService;
     constructor(posService) {
@@ -9591,7 +9983,7 @@ exports.PosSupplierOrdersController = PosSupplierOrdersController = __decorate([
 
 
 /***/ }),
-/* 132 */
+/* 138 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9611,11 +10003,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProjectsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosProjectsController = class PosProjectsController {
     posService;
     constructor(posService) {
@@ -9695,7 +10087,7 @@ exports.PosProjectsController = PosProjectsController = __decorate([
 
 
 /***/ }),
-/* 133 */
+/* 139 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9715,11 +10107,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosServicesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosServicesController = class PosServicesController {
     posService;
     constructor(posService) {
@@ -9795,7 +10187,7 @@ exports.PosServicesController = PosServicesController = __decorate([
 
 
 /***/ }),
-/* 134 */
+/* 140 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9815,11 +10207,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosQuotationsController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosQuotationsController = class PosQuotationsController {
     posService;
     constructor(posService) {
@@ -9949,7 +10341,7 @@ exports.PosQuotationsController = PosQuotationsController = __decorate([
 
 
 /***/ }),
-/* 135 */
+/* 141 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9969,11 +10361,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDeliveryOrdersController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosDeliveryOrdersController = class PosDeliveryOrdersController {
     posService;
     constructor(posService) {
@@ -10048,7 +10440,7 @@ exports.PosDeliveryOrdersController = PosDeliveryOrdersController = __decorate([
 
 
 /***/ }),
-/* 136 */
+/* 142 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10068,11 +10460,11 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCompaniesController = void 0;
 const common_1 = __webpack_require__(3);
-const pos_service_1 = __webpack_require__(97);
-const pos_auth_guard_1 = __webpack_require__(102);
-const pos_roles_guard_1 = __webpack_require__(99);
-const pos_roles_decorator_1 = __webpack_require__(100);
-const pos_patterns_1 = __webpack_require__(103);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
 let PosCompaniesController = class PosCompaniesController {
     posService;
     constructor(posService) {
@@ -10146,19 +10538,177 @@ exports.PosCompaniesController = PosCompaniesController = __decorate([
 
 
 /***/ }),
-/* 137 */
+/* 143 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PosLedgerController = void 0;
+const common_1 = __webpack_require__(3);
+const pos_service_1 = __webpack_require__(103);
+const pos_auth_guard_1 = __webpack_require__(108);
+const pos_roles_guard_1 = __webpack_require__(105);
+const pos_roles_decorator_1 = __webpack_require__(106);
+const pos_patterns_1 = __webpack_require__(109);
+let PosLedgerController = class PosLedgerController {
+    posService;
+    constructor(posService) {
+        this.posService = posService;
+    }
+    getChartOfAccounts() {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_GET_ALL, {});
+    }
+    createAccount(body) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_CREATE, body);
+    }
+    updateAccount(id, body) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_UPDATE, { id: Number(id), payload: body });
+    }
+    deleteAccount(id) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_DELETE, Number(id));
+    }
+    getJournalEntries(fromDate, toDate, type, page, size) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_GET_ALL, {
+            fromDate, toDate, type,
+            page: Number(page) || 1,
+            size: Number(size) || 50,
+        });
+    }
+    getJournalEntry(id) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_GET_ONE, Number(id));
+    }
+    createJournalEntry(req, body) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_CREATE, {
+            ...body, createdBy: req.posUser.sub,
+        });
+    }
+    syncJournalEntries(body) {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_SYNC, body);
+    }
+    getTrialBalance() {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.TRIAL_BALANCE, {});
+    }
+    getAccountSummary() {
+        return this.posService.send(pos_patterns_1.POS_PATTERNS.LEDGER.ACCOUNT_SUMMARY, {});
+    }
+};
+exports.PosLedgerController = PosLedgerController;
+__decorate([
+    (0, common_1.Get)('/v1/chart-of-accounts'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "getChartOfAccounts", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Post)('/v1/chart-of-accounts'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "createAccount", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Patch)('/v1/chart-of-accounts/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Object]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "updateAccount", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin'),
+    (0, common_1.Delete)('/v1/chart-of-accounts/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "deleteAccount", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/journal-entries'),
+    __param(0, (0, common_1.Query)('fromDate')),
+    __param(1, (0, common_1.Query)('toDate')),
+    __param(2, (0, common_1.Query)('type')),
+    __param(3, (0, common_1.Query)('page')),
+    __param(4, (0, common_1.Query)('size')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String, String, String, String]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "getJournalEntries", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/journal-entries/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "getJournalEntry", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Post)('/v1/journal-entries'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "createJournalEntry", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Post)('/v1/journal-entries/sync'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "syncJournalEntries", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/trial-balance'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "getTrialBalance", null);
+__decorate([
+    (0, pos_roles_decorator_1.PosRoles)('admin', 'manager'),
+    (0, common_1.Get)('/v1/account-summary'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PosLedgerController.prototype, "getAccountSummary", null);
+exports.PosLedgerController = PosLedgerController = __decorate([
+    (0, common_1.UseGuards)(pos_auth_guard_1.PosAuthGuard, pos_roles_guard_1.PosRolesGuard),
+    (0, common_1.Controller)('pos/ledger'),
+    __metadata("design:paramtypes", [typeof (_a = typeof pos_service_1.PosService !== "undefined" && pos_service_1.PosService) === "function" ? _a : Object])
+], PosLedgerController);
+
+
+/***/ }),
+/* 144 */
 /***/ ((module) => {
 
 module.exports = require("fs");
 
 /***/ }),
-/* 138 */
+/* 145 */
 /***/ ((module) => {
 
 module.exports = require("path");
 
 /***/ }),
-/* 139 */
+/* 146 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10177,38 +10727,38 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__webpack_require__(140), exports);
-__exportStar(__webpack_require__(141), exports);
-__exportStar(__webpack_require__(153), exports);
-__exportStar(__webpack_require__(154), exports);
-__exportStar(__webpack_require__(156), exports);
-__exportStar(__webpack_require__(157), exports);
-__exportStar(__webpack_require__(158), exports);
-__exportStar(__webpack_require__(159), exports);
-__exportStar(__webpack_require__(142), exports);
 __exportStar(__webpack_require__(147), exports);
 __exportStar(__webpack_require__(148), exports);
-__exportStar(__webpack_require__(149), exports);
-__exportStar(__webpack_require__(150), exports);
 __exportStar(__webpack_require__(160), exports);
-__exportStar(__webpack_require__(162), exports);
-__exportStar(__webpack_require__(145), exports);
-__exportStar(__webpack_require__(103), exports);
+__exportStar(__webpack_require__(161), exports);
 __exportStar(__webpack_require__(163), exports);
 __exportStar(__webpack_require__(164), exports);
 __exportStar(__webpack_require__(165), exports);
 __exportStar(__webpack_require__(166), exports);
+__exportStar(__webpack_require__(149), exports);
+__exportStar(__webpack_require__(154), exports);
+__exportStar(__webpack_require__(155), exports);
+__exportStar(__webpack_require__(156), exports);
+__exportStar(__webpack_require__(157), exports);
 __exportStar(__webpack_require__(167), exports);
-__exportStar(__webpack_require__(168), exports);
 __exportStar(__webpack_require__(169), exports);
+__exportStar(__webpack_require__(152), exports);
+__exportStar(__webpack_require__(109), exports);
 __exportStar(__webpack_require__(170), exports);
 __exportStar(__webpack_require__(171), exports);
 __exportStar(__webpack_require__(172), exports);
 __exportStar(__webpack_require__(173), exports);
+__exportStar(__webpack_require__(174), exports);
+__exportStar(__webpack_require__(175), exports);
+__exportStar(__webpack_require__(176), exports);
+__exportStar(__webpack_require__(177), exports);
+__exportStar(__webpack_require__(178), exports);
+__exportStar(__webpack_require__(179), exports);
+__exportStar(__webpack_require__(180), exports);
 
 
 /***/ }),
-/* 140 */
+/* 147 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10221,12 +10771,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CommonModule = void 0;
 const common_1 = __webpack_require__(3);
-const common_service_1 = __webpack_require__(141);
-const transform_interceptors_1 = __webpack_require__(142);
-const http_exception_filters_1 = __webpack_require__(147);
-const rpc_exection_filters_1 = __webpack_require__(148);
-const api_exeptions_1 = __webpack_require__(149);
-const logging_interceptors_1 = __webpack_require__(150);
+const common_service_1 = __webpack_require__(148);
+const transform_interceptors_1 = __webpack_require__(149);
+const http_exception_filters_1 = __webpack_require__(154);
+const rpc_exection_filters_1 = __webpack_require__(155);
+const api_exeptions_1 = __webpack_require__(156);
+const logging_interceptors_1 = __webpack_require__(157);
 let CommonModule = class CommonModule {
 };
 exports.CommonModule = CommonModule;
@@ -10239,7 +10789,7 @@ exports.CommonModule = CommonModule = __decorate([
 
 
 /***/ }),
-/* 141 */
+/* 148 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10261,7 +10811,7 @@ exports.CommonService = CommonService = __decorate([
 
 
 /***/ }),
-/* 142 */
+/* 149 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10274,8 +10824,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TransformInterceptor = void 0;
 const common_1 = __webpack_require__(3);
-const operators_1 = __webpack_require__(143);
-const language_1 = __webpack_require__(144);
+const operators_1 = __webpack_require__(150);
+const language_1 = __webpack_require__(151);
 let TransformInterceptor = class TransformInterceptor {
     intercept(context, next) {
         const request = context.switchToHttp().getRequest();
@@ -10301,20 +10851,20 @@ exports.TransformInterceptor = TransformInterceptor = __decorate([
 
 
 /***/ }),
-/* 143 */
+/* 150 */
 /***/ ((module) => {
 
 module.exports = require("rxjs/operators");
 
 /***/ }),
-/* 144 */
+/* 151 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LANGUAGES = void 0;
-const en_1 = __webpack_require__(145);
-const urdu_1 = __webpack_require__(146);
+const en_1 = __webpack_require__(152);
+const urdu_1 = __webpack_require__(153);
 exports.LANGUAGES = {
     en: en_1.en,
     urdu: urdu_1.urdu,
@@ -10322,7 +10872,7 @@ exports.LANGUAGES = {
 
 
 /***/ }),
-/* 145 */
+/* 152 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -10494,7 +11044,7 @@ exports.en = {
 
 
 /***/ }),
-/* 146 */
+/* 153 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -10516,7 +11066,7 @@ exports.urdu = {
 
 
 /***/ }),
-/* 147 */
+/* 154 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10529,7 +11079,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HttpExceptionFilter = void 0;
 const common_1 = __webpack_require__(3);
-const language_1 = __webpack_require__(144);
+const language_1 = __webpack_require__(151);
 let HttpExceptionFilter = class HttpExceptionFilter {
     catch(exception, host) {
         const ctx = host.switchToHttp();
@@ -10560,7 +11110,7 @@ exports.HttpExceptionFilter = HttpExceptionFilter = __decorate([
 
 
 /***/ }),
-/* 148 */
+/* 155 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10573,7 +11123,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HyperRpcFilter = void 0;
 const common_1 = __webpack_require__(3);
-const rxjs_1 = __webpack_require__(98);
+const rxjs_1 = __webpack_require__(104);
 const microservices_1 = __webpack_require__(7);
 let HyperRpcFilter = class HyperRpcFilter {
     catch(exception, host) {
@@ -10587,7 +11137,7 @@ exports.HyperRpcFilter = HyperRpcFilter = __decorate([
 
 
 /***/ }),
-/* 149 */
+/* 156 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -10606,7 +11156,7 @@ exports.ApiException = ApiException;
 
 
 /***/ }),
-/* 150 */
+/* 157 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10655,9 +11205,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LoggingInterceptor = void 0;
 const common_1 = __webpack_require__(3);
-const rxjs_1 = __webpack_require__(98);
-const winston = __importStar(__webpack_require__(151));
-__webpack_require__(152);
+const rxjs_1 = __webpack_require__(104);
+const winston = __importStar(__webpack_require__(158));
+__webpack_require__(159);
 let LoggingInterceptor = class LoggingInterceptor {
     logger;
     maskSensitiveData(data) {
@@ -10738,19 +11288,19 @@ exports.LoggingInterceptor = LoggingInterceptor = __decorate([
 
 
 /***/ }),
-/* 151 */
+/* 158 */
 /***/ ((module) => {
 
 module.exports = require("winston");
 
 /***/ }),
-/* 152 */
+/* 159 */
 /***/ ((module) => {
 
 module.exports = require("winston-daily-rotate-file");
 
 /***/ }),
-/* 153 */
+/* 160 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10765,7 +11315,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LoginUserDto = exports.CreateUserDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateUserDto {
     firstName;
     lastName;
@@ -10831,7 +11381,7 @@ __decorate([
 
 
 /***/ }),
-/* 154 */
+/* 161 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10846,8 +11396,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ApproveBroadcastDto = exports.CreateBroadcastDto = exports.BulkCreateNotificationDto = exports.CreateNotificationDto = void 0;
-const class_validator_1 = __webpack_require__(109);
-const class_transformer_1 = __webpack_require__(155);
+const class_validator_1 = __webpack_require__(115);
+const class_transformer_1 = __webpack_require__(162);
 class CreateNotificationDto {
     userId;
     title;
@@ -10961,13 +11511,13 @@ __decorate([
 
 
 /***/ }),
-/* 155 */
+/* 162 */
 /***/ ((module) => {
 
 module.exports = require("class-transformer");
 
 /***/ }),
-/* 156 */
+/* 163 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10982,8 +11532,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CreateLookupDto = void 0;
-const class_validator_1 = __webpack_require__(109);
-const class_transformer_1 = __webpack_require__(155);
+const class_validator_1 = __webpack_require__(115);
+const class_transformer_1 = __webpack_require__(162);
 class CreateLookupDto {
     name;
     parent;
@@ -11003,7 +11553,7 @@ __decorate([
 
 
 /***/ }),
-/* 157 */
+/* 164 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11018,7 +11568,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdatePermissionDto = exports.CreatePermissionDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreatePermissionDto {
     name;
     resource;
@@ -11076,7 +11626,7 @@ __decorate([
 
 
 /***/ }),
-/* 158 */
+/* 165 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11091,7 +11641,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdateRoleDto = exports.CreateRoleDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateRoleDto {
     companyId;
     name;
@@ -11131,7 +11681,7 @@ __decorate([
 
 
 /***/ }),
-/* 159 */
+/* 166 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11146,7 +11696,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.RemoveRolePermissionDto = exports.AssignRolePermissionDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class AssignRolePermissionDto {
     roleId;
     permissionId;
@@ -11180,7 +11730,7 @@ __decorate([
 
 
 /***/ }),
-/* 160 */
+/* 167 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11206,7 +11756,7 @@ let EmailService = EmailService_1 = class EmailService {
     constructor(configService) {
         this.configService = configService;
         try {
-            const nodemailer = __webpack_require__(161);
+            const nodemailer = __webpack_require__(168);
             const smtpHost = this.configService.get('SMTP_HOST');
             const smtpPort = this.configService.get('SMTP_PORT');
             const smtpUser = this.configService.get('SMTP_USER');
@@ -11278,13 +11828,13 @@ exports.EmailService = EmailService = EmailService_1 = __decorate([
 
 
 /***/ }),
-/* 161 */
+/* 168 */
 /***/ ((module) => {
 
 module.exports = require("nodemailer");
 
 /***/ }),
-/* 162 */
+/* 169 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11364,7 +11914,7 @@ exports.FcmService = FcmService = FcmService_1 = __decorate([
 
 
 /***/ }),
-/* 163 */
+/* 170 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -11372,7 +11922,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 
 /***/ }),
-/* 164 */
+/* 171 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11387,7 +11937,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdatePosUserDto = exports.LoginPosUserDto = exports.CreatePosUserDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreatePosUserDto {
     name;
     email;
@@ -11448,7 +11998,7 @@ __decorate([
 
 
 /***/ }),
-/* 165 */
+/* 172 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11463,7 +12013,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdateCategoryDto = exports.CreateCategoryDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateCategoryDto {
     name;
     parentId;
@@ -11497,7 +12047,7 @@ __decorate([
 
 
 /***/ }),
-/* 166 */
+/* 173 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11512,7 +12062,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdateProductDto = exports.CreateProductDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateProductDto {
     name;
     categoryId;
@@ -11616,7 +12166,7 @@ __decorate([
 
 
 /***/ }),
-/* 167 */
+/* 174 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11631,7 +12181,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.RecordCustomerPaymentDto = exports.UpdateCustomerDto = exports.CreateCustomerDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateCustomerDto {
     name;
     phone;
@@ -11723,7 +12273,7 @@ __decorate([
 
 
 /***/ }),
-/* 168 */
+/* 175 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11738,7 +12288,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdateSupplierDto = exports.CreateSupplierDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateSupplierDto {
     name;
     phone;
@@ -11824,7 +12374,7 @@ __decorate([
 
 
 /***/ }),
-/* 169 */
+/* 176 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11839,8 +12389,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HoldSaleDto = exports.CreateSaleDto = exports.SaleItemDto = void 0;
-const class_validator_1 = __webpack_require__(109);
-const class_transformer_1 = __webpack_require__(155);
+const class_validator_1 = __webpack_require__(115);
+const class_transformer_1 = __webpack_require__(162);
 class SaleItemDto {
     productId;
     variantId;
@@ -11952,7 +12502,7 @@ __decorate([
 
 
 /***/ }),
-/* 170 */
+/* 177 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11967,8 +12517,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CreatePurchaseDto = exports.PurchaseItemDto = void 0;
-const class_validator_1 = __webpack_require__(109);
-const class_transformer_1 = __webpack_require__(155);
+const class_validator_1 = __webpack_require__(115);
+const class_transformer_1 = __webpack_require__(162);
 class PurchaseItemDto {
     productId;
     qty;
@@ -12045,7 +12595,7 @@ __decorate([
 
 
 /***/ }),
-/* 171 */
+/* 178 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12060,7 +12610,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CreateSaleReturnDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateSaleReturnDto {
     saleId;
     productId;
@@ -12100,7 +12650,7 @@ __decorate([
 
 
 /***/ }),
-/* 172 */
+/* 179 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12115,7 +12665,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CreateStockAdjustmentDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateStockAdjustmentDto {
     productId;
     batchId;
@@ -12149,7 +12699,7 @@ __decorate([
 
 
 /***/ }),
-/* 173 */
+/* 180 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12164,7 +12714,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdateExpenseDto = exports.CreateExpenseDto = void 0;
-const class_validator_1 = __webpack_require__(109);
+const class_validator_1 = __webpack_require__(115);
 class CreateExpenseDto {
     category;
     amount;

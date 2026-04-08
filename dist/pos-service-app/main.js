@@ -110,42 +110,43 @@ exports.PosServiceAppModule = void 0;
 const common_1 = __webpack_require__(6);
 const database_module_1 = __webpack_require__(7);
 const sequelize_1 = __webpack_require__(8);
-const schedule_1 = __webpack_require__(97);
+const schedule_1 = __webpack_require__(103);
 const model_1 = __webpack_require__(11);
-const cron_module_1 = __webpack_require__(98);
-const pos_brands_module_1 = __webpack_require__(113);
-const pos_gateway_module_1 = __webpack_require__(106);
-const pos_users_module_1 = __webpack_require__(116);
-const pos_categories_module_1 = __webpack_require__(121);
-const pos_units_module_1 = __webpack_require__(124);
-const pos_products_module_1 = __webpack_require__(127);
-const pos_suppliers_module_1 = __webpack_require__(130);
-const pos_purchases_module_1 = __webpack_require__(133);
-const pos_customers_module_1 = __webpack_require__(136);
-const pos_sales_module_1 = __webpack_require__(139);
-const pos_sale_returns_module_1 = __webpack_require__(148);
-const pos_stock_module_1 = __webpack_require__(151);
-const pos_expenses_module_1 = __webpack_require__(154);
-const pos_reports_module_1 = __webpack_require__(157);
-const pos_discount_rules_module_1 = __webpack_require__(162);
-const pos_settings_module_1 = __webpack_require__(144);
-const pos_notifications_module_1 = __webpack_require__(107);
-const pos_supplier_payments_module_1 = __webpack_require__(165);
-const pos_purchase_returns_module_1 = __webpack_require__(168);
-const pos_loyalty_module_1 = __webpack_require__(171);
-const pos_audit_logs_module_1 = __webpack_require__(174);
-const pos_roles_module_1 = __webpack_require__(177);
-const pos_permissions_module_1 = __webpack_require__(180);
-const pos_role_permissions_module_1 = __webpack_require__(183);
-const pos_user_roles_module_1 = __webpack_require__(186);
-const pos_product_variants_module_1 = __webpack_require__(189);
-const pos_inventory_forecast_module_1 = __webpack_require__(111);
-const pos_supplier_orders_module_1 = __webpack_require__(192);
-const pos_projects_module_1 = __webpack_require__(195);
-const pos_services_module_1 = __webpack_require__(198);
-const pos_quotations_module_1 = __webpack_require__(201);
-const pos_delivery_orders_module_1 = __webpack_require__(204);
-const pos_companies_module_1 = __webpack_require__(207);
+const cron_module_1 = __webpack_require__(104);
+const pos_brands_module_1 = __webpack_require__(119);
+const pos_gateway_module_1 = __webpack_require__(112);
+const pos_users_module_1 = __webpack_require__(122);
+const pos_categories_module_1 = __webpack_require__(127);
+const pos_units_module_1 = __webpack_require__(130);
+const pos_products_module_1 = __webpack_require__(133);
+const pos_suppliers_module_1 = __webpack_require__(136);
+const pos_purchases_module_1 = __webpack_require__(139);
+const pos_customers_module_1 = __webpack_require__(142);
+const pos_sales_module_1 = __webpack_require__(145);
+const pos_sale_returns_module_1 = __webpack_require__(154);
+const pos_stock_module_1 = __webpack_require__(157);
+const pos_expenses_module_1 = __webpack_require__(160);
+const pos_reports_module_1 = __webpack_require__(163);
+const pos_discount_rules_module_1 = __webpack_require__(168);
+const pos_settings_module_1 = __webpack_require__(150);
+const pos_notifications_module_1 = __webpack_require__(113);
+const pos_supplier_payments_module_1 = __webpack_require__(171);
+const pos_purchase_returns_module_1 = __webpack_require__(174);
+const pos_loyalty_module_1 = __webpack_require__(177);
+const pos_audit_logs_module_1 = __webpack_require__(180);
+const pos_roles_module_1 = __webpack_require__(183);
+const pos_permissions_module_1 = __webpack_require__(186);
+const pos_role_permissions_module_1 = __webpack_require__(189);
+const pos_user_roles_module_1 = __webpack_require__(192);
+const pos_product_variants_module_1 = __webpack_require__(195);
+const pos_inventory_forecast_module_1 = __webpack_require__(117);
+const pos_supplier_orders_module_1 = __webpack_require__(198);
+const pos_projects_module_1 = __webpack_require__(201);
+const pos_services_module_1 = __webpack_require__(204);
+const pos_quotations_module_1 = __webpack_require__(207);
+const pos_delivery_orders_module_1 = __webpack_require__(210);
+const pos_companies_module_1 = __webpack_require__(213);
+const pos_ledger_module_1 = __webpack_require__(216);
 let PosServiceAppModule = class PosServiceAppModule {
 };
 exports.PosServiceAppModule = PosServiceAppModule;
@@ -189,6 +190,7 @@ exports.PosServiceAppModule = PosServiceAppModule = __decorate([
             pos_quotations_module_1.PosQuotationsModule,
             pos_delivery_orders_module_1.PosDeliveryOrdersModule,
             pos_companies_module_1.PosCompaniesModule,
+            pos_ledger_module_1.PosLedgerModule,
         ],
         controllers: [],
         providers: [],
@@ -220,7 +222,7 @@ const sequelize_1 = __webpack_require__(8);
 const config_1 = __webpack_require__(9);
 const config_module_1 = __webpack_require__(10);
 const model_1 = __webpack_require__(11);
-const repository_1 = __webpack_require__(59);
+const repository_1 = __webpack_require__(62);
 let DatabaseModule = class DatabaseModule {
 };
 exports.DatabaseModule = DatabaseModule;
@@ -320,38 +322,41 @@ const purchase_item_model_1 = __webpack_require__(21);
 const purchase_return_model_1 = __webpack_require__(25);
 const supplier_payment_model_1 = __webpack_require__(26);
 const customer_model_1 = __webpack_require__(27);
-const customer_payment_model_1 = __webpack_require__(35);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const customer_payment_model_1 = __webpack_require__(37);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 const sale_model_1 = __webpack_require__(28);
 const sale_item_model_1 = __webpack_require__(29);
-const sale_return_model_1 = __webpack_require__(32);
-const stock_adjustment_model_1 = __webpack_require__(36);
-const expense_model_1 = __webpack_require__(37);
-const audit_log_model_1 = __webpack_require__(38);
-const fbr_invoice_log_model_1 = __webpack_require__(39);
-const tax_setting_model_1 = __webpack_require__(40);
-const sale_payment_model_1 = __webpack_require__(31);
+const sale_return_model_1 = __webpack_require__(34);
+const stock_adjustment_model_1 = __webpack_require__(38);
+const expense_model_1 = __webpack_require__(39);
+const audit_log_model_1 = __webpack_require__(40);
+const fbr_invoice_log_model_1 = __webpack_require__(41);
+const tax_setting_model_1 = __webpack_require__(42);
+const sale_payment_model_1 = __webpack_require__(33);
 const discount_rule_model_1 = __webpack_require__(30);
-const loyalty_points_log_model_1 = __webpack_require__(34);
-const supplier_ledger_transaction_model_1 = __webpack_require__(41);
-const store_setting_model_1 = __webpack_require__(42);
-const terminal_model_1 = __webpack_require__(43);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
-const cron_job_log_model_1 = __webpack_require__(45);
-const pos_role_model_1 = __webpack_require__(46);
-const pos_permission_model_1 = __webpack_require__(47);
-const pos_role_permission_model_1 = __webpack_require__(48);
-const pos_user_role_model_1 = __webpack_require__(49);
-const pos_notification_model_1 = __webpack_require__(50);
+const loyalty_points_log_model_1 = __webpack_require__(36);
+const supplier_ledger_transaction_model_1 = __webpack_require__(43);
+const store_setting_model_1 = __webpack_require__(44);
+const terminal_model_1 = __webpack_require__(45);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
+const cron_job_log_model_1 = __webpack_require__(47);
+const pos_role_model_1 = __webpack_require__(48);
+const pos_permission_model_1 = __webpack_require__(49);
+const pos_role_permission_model_1 = __webpack_require__(50);
+const pos_user_role_model_1 = __webpack_require__(51);
+const pos_notification_model_1 = __webpack_require__(52);
 const product_image_model_1 = __webpack_require__(24);
-const reorder_alert_model_1 = __webpack_require__(51);
-const supplier_order_model_1 = __webpack_require__(52);
-const project_model_1 = __webpack_require__(53);
-const service_model_1 = __webpack_require__(54);
+const reorder_alert_model_1 = __webpack_require__(53);
+const supplier_order_model_1 = __webpack_require__(54);
+const project_model_1 = __webpack_require__(32);
+const service_model_1 = __webpack_require__(31);
 const quotation_model_1 = __webpack_require__(55);
 const currency_setting_model_1 = __webpack_require__(57);
 const delivery_order_model_1 = __webpack_require__(58);
 const company_model_1 = __webpack_require__(56);
+const chart_of_account_model_1 = __webpack_require__(59);
+const journal_entry_model_1 = __webpack_require__(60);
+const journal_line_model_1 = __webpack_require__(61);
 exports.ALL_MODELS = [
     pos_user_model_1.PosUser,
     category_model_1.Category,
@@ -404,6 +409,9 @@ exports.ALL_MODELS = [
     delivery_order_model_1.DeliveryOrder,
     delivery_order_model_1.DeliveryOrderItem,
     company_model_1.Company,
+    chart_of_account_model_1.ChartOfAccount,
+    journal_entry_model_1.JournalEntry,
+    journal_line_model_1.JournalLine,
 ];
 
 
@@ -1436,8 +1444,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Customer = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const sale_model_1 = __webpack_require__(28);
-const udhaar_transaction_model_1 = __webpack_require__(33);
-const loyalty_points_log_model_1 = __webpack_require__(34);
+const udhaar_transaction_model_1 = __webpack_require__(35);
+const loyalty_points_log_model_1 = __webpack_require__(36);
 let Customer = class Customer extends sequelize_typescript_1.Model {
     sales;
     udhaarTransactions;
@@ -1525,8 +1533,8 @@ const sequelize_typescript_1 = __webpack_require__(13);
 const customer_model_1 = __webpack_require__(27);
 const pos_user_model_1 = __webpack_require__(12);
 const sale_item_model_1 = __webpack_require__(29);
-const sale_payment_model_1 = __webpack_require__(31);
-const sale_return_model_1 = __webpack_require__(32);
+const sale_payment_model_1 = __webpack_require__(33);
+const sale_return_model_1 = __webpack_require__(34);
 let Sale = class Sale extends sequelize_typescript_1.Model {
     customer;
     createdByUser;
@@ -1660,7 +1668,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f, _g;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SaleItem = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
@@ -1669,12 +1677,16 @@ const product_model_1 = __webpack_require__(17);
 const product_variant_model_1 = __webpack_require__(22);
 const batch_model_1 = __webpack_require__(18);
 const discount_rule_model_1 = __webpack_require__(30);
+const service_model_1 = __webpack_require__(31);
+const project_model_1 = __webpack_require__(32);
 let SaleItem = class SaleItem extends sequelize_typescript_1.Model {
     sale;
     product;
     variant;
     batch;
     discountRule;
+    service;
+    project;
 };
 exports.SaleItem = SaleItem;
 __decorate([
@@ -1683,10 +1695,24 @@ __decorate([
     __metadata("design:type", Number)
 ], SaleItem.prototype, "saleId", void 0);
 __decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('product', 'service'), allowNull: false, defaultValue: 'product' }),
+    __metadata("design:type", String)
+], SaleItem.prototype, "itemType", void 0);
+__decorate([
     (0, sequelize_typescript_1.ForeignKey)(() => product_model_1.Product),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
     __metadata("design:type", Number)
 ], SaleItem.prototype, "productId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => service_model_1.Service),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], SaleItem.prototype, "serviceId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => project_model_1.Project),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], SaleItem.prototype, "projectId", void 0);
 __decorate([
     (0, sequelize_typescript_1.ForeignKey)(() => product_variant_model_1.ProductVariant),
     (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
@@ -1766,6 +1792,14 @@ __decorate([
     (0, sequelize_typescript_1.BelongsTo)(() => discount_rule_model_1.DiscountRule, 'discountRuleId'),
     __metadata("design:type", typeof (_e = typeof discount_rule_model_1.DiscountRule !== "undefined" && discount_rule_model_1.DiscountRule) === "function" ? _e : Object)
 ], SaleItem.prototype, "discountRule", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => service_model_1.Service, 'serviceId'),
+    __metadata("design:type", typeof (_f = typeof service_model_1.Service !== "undefined" && service_model_1.Service) === "function" ? _f : Object)
+], SaleItem.prototype, "service", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => project_model_1.Project, 'projectId'),
+    __metadata("design:type", typeof (_g = typeof project_model_1.Project !== "undefined" && project_model_1.Project) === "function" ? _g : Object)
+], SaleItem.prototype, "project", void 0);
 exports.SaleItem = SaleItem = __decorate([
     (0, sequelize_typescript_1.Table)({ tableName: 'sale_items', timestamps: false, underscored: true })
 ], SaleItem);
@@ -1868,6 +1902,147 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Service = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const supplier_model_1 = __webpack_require__(19);
+let Service = class Service extends sequelize_typescript_1.Model {
+    supplier;
+};
+exports.Service = Service;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
+    __metadata("design:type", String)
+], Service.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], Service.prototype, "supplierId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
+    __metadata("design:type", typeof (_a = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _a : Object)
+], Service.prototype, "supplier", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], Service.prototype, "unitPrice", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(5, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], Service.prototype, "vatPercent", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "unitOfMeasure", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Service.prototype, "notes", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], Service.prototype, "isActive", void 0);
+exports.Service = Service = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'services', timestamps: true, underscored: true })
+], Service);
+
+
+/***/ }),
+/* 32 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a, _b;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Project = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const customer_model_1 = __webpack_require__(27);
+const supplier_model_1 = __webpack_require__(19);
+let Project = class Project extends sequelize_typescript_1.Model {
+    customer;
+    supplier;
+};
+exports.Project = Project;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
+    __metadata("design:type", String)
+], Project.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: true }),
+    __metadata("design:type", Number)
+], Project.prototype, "estimatedCost", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "startDate", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "endDate", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => customer_model_1.Customer),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Number)
+], Project.prototype, "customerId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Object)
+], Project.prototype, "supplierId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], Project.prototype, "notes", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], Project.prototype, "isActive", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => customer_model_1.Customer, 'customerId'),
+    __metadata("design:type", typeof (_a = typeof customer_model_1.Customer !== "undefined" && customer_model_1.Customer) === "function" ? _a : Object)
+], Project.prototype, "customer", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
+    __metadata("design:type", typeof (_b = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _b : Object)
+], Project.prototype, "supplier", void 0);
+exports.Project = Project = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'projects', timestamps: true, underscored: true })
+], Project);
+
+
+/***/ }),
+/* 33 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SalePayment = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const sale_model_1 = __webpack_require__(28);
@@ -1902,7 +2077,7 @@ exports.SalePayment = SalePayment = __decorate([
 
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2030,7 +2205,7 @@ exports.SaleReturn = SaleReturn = __decorate([
 
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2106,7 +2281,7 @@ exports.UdhaarTransaction = UdhaarTransaction = __decorate([
 
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2189,7 +2364,7 @@ exports.LoyaltyPointsLog = LoyaltyPointsLog = __decorate([
 
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2266,7 +2441,7 @@ exports.CustomerPayment = CustomerPayment = __decorate([
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2344,7 +2519,7 @@ exports.StockAdjustment = StockAdjustment = __decorate([
 
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2404,7 +2579,7 @@ exports.Expense = Expense = __decorate([
 
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2461,7 +2636,7 @@ exports.AuditLog = AuditLog = __decorate([
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2530,7 +2705,7 @@ exports.FbrInvoiceLog = FbrInvoiceLog = __decorate([
 
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2602,7 +2777,7 @@ exports.TaxSetting = TaxSetting = __decorate([
 
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2685,7 +2860,7 @@ exports.SupplierLedgerTransaction = SupplierLedgerTransaction = __decorate([
 
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2794,7 +2969,7 @@ exports.StoreSetting = StoreSetting = __decorate([
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2845,7 +3020,7 @@ exports.Terminal = Terminal = __decorate([
 
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2915,7 +3090,7 @@ exports.SmsWhatsappLog = SmsWhatsappLog = __decorate([
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -2968,7 +3143,7 @@ exports.CronJobLog = CronJobLog = __decorate([
 
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3013,7 +3188,7 @@ exports.PosRole = PosRole = __decorate([
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3062,7 +3237,7 @@ exports.PosPermission = PosPermission = __decorate([
 
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3079,8 +3254,8 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermission = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
-const pos_role_model_1 = __webpack_require__(46);
-const pos_permission_model_1 = __webpack_require__(47);
+const pos_role_model_1 = __webpack_require__(48);
+const pos_permission_model_1 = __webpack_require__(49);
 let PosRolePermission = class PosRolePermission extends sequelize_typescript_1.Model {
     role;
     permission;
@@ -3115,7 +3290,7 @@ exports.PosRolePermission = PosRolePermission = __decorate([
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3133,7 +3308,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRole = void 0;
 const sequelize_typescript_1 = __webpack_require__(13);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_role_model_1 = __webpack_require__(46);
+const pos_role_model_1 = __webpack_require__(48);
 let PosUserRole = class PosUserRole extends sequelize_typescript_1.Model {
     user;
     role;
@@ -3168,7 +3343,7 @@ exports.PosUserRole = PosUserRole = __decorate([
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3241,7 +3416,7 @@ exports.PosNotification = PosNotification = __decorate([
 
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3310,7 +3485,7 @@ exports.ReorderAlert = ReorderAlert = __decorate([
 
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3420,147 +3595,6 @@ __decorate([
 exports.SupplierOrderItem = SupplierOrderItem = __decorate([
     (0, sequelize_typescript_1.Table)({ tableName: 'supplier_order_items', timestamps: false, underscored: true })
 ], SupplierOrderItem);
-
-
-/***/ }),
-/* 53 */
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var _a, _b;
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Project = void 0;
-const sequelize_typescript_1 = __webpack_require__(13);
-const customer_model_1 = __webpack_require__(27);
-const supplier_model_1 = __webpack_require__(19);
-let Project = class Project extends sequelize_typescript_1.Model {
-    customer;
-    supplier;
-};
-exports.Project = Project;
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
-    __metadata("design:type", String)
-], Project.prototype, "name", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "description", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: true }),
-    __metadata("design:type", Number)
-], Project.prototype, "estimatedCost", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "startDate", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "endDate", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => customer_model_1.Customer),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Number)
-], Project.prototype, "customerId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Object)
-], Project.prototype, "supplierId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Project.prototype, "notes", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
-    __metadata("design:type", Boolean)
-], Project.prototype, "isActive", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => customer_model_1.Customer, 'customerId'),
-    __metadata("design:type", typeof (_a = typeof customer_model_1.Customer !== "undefined" && customer_model_1.Customer) === "function" ? _a : Object)
-], Project.prototype, "customer", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
-    __metadata("design:type", typeof (_b = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _b : Object)
-], Project.prototype, "supplier", void 0);
-exports.Project = Project = __decorate([
-    (0, sequelize_typescript_1.Table)({ tableName: 'projects', timestamps: true, underscored: true })
-], Project);
-
-
-/***/ }),
-/* 54 */
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var _a;
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Service = void 0;
-const sequelize_typescript_1 = __webpack_require__(13);
-const supplier_model_1 = __webpack_require__(19);
-let Service = class Service extends sequelize_typescript_1.Model {
-    supplier;
-};
-exports.Service = Service;
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(200), allowNull: false }),
-    __metadata("design:type", String)
-], Service.prototype, "name", void 0);
-__decorate([
-    (0, sequelize_typescript_1.ForeignKey)(() => supplier_model_1.Supplier),
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
-    __metadata("design:type", Object)
-], Service.prototype, "supplierId", void 0);
-__decorate([
-    (0, sequelize_typescript_1.BelongsTo)(() => supplier_model_1.Supplier, 'supplierId'),
-    __metadata("design:type", typeof (_a = typeof supplier_model_1.Supplier !== "undefined" && supplier_model_1.Supplier) === "function" ? _a : Object)
-], Service.prototype, "supplier", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "description", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(12, 2), allowNull: false, defaultValue: 0 }),
-    __metadata("design:type", Number)
-], Service.prototype, "unitPrice", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(5, 2), allowNull: false, defaultValue: 0 }),
-    __metadata("design:type", Number)
-], Service.prototype, "vatPercent", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "unitOfMeasure", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
-    __metadata("design:type", String)
-], Service.prototype, "notes", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
-    __metadata("design:type", Boolean)
-], Service.prototype, "isActive", void 0);
-exports.Service = Service = __decorate([
-    (0, sequelize_typescript_1.Table)({ tableName: 'services', timestamps: true, underscored: true })
-], Service);
 
 
 /***/ }),
@@ -4105,48 +4139,227 @@ exports.DeliveryOrderItem = DeliveryOrderItem = __decorate([
 
 /***/ }),
 /* 59 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChartOfAccount = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+let ChartOfAccount = class ChartOfAccount extends sequelize_typescript_1.Model {
+};
+exports.ChartOfAccount = ChartOfAccount;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(10), allowNull: false, unique: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "code", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: false }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('asset', 'liability', 'equity', 'revenue', 'expense'), allowNull: false }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "type", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "category", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], ChartOfAccount.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.BOOLEAN, allowNull: false, defaultValue: true }),
+    __metadata("design:type", Boolean)
+], ChartOfAccount.prototype, "isActive", void 0);
+exports.ChartOfAccount = ChartOfAccount = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'chart_of_accounts', timestamps: true, underscored: true })
+], ChartOfAccount);
+
+
+/***/ }),
+/* 60 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalEntry = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const pos_user_model_1 = __webpack_require__(12);
+const journal_line_model_1 = __webpack_require__(61);
+let JournalEntry = class JournalEntry extends sequelize_typescript_1.Model {
+    createdByUser;
+    lines;
+};
+exports.JournalEntry = JournalEntry;
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(60), allowNull: false, unique: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "journalId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DATEONLY, allowNull: false }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "date", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('sale', 'purchase', 'payment', 'expense', 'adjustment', 'manual'), allowNull: false, defaultValue: 'manual' }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "type", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.STRING(100), allowNull: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "reference", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.ENUM('draft', 'posted', 'reversed'), allowNull: false, defaultValue: 'posted' }),
+    __metadata("design:type", String)
+], JournalEntry.prototype, "status", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => pos_user_model_1.PosUser),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: true }),
+    __metadata("design:type", Number)
+], JournalEntry.prototype, "createdBy", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => pos_user_model_1.PosUser, 'createdBy'),
+    __metadata("design:type", typeof (_a = typeof pos_user_model_1.PosUser !== "undefined" && pos_user_model_1.PosUser) === "function" ? _a : Object)
+], JournalEntry.prototype, "createdByUser", void 0);
+__decorate([
+    (0, sequelize_typescript_1.HasMany)(() => journal_line_model_1.JournalLine, 'entryId'),
+    __metadata("design:type", Array)
+], JournalEntry.prototype, "lines", void 0);
+exports.JournalEntry = JournalEntry = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'journal_entries', timestamps: true, underscored: true })
+], JournalEntry);
+
+
+/***/ }),
+/* 61 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var _a, _b;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalLine = void 0;
+const sequelize_typescript_1 = __webpack_require__(13);
+const journal_entry_model_1 = __webpack_require__(60);
+const chart_of_account_model_1 = __webpack_require__(59);
+let JournalLine = class JournalLine extends sequelize_typescript_1.Model {
+    entry;
+    account;
+};
+exports.JournalLine = JournalLine;
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => journal_entry_model_1.JournalEntry),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "entryId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => chart_of_account_model_1.ChartOfAccount),
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.INTEGER, allowNull: false }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "accountId", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(14, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "debit", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.DECIMAL(14, 2), allowNull: false, defaultValue: 0 }),
+    __metadata("design:type", Number)
+], JournalLine.prototype, "credit", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({ type: sequelize_typescript_1.DataType.TEXT, allowNull: true }),
+    __metadata("design:type", String)
+], JournalLine.prototype, "description", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => journal_entry_model_1.JournalEntry, 'entryId'),
+    __metadata("design:type", typeof (_a = typeof journal_entry_model_1.JournalEntry !== "undefined" && journal_entry_model_1.JournalEntry) === "function" ? _a : Object)
+], JournalLine.prototype, "entry", void 0);
+__decorate([
+    (0, sequelize_typescript_1.BelongsTo)(() => chart_of_account_model_1.ChartOfAccount, 'accountId'),
+    __metadata("design:type", typeof (_b = typeof chart_of_account_model_1.ChartOfAccount !== "undefined" && chart_of_account_model_1.ChartOfAccount) === "function" ? _b : Object)
+], JournalLine.prototype, "account", void 0);
+exports.JournalLine = JournalLine = __decorate([
+    (0, sequelize_typescript_1.Table)({ tableName: 'journal_lines', timestamps: false, underscored: true })
+], JournalLine);
+
+
+/***/ }),
+/* 62 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ALL_REPOSITORY = void 0;
-const brand_repository_1 = __webpack_require__(60);
-const pos_user_repository_1 = __webpack_require__(61);
-const category_repository_1 = __webpack_require__(62);
-const unit_repository_1 = __webpack_require__(63);
-const product_repository_1 = __webpack_require__(64);
-const batch_repository_1 = __webpack_require__(65);
-const supplier_repository_1 = __webpack_require__(66);
-const purchase_repository_1 = __webpack_require__(67);
-const purchase_item_repository_1 = __webpack_require__(68);
-const customer_repository_1 = __webpack_require__(69);
-const customer_payment_repository_1 = __webpack_require__(70);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const sale_repository_1 = __webpack_require__(72);
-const sale_item_repository_1 = __webpack_require__(73);
-const sale_return_repository_1 = __webpack_require__(74);
-const stock_adjustment_repository_1 = __webpack_require__(75);
-const expense_repository_1 = __webpack_require__(76);
-const audit_log_repository_1 = __webpack_require__(77);
-const fbr_invoice_log_repository_1 = __webpack_require__(78);
-const sale_payment_repository_1 = __webpack_require__(79);
-const discount_rule_repository_1 = __webpack_require__(80);
-const loyalty_points_log_repository_1 = __webpack_require__(81);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
-const supplier_payment_repository_1 = __webpack_require__(83);
-const purchase_return_repository_1 = __webpack_require__(84);
-const pos_role_repository_1 = __webpack_require__(85);
-const pos_permission_repository_1 = __webpack_require__(86);
-const pos_role_permission_repository_1 = __webpack_require__(87);
-const pos_user_role_repository_1 = __webpack_require__(88);
-const product_variant_repository_1 = __webpack_require__(89);
-const supplier_order_repository_1 = __webpack_require__(90);
-const project_repository_1 = __webpack_require__(91);
-const service_repository_1 = __webpack_require__(92);
-const quotation_repository_1 = __webpack_require__(93);
-const currency_setting_repository_1 = __webpack_require__(94);
-const delivery_order_repository_1 = __webpack_require__(95);
-const company_repository_1 = __webpack_require__(96);
+const brand_repository_1 = __webpack_require__(63);
+const pos_user_repository_1 = __webpack_require__(64);
+const category_repository_1 = __webpack_require__(65);
+const unit_repository_1 = __webpack_require__(66);
+const product_repository_1 = __webpack_require__(67);
+const batch_repository_1 = __webpack_require__(68);
+const supplier_repository_1 = __webpack_require__(69);
+const purchase_repository_1 = __webpack_require__(70);
+const purchase_item_repository_1 = __webpack_require__(71);
+const customer_repository_1 = __webpack_require__(72);
+const customer_payment_repository_1 = __webpack_require__(73);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const sale_repository_1 = __webpack_require__(75);
+const sale_item_repository_1 = __webpack_require__(76);
+const sale_return_repository_1 = __webpack_require__(77);
+const stock_adjustment_repository_1 = __webpack_require__(78);
+const expense_repository_1 = __webpack_require__(79);
+const audit_log_repository_1 = __webpack_require__(80);
+const fbr_invoice_log_repository_1 = __webpack_require__(81);
+const sale_payment_repository_1 = __webpack_require__(82);
+const discount_rule_repository_1 = __webpack_require__(83);
+const loyalty_points_log_repository_1 = __webpack_require__(84);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
+const supplier_payment_repository_1 = __webpack_require__(86);
+const purchase_return_repository_1 = __webpack_require__(87);
+const pos_role_repository_1 = __webpack_require__(88);
+const pos_permission_repository_1 = __webpack_require__(89);
+const pos_role_permission_repository_1 = __webpack_require__(90);
+const pos_user_role_repository_1 = __webpack_require__(91);
+const product_variant_repository_1 = __webpack_require__(92);
+const supplier_order_repository_1 = __webpack_require__(93);
+const project_repository_1 = __webpack_require__(94);
+const service_repository_1 = __webpack_require__(95);
+const quotation_repository_1 = __webpack_require__(96);
+const currency_setting_repository_1 = __webpack_require__(97);
+const delivery_order_repository_1 = __webpack_require__(98);
+const company_repository_1 = __webpack_require__(99);
+const chart_of_account_repository_1 = __webpack_require__(100);
+const journal_entry_repository_1 = __webpack_require__(101);
+const journal_line_repository_1 = __webpack_require__(102);
 exports.ALL_REPOSITORY = [
     brand_repository_1.BrandRepository,
     pos_user_repository_1.PosUserRepository,
@@ -4190,11 +4403,14 @@ exports.ALL_REPOSITORY = [
     delivery_order_repository_1.DeliveryOrderRepository,
     delivery_order_repository_1.DeliveryOrderItemRepository,
     company_repository_1.CompanyRepository,
+    chart_of_account_repository_1.ChartOfAccountRepository,
+    journal_entry_repository_1.JournalEntryRepository,
+    journal_line_repository_1.JournalLineRepository,
 ];
 
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4246,7 +4462,7 @@ exports.BrandRepository = BrandRepository = __decorate([
 
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4307,7 +4523,7 @@ exports.PosUserRepository = PosUserRepository = __decorate([
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4368,7 +4584,7 @@ exports.CategoryRepository = CategoryRepository = __decorate([
 
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4426,7 +4642,7 @@ exports.UnitRepository = UnitRepository = __decorate([
 
 
 /***/ }),
-/* 64 */
+/* 67 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4487,7 +4703,7 @@ exports.ProductRepository = ProductRepository = __decorate([
 
 
 /***/ }),
-/* 65 */
+/* 68 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4548,7 +4764,7 @@ exports.BatchRepository = BatchRepository = __decorate([
 
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4609,7 +4825,7 @@ exports.SupplierRepository = SupplierRepository = __decorate([
 
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4670,7 +4886,7 @@ exports.PurchaseRepository = PurchaseRepository = __decorate([
 
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4715,7 +4931,7 @@ exports.PurchaseItemRepository = PurchaseItemRepository = __decorate([
 
 
 /***/ }),
-/* 69 */
+/* 72 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4776,7 +4992,7 @@ exports.CustomerRepository = CustomerRepository = __decorate([
 
 
 /***/ }),
-/* 70 */
+/* 73 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4796,7 +5012,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CustomerPaymentRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const customer_payment_model_1 = __webpack_require__(35);
+const customer_payment_model_1 = __webpack_require__(37);
 let CustomerPaymentRepository = class CustomerPaymentRepository {
     model;
     constructor(model) {
@@ -4821,7 +5037,7 @@ exports.CustomerPaymentRepository = CustomerPaymentRepository = __decorate([
 
 
 /***/ }),
-/* 71 */
+/* 74 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4841,7 +5057,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UdhaarTransactionRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 let UdhaarTransactionRepository = class UdhaarTransactionRepository {
     model;
     constructor(model) {
@@ -4866,7 +5082,7 @@ exports.UdhaarTransactionRepository = UdhaarTransactionRepository = __decorate([
 
 
 /***/ }),
-/* 72 */
+/* 75 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4920,7 +5136,7 @@ exports.SaleRepository = SaleRepository = __decorate([
 
 
 /***/ }),
-/* 73 */
+/* 76 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4962,7 +5178,7 @@ exports.SaleItemRepository = SaleItemRepository = __decorate([
 
 
 /***/ }),
-/* 74 */
+/* 77 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4982,7 +5198,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SaleReturnRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const sale_return_model_1 = __webpack_require__(32);
+const sale_return_model_1 = __webpack_require__(34);
 let SaleReturnRepository = class SaleReturnRepository {
     saleReturnModel;
     constructor(saleReturnModel) {
@@ -5010,7 +5226,7 @@ exports.SaleReturnRepository = SaleReturnRepository = __decorate([
 
 
 /***/ }),
-/* 75 */
+/* 78 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5030,7 +5246,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StockAdjustmentRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const stock_adjustment_model_1 = __webpack_require__(36);
+const stock_adjustment_model_1 = __webpack_require__(38);
 let StockAdjustmentRepository = class StockAdjustmentRepository {
     stockAdjModel;
     constructor(stockAdjModel) {
@@ -5055,7 +5271,7 @@ exports.StockAdjustmentRepository = StockAdjustmentRepository = __decorate([
 
 
 /***/ }),
-/* 76 */
+/* 79 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5075,7 +5291,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExpenseRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const expense_model_1 = __webpack_require__(37);
+const expense_model_1 = __webpack_require__(39);
 let ExpenseRepository = class ExpenseRepository {
     expenseModel;
     constructor(expenseModel) {
@@ -5116,7 +5332,7 @@ exports.ExpenseRepository = ExpenseRepository = __decorate([
 
 
 /***/ }),
-/* 77 */
+/* 80 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5136,7 +5352,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AuditLogRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const audit_log_model_1 = __webpack_require__(38);
+const audit_log_model_1 = __webpack_require__(40);
 let AuditLogRepository = class AuditLogRepository {
     auditLogModel;
     constructor(auditLogModel) {
@@ -5161,7 +5377,7 @@ exports.AuditLogRepository = AuditLogRepository = __decorate([
 
 
 /***/ }),
-/* 78 */
+/* 81 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5181,7 +5397,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FbrInvoiceLogRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const fbr_invoice_log_model_1 = __webpack_require__(39);
+const fbr_invoice_log_model_1 = __webpack_require__(41);
 let FbrInvoiceLogRepository = class FbrInvoiceLogRepository {
     fbrLogModel;
     constructor(fbrLogModel) {
@@ -5212,7 +5428,7 @@ exports.FbrInvoiceLogRepository = FbrInvoiceLogRepository = __decorate([
 
 
 /***/ }),
-/* 79 */
+/* 82 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5232,7 +5448,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SalePaymentRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const sale_payment_model_1 = __webpack_require__(31);
+const sale_payment_model_1 = __webpack_require__(33);
 let SalePaymentRepository = class SalePaymentRepository {
     model;
     constructor(model) {
@@ -5257,7 +5473,7 @@ exports.SalePaymentRepository = SalePaymentRepository = __decorate([
 
 
 /***/ }),
-/* 80 */
+/* 83 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5314,7 +5530,7 @@ exports.DiscountRuleRepository = DiscountRuleRepository = __decorate([
 
 
 /***/ }),
-/* 81 */
+/* 84 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5334,7 +5550,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LoyaltyPointsLogRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const loyalty_points_log_model_1 = __webpack_require__(34);
+const loyalty_points_log_model_1 = __webpack_require__(36);
 let LoyaltyPointsLogRepository = class LoyaltyPointsLogRepository {
     model;
     constructor(model) {
@@ -5359,7 +5575,7 @@ exports.LoyaltyPointsLogRepository = LoyaltyPointsLogRepository = __decorate([
 
 
 /***/ }),
-/* 82 */
+/* 85 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5379,7 +5595,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SupplierLedgerTransactionRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const supplier_ledger_transaction_model_1 = __webpack_require__(41);
+const supplier_ledger_transaction_model_1 = __webpack_require__(43);
 let SupplierLedgerTransactionRepository = class SupplierLedgerTransactionRepository {
     model;
     constructor(model) {
@@ -5404,7 +5620,7 @@ exports.SupplierLedgerTransactionRepository = SupplierLedgerTransactionRepositor
 
 
 /***/ }),
-/* 83 */
+/* 86 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5452,7 +5668,7 @@ exports.SupplierPaymentRepository = SupplierPaymentRepository = __decorate([
 
 
 /***/ }),
-/* 84 */
+/* 87 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5506,7 +5722,7 @@ exports.PurchaseReturnRepository = PurchaseReturnRepository = __decorate([
 
 
 /***/ }),
-/* 85 */
+/* 88 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5526,7 +5742,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRoleRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_role_model_1 = __webpack_require__(46);
+const pos_role_model_1 = __webpack_require__(48);
 let PosRoleRepository = class PosRoleRepository {
     model;
     constructor(model) {
@@ -5564,7 +5780,7 @@ exports.PosRoleRepository = PosRoleRepository = __decorate([
 
 
 /***/ }),
-/* 86 */
+/* 89 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5584,7 +5800,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_permission_model_1 = __webpack_require__(47);
+const pos_permission_model_1 = __webpack_require__(49);
 let PosPermissionRepository = class PosPermissionRepository {
     model;
     constructor(model) {
@@ -5616,7 +5832,7 @@ exports.PosPermissionRepository = PosPermissionRepository = __decorate([
 
 
 /***/ }),
-/* 87 */
+/* 90 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5636,7 +5852,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermissionRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_role_permission_model_1 = __webpack_require__(48);
+const pos_role_permission_model_1 = __webpack_require__(50);
 let PosRolePermissionRepository = class PosRolePermissionRepository {
     model;
     constructor(model) {
@@ -5668,7 +5884,7 @@ exports.PosRolePermissionRepository = PosRolePermissionRepository = __decorate([
 
 
 /***/ }),
-/* 88 */
+/* 91 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5688,7 +5904,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRoleRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_user_role_model_1 = __webpack_require__(49);
+const pos_user_role_model_1 = __webpack_require__(51);
 let PosUserRoleRepository = class PosUserRoleRepository {
     model;
     constructor(model) {
@@ -5720,7 +5936,7 @@ exports.PosUserRoleRepository = PosUserRoleRepository = __decorate([
 
 
 /***/ }),
-/* 89 */
+/* 92 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5781,7 +5997,7 @@ exports.ProductVariantRepository = ProductVariantRepository = __decorate([
 
 
 /***/ }),
-/* 90 */
+/* 93 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5801,8 +6017,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SupplierOrderItemRepository = exports.SupplierOrderRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const supplier_order_model_1 = __webpack_require__(52);
-const supplier_order_model_2 = __webpack_require__(52);
+const supplier_order_model_1 = __webpack_require__(54);
+const supplier_order_model_2 = __webpack_require__(54);
 let SupplierOrderRepository = class SupplierOrderRepository {
     model;
     constructor(model) {
@@ -5861,7 +6077,7 @@ exports.SupplierOrderItemRepository = SupplierOrderItemRepository = __decorate([
 
 
 /***/ }),
-/* 91 */
+/* 94 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5881,7 +6097,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ProjectRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const project_model_1 = __webpack_require__(53);
+const project_model_1 = __webpack_require__(32);
 let ProjectRepository = class ProjectRepository {
     model;
     constructor(model) {
@@ -5916,7 +6132,7 @@ exports.ProjectRepository = ProjectRepository = __decorate([
 
 
 /***/ }),
-/* 92 */
+/* 95 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5936,7 +6152,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServiceRepository = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const service_model_1 = __webpack_require__(54);
+const service_model_1 = __webpack_require__(31);
 let ServiceRepository = class ServiceRepository {
     model;
     constructor(model) {
@@ -5971,7 +6187,7 @@ exports.ServiceRepository = ServiceRepository = __decorate([
 
 
 /***/ }),
-/* 93 */
+/* 96 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6083,7 +6299,7 @@ exports.QuotationStatusLogRepository = QuotationStatusLogRepository = __decorate
 
 
 /***/ }),
-/* 94 */
+/* 97 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6135,7 +6351,7 @@ exports.CurrencySettingRepository = CurrencySettingRepository = __decorate([
 
 
 /***/ }),
-/* 95 */
+/* 98 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6204,7 +6420,7 @@ exports.DeliveryOrderItemRepository = DeliveryOrderItemRepository = __decorate([
 
 
 /***/ }),
-/* 96 */
+/* 99 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6259,13 +6475,151 @@ exports.CompanyRepository = CompanyRepository = __decorate([
 
 
 /***/ }),
-/* 97 */
+/* 100 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChartOfAccountRepository = void 0;
+const common_1 = __webpack_require__(6);
+const sequelize_1 = __webpack_require__(8);
+const chart_of_account_model_1 = __webpack_require__(59);
+let ChartOfAccountRepository = class ChartOfAccountRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async create(data) { return this.model.create(data); }
+    async findOne(options) { return this.model.findOne(options); }
+    async findAll(options) { return this.model.findAll(options); }
+    async findAndCountAll(options) { return this.model.findAndCountAll(options); }
+    async update(options, data) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('ACCOUNT_NOT_FOUND');
+        return record.update(data);
+    }
+    async delete(options) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('ACCOUNT_NOT_FOUND');
+        await record.destroy();
+        return true;
+    }
+};
+exports.ChartOfAccountRepository = ChartOfAccountRepository;
+exports.ChartOfAccountRepository = ChartOfAccountRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(chart_of_account_model_1.ChartOfAccount)),
+    __metadata("design:paramtypes", [Object])
+], ChartOfAccountRepository);
+
+
+/***/ }),
+/* 101 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalEntryRepository = void 0;
+const common_1 = __webpack_require__(6);
+const sequelize_1 = __webpack_require__(8);
+const journal_entry_model_1 = __webpack_require__(60);
+let JournalEntryRepository = class JournalEntryRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async create(data) { return this.model.create(data); }
+    async findOne(options) { return this.model.findOne(options); }
+    async findAll(options) { return this.model.findAll(options); }
+    async findAndCountAll(options) { return this.model.findAndCountAll(options); }
+    async update(options, data) {
+        const record = await this.findOne(options);
+        if (!record)
+            throw new common_1.NotFoundException('JOURNAL_ENTRY_NOT_FOUND');
+        return record.update(data);
+    }
+};
+exports.JournalEntryRepository = JournalEntryRepository;
+exports.JournalEntryRepository = JournalEntryRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(journal_entry_model_1.JournalEntry)),
+    __metadata("design:paramtypes", [Object])
+], JournalEntryRepository);
+
+
+/***/ }),
+/* 102 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.JournalLineRepository = void 0;
+const common_1 = __webpack_require__(6);
+const sequelize_1 = __webpack_require__(8);
+const journal_line_model_1 = __webpack_require__(61);
+let JournalLineRepository = class JournalLineRepository {
+    model;
+    constructor(model) {
+        this.model = model;
+    }
+    async bulkCreate(data) { return this.model.bulkCreate(data); }
+    async findAll(options) { return this.model.findAll(options); }
+    async destroy(options) { return this.model.destroy(options); }
+};
+exports.JournalLineRepository = JournalLineRepository;
+exports.JournalLineRepository = JournalLineRepository = __decorate([
+    (0, common_1.Injectable)(),
+    __param(0, (0, sequelize_1.InjectModel)(journal_line_model_1.JournalLine)),
+    __metadata("design:paramtypes", [Object])
+], JournalLineRepository);
+
+
+/***/ }),
+/* 103 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/schedule");
 
 /***/ }),
-/* 98 */
+/* 104 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6279,21 +6633,21 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CronModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const cron_user_service_1 = __webpack_require__(99);
+const cron_user_service_1 = __webpack_require__(105);
 const batch_model_1 = __webpack_require__(18);
 const product_model_1 = __webpack_require__(17);
 const customer_model_1 = __webpack_require__(27);
 const sale_model_1 = __webpack_require__(28);
-const expense_model_1 = __webpack_require__(37);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const expense_model_1 = __webpack_require__(39);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 const supplier_model_1 = __webpack_require__(19);
 const purchase_model_1 = __webpack_require__(20);
-const reorder_alert_model_1 = __webpack_require__(51);
-const store_setting_model_1 = __webpack_require__(42);
-const pos_gateway_module_1 = __webpack_require__(106);
-const pos_notifications_module_1 = __webpack_require__(107);
-const pos_inventory_forecast_module_1 = __webpack_require__(111);
+const reorder_alert_model_1 = __webpack_require__(53);
+const store_setting_model_1 = __webpack_require__(44);
+const pos_gateway_module_1 = __webpack_require__(112);
+const pos_notifications_module_1 = __webpack_require__(113);
+const pos_inventory_forecast_module_1 = __webpack_require__(117);
 let CronModule = class CronModule {
 };
 exports.CronModule = CronModule;
@@ -6315,7 +6669,7 @@ exports.CronModule = CronModule = __decorate([
 
 
 /***/ }),
-/* 99 */
+/* 105 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6336,23 +6690,23 @@ var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CronService = void 0;
 const common_1 = __webpack_require__(6);
-const schedule_1 = __webpack_require__(97);
-const sequelize_1 = __webpack_require__(100);
+const schedule_1 = __webpack_require__(103);
+const sequelize_1 = __webpack_require__(106);
 const sequelize_2 = __webpack_require__(8);
 const batch_model_1 = __webpack_require__(18);
 const product_model_1 = __webpack_require__(17);
 const customer_model_1 = __webpack_require__(27);
 const sale_model_1 = __webpack_require__(28);
-const expense_model_1 = __webpack_require__(37);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
-const udhaar_transaction_model_1 = __webpack_require__(33);
+const expense_model_1 = __webpack_require__(39);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
+const udhaar_transaction_model_1 = __webpack_require__(35);
 const supplier_model_1 = __webpack_require__(19);
 const purchase_model_1 = __webpack_require__(20);
-const reorder_alert_model_1 = __webpack_require__(51);
-const store_setting_model_1 = __webpack_require__(42);
-const pos_gateway_1 = __webpack_require__(101);
-const sms_service_1 = __webpack_require__(104);
-const pos_inventory_forecast_service_1 = __webpack_require__(105);
+const reorder_alert_model_1 = __webpack_require__(53);
+const store_setting_model_1 = __webpack_require__(44);
+const pos_gateway_1 = __webpack_require__(107);
+const sms_service_1 = __webpack_require__(110);
+const pos_inventory_forecast_service_1 = __webpack_require__(111);
 let CronService = CronService_1 = class CronService {
     batchModel;
     productModel;
@@ -6680,13 +7034,13 @@ exports.CronService = CronService = CronService_1 = __decorate([
 
 
 /***/ }),
-/* 100 */
+/* 106 */
 /***/ ((module) => {
 
 module.exports = require("sequelize");
 
 /***/ }),
-/* 101 */
+/* 107 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6706,8 +7060,8 @@ var PosGateway_1;
 var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosGateway = void 0;
-const websockets_1 = __webpack_require__(102);
-const socket_io_1 = __webpack_require__(103);
+const websockets_1 = __webpack_require__(108);
+const socket_io_1 = __webpack_require__(109);
 const common_1 = __webpack_require__(6);
 let PosGateway = PosGateway_1 = class PosGateway {
     server;
@@ -6792,19 +7146,19 @@ exports.PosGateway = PosGateway = PosGateway_1 = __decorate([
 
 
 /***/ }),
-/* 102 */
+/* 108 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/websockets");
 
 /***/ }),
-/* 103 */
+/* 109 */
 /***/ ((module) => {
 
 module.exports = require("socket.io");
 
 /***/ }),
-/* 104 */
+/* 110 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6825,7 +7179,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SmsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
 let SmsService = SmsService_1 = class SmsService {
     logModel;
     logger = new common_1.Logger(SmsService_1.name);
@@ -6946,7 +7300,7 @@ exports.SmsService = SmsService = SmsService_1 = __decorate([
 
 
 /***/ }),
-/* 105 */
+/* 111 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -6967,12 +7321,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosInventoryForecastService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const sequelize_2 = __webpack_require__(100);
+const sequelize_2 = __webpack_require__(106);
 const product_model_1 = __webpack_require__(17);
 const batch_model_1 = __webpack_require__(18);
 const sale_item_model_1 = __webpack_require__(29);
 const sale_model_1 = __webpack_require__(28);
-const reorder_alert_model_1 = __webpack_require__(51);
+const reorder_alert_model_1 = __webpack_require__(53);
 let PosInventoryForecastService = PosInventoryForecastService_1 = class PosInventoryForecastService {
     productModel;
     batchModel;
@@ -7147,7 +7501,7 @@ exports.PosInventoryForecastService = PosInventoryForecastService = PosInventory
 
 
 /***/ }),
-/* 106 */
+/* 112 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7160,7 +7514,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosGatewayModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosGatewayModule = class PosGatewayModule {
 };
 exports.PosGatewayModule = PosGatewayModule;
@@ -7174,7 +7528,7 @@ exports.PosGatewayModule = PosGatewayModule = __decorate([
 
 
 /***/ }),
-/* 107 */
+/* 113 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7188,11 +7542,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosNotificationsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_notification_model_1 = __webpack_require__(50);
-const sms_whatsapp_log_model_1 = __webpack_require__(44);
-const pos_notifications_controller_1 = __webpack_require__(108);
-const pos_notifications_service_1 = __webpack_require__(109);
-const sms_service_1 = __webpack_require__(104);
+const pos_notification_model_1 = __webpack_require__(52);
+const sms_whatsapp_log_model_1 = __webpack_require__(46);
+const pos_notifications_controller_1 = __webpack_require__(114);
+const pos_notifications_service_1 = __webpack_require__(115);
+const sms_service_1 = __webpack_require__(110);
 let PosNotificationsModule = class PosNotificationsModule {
 };
 exports.PosNotificationsModule = PosNotificationsModule;
@@ -7207,7 +7561,7 @@ exports.PosNotificationsModule = PosNotificationsModule = __decorate([
 
 
 /***/ }),
-/* 108 */
+/* 114 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7228,8 +7582,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosNotificationsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_notifications_service_1 = __webpack_require__(109);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_notifications_service_1 = __webpack_require__(115);
+const pos_patterns_1 = __webpack_require__(116);
 let PosNotificationsController = class PosNotificationsController {
     service;
     constructor(service) {
@@ -7289,7 +7643,7 @@ exports.PosNotificationsController = PosNotificationsController = __decorate([
 
 
 /***/ }),
-/* 109 */
+/* 115 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7309,7 +7663,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosNotificationsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_notification_model_1 = __webpack_require__(50);
+const pos_notification_model_1 = __webpack_require__(52);
 let PosNotificationsService = class PosNotificationsService {
     model;
     constructor(model) {
@@ -7365,7 +7719,7 @@ exports.PosNotificationsService = PosNotificationsService = __decorate([
 
 
 /***/ }),
-/* 110 */
+/* 116 */
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -7491,6 +7845,8 @@ exports.POS_PATTERNS = {
         STOCK_STATUS: { cmd: 'report_stock_status' },
         EXPIRY_REPORT: { cmd: 'report_expiry' },
         PRODUCT_WISE_SALES: { cmd: 'report_product_wise_sales' },
+        SERVICE_WISE_SALES: { cmd: 'report_service_wise_sales' },
+        PROJECT_WISE_SALES: { cmd: 'report_project_wise_sales' },
         CUSTOMER_LEDGER: { cmd: 'report_customer_ledger' },
         SUPPLIER_LEDGER: { cmd: 'report_supplier_ledger' },
         EXPORT_SALES_EXCEL: { cmd: 'report_export_sales_excel' },
@@ -7624,11 +7980,23 @@ exports.POS_PATTERNS = {
         DELETE: { cmd: 'currency_delete' },
         SET_DEFAULT: { cmd: 'currency_set_default' },
     },
+    LEDGER: {
+        CHART_GET_ALL: { cmd: 'ledger_chart_get_all' },
+        CHART_CREATE: { cmd: 'ledger_chart_create' },
+        CHART_UPDATE: { cmd: 'ledger_chart_update' },
+        CHART_DELETE: { cmd: 'ledger_chart_delete' },
+        JOURNAL_GET_ALL: { cmd: 'ledger_journal_get_all' },
+        JOURNAL_GET_ONE: { cmd: 'ledger_journal_get_one' },
+        JOURNAL_CREATE: { cmd: 'ledger_journal_create' },
+        JOURNAL_SYNC: { cmd: 'ledger_journal_sync' },
+        TRIAL_BALANCE: { cmd: 'ledger_trial_balance' },
+        ACCOUNT_SUMMARY: { cmd: 'ledger_account_summary' },
+    },
 };
 
 
 /***/ }),
-/* 111 */
+/* 117 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7645,9 +8013,9 @@ const sequelize_1 = __webpack_require__(8);
 const product_model_1 = __webpack_require__(17);
 const batch_model_1 = __webpack_require__(18);
 const sale_model_1 = __webpack_require__(28);
-const reorder_alert_model_1 = __webpack_require__(51);
-const pos_inventory_forecast_service_1 = __webpack_require__(105);
-const pos_inventory_forecast_controller_1 = __webpack_require__(112);
+const reorder_alert_model_1 = __webpack_require__(53);
+const pos_inventory_forecast_service_1 = __webpack_require__(111);
+const pos_inventory_forecast_controller_1 = __webpack_require__(118);
 let PosInventoryForecastModule = class PosInventoryForecastModule {
 };
 exports.PosInventoryForecastModule = PosInventoryForecastModule;
@@ -7662,7 +8030,7 @@ exports.PosInventoryForecastModule = PosInventoryForecastModule = __decorate([
 
 
 /***/ }),
-/* 112 */
+/* 118 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7683,8 +8051,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosInventoryForecastController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_inventory_forecast_service_1 = __webpack_require__(105);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_inventory_forecast_service_1 = __webpack_require__(111);
+const pos_patterns_1 = __webpack_require__(116);
 let PosInventoryForecastController = class PosInventoryForecastController {
     service;
     constructor(service) {
@@ -7772,7 +8140,7 @@ exports.PosInventoryForecastController = PosInventoryForecastController = __deco
 
 
 /***/ }),
-/* 113 */
+/* 119 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7786,8 +8154,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosBrandsModule = void 0;
 const common_1 = __webpack_require__(6);
 const database_module_1 = __webpack_require__(7);
-const pos_brands_controller_1 = __webpack_require__(114);
-const pos_brands_service_1 = __webpack_require__(115);
+const pos_brands_controller_1 = __webpack_require__(120);
+const pos_brands_service_1 = __webpack_require__(121);
 let PosBrandsModule = class PosBrandsModule {
 };
 exports.PosBrandsModule = PosBrandsModule;
@@ -7802,7 +8170,7 @@ exports.PosBrandsModule = PosBrandsModule = __decorate([
 
 
 /***/ }),
-/* 114 */
+/* 120 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7823,8 +8191,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosBrandsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_brands_service_1 = __webpack_require__(115);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_brands_service_1 = __webpack_require__(121);
+const pos_patterns_1 = __webpack_require__(116);
 let PosBrandsController = class PosBrandsController {
     service;
     constructor(service) {
@@ -7899,7 +8267,7 @@ exports.PosBrandsController = PosBrandsController = __decorate([
 
 
 /***/ }),
-/* 115 */
+/* 121 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7916,7 +8284,7 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosBrandsService = void 0;
 const common_1 = __webpack_require__(6);
-const brand_repository_1 = __webpack_require__(60);
+const brand_repository_1 = __webpack_require__(63);
 let PosBrandsService = class PosBrandsService {
     brandRepository;
     constructor(brandRepository) {
@@ -7969,7 +8337,7 @@ exports.PosBrandsService = PosBrandsService = __decorate([
 
 
 /***/ }),
-/* 116 */
+/* 122 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -7982,9 +8350,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUsersModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_users_controller_1 = __webpack_require__(117);
-const pos_users_service_1 = __webpack_require__(118);
-const jwt_1 = __webpack_require__(119);
+const pos_users_controller_1 = __webpack_require__(123);
+const pos_users_service_1 = __webpack_require__(124);
+const jwt_1 = __webpack_require__(125);
 const database_module_1 = __webpack_require__(7);
 let PosUsersModule = class PosUsersModule {
 };
@@ -7999,7 +8367,7 @@ exports.PosUsersModule = PosUsersModule = __decorate([
 
 
 /***/ }),
-/* 117 */
+/* 123 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8020,8 +8388,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUsersController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_users_service_1 = __webpack_require__(118);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_users_service_1 = __webpack_require__(124);
+const pos_patterns_1 = __webpack_require__(116);
 let PosUsersController = class PosUsersController {
     posUsersService;
     constructor(posUsersService) {
@@ -8141,7 +8509,7 @@ exports.PosUsersController = PosUsersController = __decorate([
 
 
 /***/ }),
-/* 118 */
+/* 124 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8191,11 +8559,11 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUsersService = void 0;
 const common_1 = __webpack_require__(6);
-const jwt_1 = __webpack_require__(119);
-const bcrypt = __importStar(__webpack_require__(120));
+const jwt_1 = __webpack_require__(125);
+const bcrypt = __importStar(__webpack_require__(126));
 const dotenv = __importStar(__webpack_require__(2));
 const path_1 = __webpack_require__(3);
-const pos_user_repository_1 = __webpack_require__(61);
+const pos_user_repository_1 = __webpack_require__(64);
 dotenv.config({ path: (0, path_1.join)(process.cwd(), `.env.${process.env.NODE_ENV}`) });
 let PosUsersService = class PosUsersService {
     posUserRepository;
@@ -8326,19 +8694,19 @@ exports.PosUsersService = PosUsersService = __decorate([
 
 
 /***/ }),
-/* 119 */
+/* 125 */
 /***/ ((module) => {
 
 module.exports = require("@nestjs/jwt");
 
 /***/ }),
-/* 120 */
+/* 126 */
 /***/ ((module) => {
 
 module.exports = require("bcrypt");
 
 /***/ }),
-/* 121 */
+/* 127 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8352,8 +8720,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCategoriesModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_categories_controller_1 = __webpack_require__(122);
-const pos_categories_service_1 = __webpack_require__(123);
+const pos_categories_controller_1 = __webpack_require__(128);
+const pos_categories_service_1 = __webpack_require__(129);
 const database_module_1 = __webpack_require__(7);
 const product_model_1 = __webpack_require__(17);
 let PosCategoriesModule = class PosCategoriesModule {
@@ -8369,7 +8737,7 @@ exports.PosCategoriesModule = PosCategoriesModule = __decorate([
 
 
 /***/ }),
-/* 122 */
+/* 128 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8390,8 +8758,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCategoriesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_categories_service_1 = __webpack_require__(123);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_categories_service_1 = __webpack_require__(129);
+const pos_patterns_1 = __webpack_require__(116);
 let PosCategoriesController = class PosCategoriesController {
     service;
     constructor(service) {
@@ -8495,7 +8863,7 @@ exports.PosCategoriesController = PosCategoriesController = __decorate([
 
 
 /***/ }),
-/* 123 */
+/* 129 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8517,9 +8885,9 @@ exports.PosCategoriesService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
 const sequelize_1 = __webpack_require__(8);
-const category_repository_1 = __webpack_require__(62);
+const category_repository_1 = __webpack_require__(65);
 const product_model_1 = __webpack_require__(17);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosCategoriesService = class PosCategoriesService {
     categoryRepository;
     posGateway;
@@ -8634,7 +9002,7 @@ exports.PosCategoriesService = PosCategoriesService = __decorate([
 
 
 /***/ }),
-/* 124 */
+/* 130 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8647,8 +9015,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUnitsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_units_controller_1 = __webpack_require__(125);
-const pos_units_service_1 = __webpack_require__(126);
+const pos_units_controller_1 = __webpack_require__(131);
+const pos_units_service_1 = __webpack_require__(132);
 const database_module_1 = __webpack_require__(7);
 let PosUnitsModule = class PosUnitsModule {
 };
@@ -8663,7 +9031,7 @@ exports.PosUnitsModule = PosUnitsModule = __decorate([
 
 
 /***/ }),
-/* 125 */
+/* 131 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8684,8 +9052,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUnitsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_units_service_1 = __webpack_require__(126);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_units_service_1 = __webpack_require__(132);
+const pos_patterns_1 = __webpack_require__(116);
 let PosUnitsController = class PosUnitsController {
     service;
     constructor(service) {
@@ -8759,7 +9127,7 @@ exports.PosUnitsController = PosUnitsController = __decorate([
 
 
 /***/ }),
-/* 126 */
+/* 132 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8776,8 +9144,8 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUnitsService = void 0;
 const common_1 = __webpack_require__(6);
-const unit_repository_1 = __webpack_require__(63);
-const pos_gateway_1 = __webpack_require__(101);
+const unit_repository_1 = __webpack_require__(66);
+const pos_gateway_1 = __webpack_require__(107);
 let PosUnitsService = class PosUnitsService {
     unitRepository;
     posGateway;
@@ -8833,7 +9201,7 @@ exports.PosUnitsService = PosUnitsService = __decorate([
 
 
 /***/ }),
-/* 127 */
+/* 133 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8847,11 +9215,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_products_controller_1 = __webpack_require__(128);
-const pos_products_service_1 = __webpack_require__(129);
+const pos_products_controller_1 = __webpack_require__(134);
+const pos_products_service_1 = __webpack_require__(135);
 const database_module_1 = __webpack_require__(7);
 const product_price_model_1 = __webpack_require__(23);
 const product_image_model_1 = __webpack_require__(24);
+const audit_log_repository_1 = __webpack_require__(80);
 let PosProductsModule = class PosProductsModule {
 };
 exports.PosProductsModule = PosProductsModule;
@@ -8859,13 +9228,13 @@ exports.PosProductsModule = PosProductsModule = __decorate([
     (0, common_1.Module)({
         imports: [database_module_1.DatabaseModule, sequelize_1.SequelizeModule.forFeature([product_price_model_1.ProductPrice, product_image_model_1.ProductImage])],
         controllers: [pos_products_controller_1.PosProductsController],
-        providers: [pos_products_service_1.PosProductsService],
+        providers: [pos_products_service_1.PosProductsService, audit_log_repository_1.AuditLogRepository],
     })
 ], PosProductsModule);
 
 
 /***/ }),
-/* 128 */
+/* 134 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -8886,8 +9255,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_products_service_1 = __webpack_require__(129);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_products_service_1 = __webpack_require__(135);
+const pos_patterns_1 = __webpack_require__(116);
 let PosProductsController = class PosProductsController {
     service;
     constructor(service) {
@@ -9126,7 +9495,7 @@ exports.PosProductsController = PosProductsController = __decorate([
 
 
 /***/ }),
-/* 129 */
+/* 135 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9142,14 +9511,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b, _c;
+var _a, _b, _c, _d;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductsService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
+const sequelize_1 = __webpack_require__(106);
 const sequelize_2 = __webpack_require__(8);
-const product_repository_1 = __webpack_require__(64);
-const batch_repository_1 = __webpack_require__(65);
+const product_repository_1 = __webpack_require__(67);
+const batch_repository_1 = __webpack_require__(68);
+const audit_log_repository_1 = __webpack_require__(80);
 const product_model_1 = __webpack_require__(17);
 const batch_model_1 = __webpack_require__(18);
 const category_model_1 = __webpack_require__(14);
@@ -9159,16 +9529,18 @@ const product_variant_model_1 = __webpack_require__(22);
 const product_price_model_1 = __webpack_require__(23);
 const product_image_model_1 = __webpack_require__(24);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosProductsService = class PosProductsService {
     productRepository;
     batchRepository;
+    auditLogRepository;
     posGateway;
     productPriceModel;
     productImageModel;
-    constructor(productRepository, batchRepository, posGateway, productPriceModel, productImageModel) {
+    constructor(productRepository, batchRepository, auditLogRepository, posGateway, productPriceModel, productImageModel) {
         this.productRepository = productRepository;
         this.batchRepository = batchRepository;
+        this.auditLogRepository = auditLogRepository;
         this.posGateway = posGateway;
         this.productPriceModel = productPriceModel;
         this.productImageModel = productImageModel;
@@ -9400,6 +9772,33 @@ let PosProductsService = class PosProductsService {
                     changedBy: data.changedBy || null,
                 });
             }
+            const unitChanged = data.unitId !== undefined && Number(data.unitId) !== Number(existing.unitId);
+            if (unitChanged) {
+                await this.auditLogRepository.create({
+                    userId: data.changedBy || null,
+                    module: 'product',
+                    action: 'unit_change',
+                    oldValue: { productId: id, unitId: existing.unitId },
+                    newValue: { productId: id, unitId: data.unitId },
+                });
+            }
+            const oldJson = existing.toJSON();
+            const changedFields = {};
+            const trackFields = ['name', 'barcode', 'categoryId', 'brandId', 'lowStockThreshold', 'isActive'];
+            for (const field of trackFields) {
+                if (data[field] !== undefined && String(data[field]) !== String(oldJson[field])) {
+                    changedFields[field] = { old: oldJson[field], new: data[field] };
+                }
+            }
+            if (Object.keys(changedFields).length > 0) {
+                await this.auditLogRepository.create({
+                    userId: data.changedBy || null,
+                    module: 'product',
+                    action: 'update',
+                    oldValue: changedFields,
+                    newValue: { productId: id, ...changedFields },
+                });
+            }
             const updated = await this.productRepository.update({ where: { id } }, data);
             this.posGateway.broadcast('product_updated', updated.toJSON());
             return updated.toJSON();
@@ -9426,6 +9825,9 @@ let PosProductsService = class PosProductsService {
             const record = await this.productPriceModel.findByPk(priceId);
             if (!record)
                 throw new common_1.BadRequestException('PRICE_HISTORY_NOT_FOUND');
+            const count = await this.productPriceModel.count({ where: { productId: record.productId } });
+            if (count <= 1)
+                throw new common_1.BadRequestException('CANNOT_DELETE_ONLY_PRICE_RECORD');
             await record.destroy();
             return true;
         }
@@ -9482,14 +9884,14 @@ let PosProductsService = class PosProductsService {
     }
     async parseImportFile(buffer, fileType) {
         if (fileType === 'xlsx') {
-            const XLSX = await Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 210, 23));
+            const XLSX = await Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 219, 23));
             const workbook = XLSX.read(buffer, { type: 'buffer' });
             const sheet = workbook.Sheets[workbook.SheetNames[0]];
             const rawRows = XLSX.utils.sheet_to_json(sheet);
             return rawRows.map(r => this.normalizeImportRow(r));
         }
         else {
-            const { parse } = await Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 211, 23));
+            const { parse } = await Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 220, 23));
             const rawRows = parse(buffer, { columns: true, skip_empty_lines: true, trim: true });
             return rawRows.map(r => this.normalizeImportRow(r));
         }
@@ -9546,14 +9948,14 @@ let PosProductsService = class PosProductsService {
 exports.PosProductsService = PosProductsService;
 exports.PosProductsService = PosProductsService = __decorate([
     (0, common_1.Injectable)(),
-    __param(3, (0, sequelize_2.InjectModel)(product_price_model_1.ProductPrice)),
-    __param(4, (0, sequelize_2.InjectModel)(product_image_model_1.ProductImage)),
-    __metadata("design:paramtypes", [typeof (_a = typeof product_repository_1.ProductRepository !== "undefined" && product_repository_1.ProductRepository) === "function" ? _a : Object, typeof (_b = typeof batch_repository_1.BatchRepository !== "undefined" && batch_repository_1.BatchRepository) === "function" ? _b : Object, typeof (_c = typeof pos_gateway_1.PosGateway !== "undefined" && pos_gateway_1.PosGateway) === "function" ? _c : Object, Object, Object])
+    __param(4, (0, sequelize_2.InjectModel)(product_price_model_1.ProductPrice)),
+    __param(5, (0, sequelize_2.InjectModel)(product_image_model_1.ProductImage)),
+    __metadata("design:paramtypes", [typeof (_a = typeof product_repository_1.ProductRepository !== "undefined" && product_repository_1.ProductRepository) === "function" ? _a : Object, typeof (_b = typeof batch_repository_1.BatchRepository !== "undefined" && batch_repository_1.BatchRepository) === "function" ? _b : Object, typeof (_c = typeof audit_log_repository_1.AuditLogRepository !== "undefined" && audit_log_repository_1.AuditLogRepository) === "function" ? _c : Object, typeof (_d = typeof pos_gateway_1.PosGateway !== "undefined" && pos_gateway_1.PosGateway) === "function" ? _d : Object, Object, Object])
 ], PosProductsService);
 
 
 /***/ }),
-/* 130 */
+/* 136 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9566,8 +9968,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSuppliersModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_suppliers_controller_1 = __webpack_require__(131);
-const pos_suppliers_service_1 = __webpack_require__(132);
+const pos_suppliers_controller_1 = __webpack_require__(137);
+const pos_suppliers_service_1 = __webpack_require__(138);
 const database_module_1 = __webpack_require__(7);
 let PosSuppliersModule = class PosSuppliersModule {
 };
@@ -9582,7 +9984,7 @@ exports.PosSuppliersModule = PosSuppliersModule = __decorate([
 
 
 /***/ }),
-/* 131 */
+/* 137 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9603,8 +10005,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSuppliersController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_suppliers_service_1 = __webpack_require__(132);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_suppliers_service_1 = __webpack_require__(138);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSuppliersController = class PosSuppliersController {
     service;
     constructor(service) {
@@ -9694,7 +10096,7 @@ exports.PosSuppliersController = PosSuppliersController = __decorate([
 
 
 /***/ }),
-/* 132 */
+/* 138 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9711,9 +10113,9 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSuppliersService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const supplier_repository_1 = __webpack_require__(66);
-const pos_gateway_1 = __webpack_require__(101);
+const sequelize_1 = __webpack_require__(106);
+const supplier_repository_1 = __webpack_require__(69);
+const pos_gateway_1 = __webpack_require__(107);
 const VALID_DISCOUNT_TYPES = ['percentage', 'fixed'];
 function resolveDiscount(discountType, discountValue) {
     const type = VALID_DISCOUNT_TYPES.includes(discountType) ? discountType : 'percentage';
@@ -9838,7 +10240,7 @@ exports.PosSuppliersService = PosSuppliersService = __decorate([
 
 
 /***/ }),
-/* 133 */
+/* 139 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9852,8 +10254,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchasesModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_purchases_controller_1 = __webpack_require__(134);
-const pos_purchases_service_1 = __webpack_require__(135);
+const pos_purchases_controller_1 = __webpack_require__(140);
+const pos_purchases_service_1 = __webpack_require__(141);
 const database_module_1 = __webpack_require__(7);
 const product_variant_model_1 = __webpack_require__(22);
 const product_model_1 = __webpack_require__(17);
@@ -9871,7 +10273,7 @@ exports.PosPurchasesModule = PosPurchasesModule = __decorate([
 
 
 /***/ }),
-/* 134 */
+/* 140 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -9892,8 +10294,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchasesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_purchases_service_1 = __webpack_require__(135);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_purchases_service_1 = __webpack_require__(141);
+const pos_patterns_1 = __webpack_require__(116);
 let PosPurchasesController = class PosPurchasesController {
     service;
     constructor(service) {
@@ -9983,7 +10385,7 @@ exports.PosPurchasesController = PosPurchasesController = __decorate([
 
 
 /***/ }),
-/* 135 */
+/* 141 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10005,11 +10407,11 @@ exports.PosPurchasesService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
 const sequelize_1 = __webpack_require__(8);
-const purchase_repository_1 = __webpack_require__(67);
-const purchase_item_repository_1 = __webpack_require__(68);
-const batch_repository_1 = __webpack_require__(65);
-const supplier_repository_1 = __webpack_require__(66);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
+const purchase_repository_1 = __webpack_require__(70);
+const purchase_item_repository_1 = __webpack_require__(71);
+const batch_repository_1 = __webpack_require__(68);
+const supplier_repository_1 = __webpack_require__(69);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
 const purchase_item_model_1 = __webpack_require__(21);
 const batch_model_1 = __webpack_require__(18);
 const supplier_model_1 = __webpack_require__(19);
@@ -10017,7 +10419,7 @@ const product_model_1 = __webpack_require__(17);
 const brand_model_1 = __webpack_require__(16);
 const product_variant_model_1 = __webpack_require__(22);
 const product_price_model_1 = __webpack_require__(23);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosPurchasesService = class PosPurchasesService {
     purchaseRepository;
     purchaseItemRepository;
@@ -10375,7 +10777,7 @@ exports.PosPurchasesService = PosPurchasesService = __decorate([
 
 
 /***/ }),
-/* 136 */
+/* 142 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10388,8 +10790,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCustomersModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_customers_controller_1 = __webpack_require__(137);
-const pos_customers_service_1 = __webpack_require__(138);
+const pos_customers_controller_1 = __webpack_require__(143);
+const pos_customers_service_1 = __webpack_require__(144);
 const database_module_1 = __webpack_require__(7);
 let PosCustomersModule = class PosCustomersModule {
 };
@@ -10404,7 +10806,7 @@ exports.PosCustomersModule = PosCustomersModule = __decorate([
 
 
 /***/ }),
-/* 137 */
+/* 143 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10425,8 +10827,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCustomersController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_customers_service_1 = __webpack_require__(138);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_customers_service_1 = __webpack_require__(144);
+const pos_patterns_1 = __webpack_require__(116);
 let PosCustomersController = class PosCustomersController {
     service;
     constructor(service) {
@@ -10561,7 +10963,7 @@ exports.PosCustomersController = PosCustomersController = __decorate([
 
 
 /***/ }),
-/* 138 */
+/* 144 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10578,11 +10980,11 @@ var _a, _b, _c, _d;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCustomersService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const customer_repository_1 = __webpack_require__(69);
-const customer_payment_repository_1 = __webpack_require__(70);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const pos_gateway_1 = __webpack_require__(101);
+const sequelize_1 = __webpack_require__(106);
+const customer_repository_1 = __webpack_require__(72);
+const customer_payment_repository_1 = __webpack_require__(73);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const pos_gateway_1 = __webpack_require__(107);
 let PosCustomersService = class PosCustomersService {
     customerRepository;
     customerPaymentRepository;
@@ -10749,7 +11151,7 @@ exports.PosCustomersService = PosCustomersService = __decorate([
 
 
 /***/ }),
-/* 139 */
+/* 145 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10763,16 +11165,16 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSalesModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_sales_controller_1 = __webpack_require__(140);
-const pos_sales_service_1 = __webpack_require__(141);
+const pos_sales_controller_1 = __webpack_require__(146);
+const pos_sales_service_1 = __webpack_require__(147);
 const database_module_1 = __webpack_require__(7);
-const pos_gateway_module_1 = __webpack_require__(106);
+const pos_gateway_module_1 = __webpack_require__(112);
 const discount_rule_model_1 = __webpack_require__(30);
 const sale_model_1 = __webpack_require__(28);
 const sale_item_model_1 = __webpack_require__(29);
-const store_setting_model_1 = __webpack_require__(42);
+const store_setting_model_1 = __webpack_require__(44);
 const product_variant_model_1 = __webpack_require__(22);
-const pos_settings_module_1 = __webpack_require__(144);
+const pos_settings_module_1 = __webpack_require__(150);
 let PosSalesModule = class PosSalesModule {
 };
 exports.PosSalesModule = PosSalesModule;
@@ -10791,7 +11193,7 @@ exports.PosSalesModule = PosSalesModule = __decorate([
 
 
 /***/ }),
-/* 140 */
+/* 146 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -10812,8 +11214,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSalesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_sales_service_1 = __webpack_require__(141);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_sales_service_1 = __webpack_require__(147);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSalesController = class PosSalesController {
     service;
     constructor(service) {
@@ -10947,7 +11349,7 @@ exports.PosSalesController = PosSalesController = __decorate([
 
 
 /***/ }),
-/* 141 */
+/* 147 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11000,28 +11402,28 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSalesService = void 0;
 const common_1 = __webpack_require__(6);
-const QRCode = __importStar(__webpack_require__(142));
+const QRCode = __importStar(__webpack_require__(148));
 const sequelize_typescript_1 = __webpack_require__(13);
 const sequelize_1 = __webpack_require__(8);
-const sale_repository_1 = __webpack_require__(72);
-const sale_item_repository_1 = __webpack_require__(73);
-const sale_payment_repository_1 = __webpack_require__(79);
-const batch_repository_1 = __webpack_require__(65);
-const customer_repository_1 = __webpack_require__(69);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const fbr_invoice_log_repository_1 = __webpack_require__(78);
-const audit_log_repository_1 = __webpack_require__(77);
-const loyalty_points_log_repository_1 = __webpack_require__(81);
+const sale_repository_1 = __webpack_require__(75);
+const sale_item_repository_1 = __webpack_require__(76);
+const sale_payment_repository_1 = __webpack_require__(82);
+const batch_repository_1 = __webpack_require__(68);
+const customer_repository_1 = __webpack_require__(72);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const fbr_invoice_log_repository_1 = __webpack_require__(81);
+const audit_log_repository_1 = __webpack_require__(80);
+const loyalty_points_log_repository_1 = __webpack_require__(84);
 const sale_item_model_1 = __webpack_require__(29);
 const sale_model_1 = __webpack_require__(28);
-const sale_payment_model_1 = __webpack_require__(31);
+const sale_payment_model_1 = __webpack_require__(33);
 const customer_model_1 = __webpack_require__(27);
 const product_model_1 = __webpack_require__(17);
 const product_variant_model_1 = __webpack_require__(22);
-const store_setting_model_1 = __webpack_require__(42);
+const store_setting_model_1 = __webpack_require__(44);
 const discount_rule_model_1 = __webpack_require__(30);
-const pos_gateway_1 = __webpack_require__(101);
-const pos_tax_settings_service_1 = __webpack_require__(143);
+const pos_gateway_1 = __webpack_require__(107);
+const pos_tax_settings_service_1 = __webpack_require__(149);
 let PosSalesService = class PosSalesService {
     saleRepository;
     saleItemRepository;
@@ -11100,26 +11502,30 @@ let PosSalesService = class PosSalesService {
                 const qty = Number(item.qty);
                 const unitPrice = Number(item.unitPrice);
                 const itemSubtotal = qty * unitPrice;
-                const autoDiscount = resolveItemDiscount(item.productId, item.categoryId, itemSubtotal, qty);
+                const isService = item.itemType === 'service';
+                const autoDiscount = isService ? 0 : resolveItemDiscount(item.productId, item.categoryId, itemSubtotal, qty);
                 const itemDiscount = item.discount !== undefined ? Number(item.discount) : autoDiscount;
                 const taxRate = item.taxRate !== undefined
                     ? Number(item.taxRate)
-                    : (taxRateMap.get(item.productId) ?? 0);
+                    : (isService ? 0 : (taxRateMap.get(item.productId) ?? 0));
                 const taxAmount = ((itemSubtotal - itemDiscount) * taxRate) / 100;
                 const itemTotal = itemSubtotal - itemDiscount + taxAmount;
                 subtotal += itemSubtotal;
                 totalItemDiscount += itemDiscount;
                 totalTax += taxAmount;
-                const batchId = item.batchId && item.batchId > 0 ? item.batchId : null;
+                const batchId = (!isService && item.batchId && item.batchId > 0) ? item.batchId : null;
                 const costBatch = batchId ? batchMap.get(batchId) : null;
-                const costPrice = costBatch ? Number(costBatch.purchasePrice) : null;
+                const costPrice = isService ? null : (costBatch ? Number(costBatch.purchasePrice) : null);
                 const costAmount = costPrice !== null ? costPrice * qty : null;
-                const profitAmount = costAmount !== null ? itemTotal - costAmount : null;
+                const profitAmount = costAmount !== null ? itemTotal - costAmount : (isService ? itemTotal : null);
                 const profitMarginPercent = profitAmount !== null && itemTotal > 0
                     ? Number(((profitAmount / itemTotal) * 100).toFixed(2))
                     : null;
                 itemsToCreate.push({
-                    productId: item.productId,
+                    itemType: isService ? 'service' : 'product',
+                    productId: isService ? null : item.productId,
+                    serviceId: isService ? item.serviceId : null,
+                    projectId: item.projectId ?? null,
                     variantId: item.variantId,
                     batchId: batchId ?? undefined,
                     qty,
@@ -11210,6 +11616,8 @@ let PosSalesService = class PosSalesService {
                 });
             }
             for (const item of input.items) {
+                if (item.itemType === 'service')
+                    continue;
                 let resolvedBatchId = item.batchId && item.batchId > 0 ? item.batchId : null;
                 if (!resolvedBatchId) {
                     const activeBatch = await this.batchRepository.findOne({
@@ -11552,13 +11960,13 @@ exports.PosSalesService = PosSalesService = __decorate([
 
 
 /***/ }),
-/* 142 */
+/* 148 */
 /***/ ((module) => {
 
 module.exports = require("qrcode");
 
 /***/ }),
-/* 143 */
+/* 149 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11578,7 +11986,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosTaxSettingsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const tax_setting_model_1 = __webpack_require__(40);
+const tax_setting_model_1 = __webpack_require__(42);
 const category_model_1 = __webpack_require__(14);
 const product_model_1 = __webpack_require__(17);
 let PosTaxSettingsService = class PosTaxSettingsService {
@@ -11697,7 +12105,7 @@ exports.PosTaxSettingsService = PosTaxSettingsService = __decorate([
 
 
 /***/ }),
-/* 144 */
+/* 150 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11711,14 +12119,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSettingsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const store_setting_model_1 = __webpack_require__(42);
-const tax_setting_model_1 = __webpack_require__(40);
+const store_setting_model_1 = __webpack_require__(44);
+const tax_setting_model_1 = __webpack_require__(42);
 const category_model_1 = __webpack_require__(14);
 const product_model_1 = __webpack_require__(17);
-const pos_settings_controller_1 = __webpack_require__(145);
-const pos_settings_service_1 = __webpack_require__(146);
-const pos_tax_settings_service_1 = __webpack_require__(143);
-const pos_currency_service_1 = __webpack_require__(147);
+const pos_settings_controller_1 = __webpack_require__(151);
+const pos_settings_service_1 = __webpack_require__(152);
+const pos_tax_settings_service_1 = __webpack_require__(149);
+const pos_currency_service_1 = __webpack_require__(153);
 const currency_setting_model_1 = __webpack_require__(57);
 let PosSettingsModule = class PosSettingsModule {
 };
@@ -11734,7 +12142,7 @@ exports.PosSettingsModule = PosSettingsModule = __decorate([
 
 
 /***/ }),
-/* 145 */
+/* 151 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11755,10 +12163,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSettingsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_settings_service_1 = __webpack_require__(146);
-const pos_tax_settings_service_1 = __webpack_require__(143);
-const pos_currency_service_1 = __webpack_require__(147);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_settings_service_1 = __webpack_require__(152);
+const pos_tax_settings_service_1 = __webpack_require__(149);
+const pos_currency_service_1 = __webpack_require__(153);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSettingsController = class PosSettingsController {
     service;
     taxService;
@@ -11957,7 +12365,7 @@ exports.PosSettingsController = PosSettingsController = __decorate([
 
 
 /***/ }),
-/* 146 */
+/* 152 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -11977,7 +12385,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSettingsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const store_setting_model_1 = __webpack_require__(42);
+const store_setting_model_1 = __webpack_require__(44);
 let PosSettingsService = class PosSettingsService {
     storeSettingModel;
     constructor(storeSettingModel) {
@@ -12019,7 +12427,7 @@ exports.PosSettingsService = PosSettingsService = __decorate([
 
 
 /***/ }),
-/* 147 */
+/* 153 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12119,7 +12527,7 @@ exports.PosCurrencyService = PosCurrencyService = __decorate([
 
 
 /***/ }),
-/* 148 */
+/* 154 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12133,12 +12541,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSaleReturnsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_sale_returns_controller_1 = __webpack_require__(149);
-const pos_sale_returns_service_1 = __webpack_require__(150);
+const pos_sale_returns_controller_1 = __webpack_require__(155);
+const pos_sale_returns_service_1 = __webpack_require__(156);
 const database_module_1 = __webpack_require__(7);
-const pos_gateway_module_1 = __webpack_require__(106);
+const pos_gateway_module_1 = __webpack_require__(112);
 const sale_model_1 = __webpack_require__(28);
-const store_setting_model_1 = __webpack_require__(42);
+const store_setting_model_1 = __webpack_require__(44);
 const product_variant_model_1 = __webpack_require__(22);
 let PosSaleReturnsModule = class PosSaleReturnsModule {
 };
@@ -12153,7 +12561,7 @@ exports.PosSaleReturnsModule = PosSaleReturnsModule = __decorate([
 
 
 /***/ }),
-/* 149 */
+/* 155 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12174,8 +12582,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSaleReturnsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_sale_returns_service_1 = __webpack_require__(150);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_sale_returns_service_1 = __webpack_require__(156);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSaleReturnsController = class PosSaleReturnsController {
     service;
     constructor(service) {
@@ -12250,7 +12658,7 @@ exports.PosSaleReturnsController = PosSaleReturnsController = __decorate([
 
 
 /***/ }),
-/* 150 */
+/* 156 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12272,18 +12680,18 @@ exports.PosSaleReturnsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const sequelize_typescript_1 = __webpack_require__(13);
-const sale_return_repository_1 = __webpack_require__(74);
-const sale_item_repository_1 = __webpack_require__(73);
-const batch_repository_1 = __webpack_require__(65);
-const customer_repository_1 = __webpack_require__(69);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const audit_log_repository_1 = __webpack_require__(77);
+const sale_return_repository_1 = __webpack_require__(77);
+const sale_item_repository_1 = __webpack_require__(76);
+const batch_repository_1 = __webpack_require__(68);
+const customer_repository_1 = __webpack_require__(72);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const audit_log_repository_1 = __webpack_require__(80);
 const sale_model_1 = __webpack_require__(28);
 const product_model_1 = __webpack_require__(17);
 const product_variant_model_1 = __webpack_require__(22);
-const store_setting_model_1 = __webpack_require__(42);
+const store_setting_model_1 = __webpack_require__(44);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosSaleReturnsService = class PosSaleReturnsService {
     saleReturnRepository;
     saleItemRepository;
@@ -12532,7 +12940,7 @@ exports.PosSaleReturnsService = PosSaleReturnsService = __decorate([
 
 
 /***/ }),
-/* 151 */
+/* 157 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12546,10 +12954,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosStockModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_stock_controller_1 = __webpack_require__(152);
-const pos_stock_service_1 = __webpack_require__(153);
+const pos_stock_controller_1 = __webpack_require__(158);
+const pos_stock_service_1 = __webpack_require__(159);
 const database_module_1 = __webpack_require__(7);
-const pos_gateway_module_1 = __webpack_require__(106);
+const pos_gateway_module_1 = __webpack_require__(112);
 const product_variant_model_1 = __webpack_require__(22);
 let PosStockModule = class PosStockModule {
 };
@@ -12564,7 +12972,7 @@ exports.PosStockModule = PosStockModule = __decorate([
 
 
 /***/ }),
-/* 152 */
+/* 158 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12585,8 +12993,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosStockController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_stock_service_1 = __webpack_require__(153);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_stock_service_1 = __webpack_require__(159);
+const pos_patterns_1 = __webpack_require__(116);
 let PosStockController = class PosStockController {
     service;
     constructor(service) {
@@ -12631,7 +13039,7 @@ exports.PosStockController = PosStockController = __decorate([
 
 
 /***/ }),
-/* 153 */
+/* 159 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12652,11 +13060,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosStockService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const stock_adjustment_repository_1 = __webpack_require__(75);
-const batch_repository_1 = __webpack_require__(65);
+const stock_adjustment_repository_1 = __webpack_require__(78);
+const batch_repository_1 = __webpack_require__(68);
 const product_model_1 = __webpack_require__(17);
 const product_variant_model_1 = __webpack_require__(22);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosStockService = class PosStockService {
     stockAdjRepository;
     batchRepository;
@@ -12731,7 +13139,7 @@ exports.PosStockService = PosStockService = __decorate([
 
 
 /***/ }),
-/* 154 */
+/* 160 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12744,8 +13152,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosExpensesModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_expenses_controller_1 = __webpack_require__(155);
-const pos_expenses_service_1 = __webpack_require__(156);
+const pos_expenses_controller_1 = __webpack_require__(161);
+const pos_expenses_service_1 = __webpack_require__(162);
 const database_module_1 = __webpack_require__(7);
 let PosExpensesModule = class PosExpensesModule {
 };
@@ -12760,7 +13168,7 @@ exports.PosExpensesModule = PosExpensesModule = __decorate([
 
 
 /***/ }),
-/* 155 */
+/* 161 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12781,8 +13189,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosExpensesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_expenses_service_1 = __webpack_require__(156);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_expenses_service_1 = __webpack_require__(162);
+const pos_patterns_1 = __webpack_require__(116);
 let PosExpensesController = class PosExpensesController {
     service;
     constructor(service) {
@@ -12857,7 +13265,7 @@ exports.PosExpensesController = PosExpensesController = __decorate([
 
 
 /***/ }),
-/* 156 */
+/* 162 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12874,9 +13282,9 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosExpensesService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const expense_repository_1 = __webpack_require__(76);
-const pos_gateway_1 = __webpack_require__(101);
+const sequelize_1 = __webpack_require__(106);
+const expense_repository_1 = __webpack_require__(79);
+const pos_gateway_1 = __webpack_require__(107);
 let PosExpensesService = class PosExpensesService {
     expenseRepository;
     posGateway;
@@ -12950,7 +13358,7 @@ exports.PosExpensesService = PosExpensesService = __decorate([
 
 
 /***/ }),
-/* 157 */
+/* 163 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -12964,19 +13372,21 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosReportsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_reports_controller_1 = __webpack_require__(158);
-const pos_reports_service_1 = __webpack_require__(159);
+const pos_reports_controller_1 = __webpack_require__(164);
+const pos_reports_service_1 = __webpack_require__(165);
 const database_module_1 = __webpack_require__(7);
 const product_model_1 = __webpack_require__(17);
 const batch_model_1 = __webpack_require__(18);
 const sale_item_model_1 = __webpack_require__(29);
 const sale_model_1 = __webpack_require__(28);
+const service_model_1 = __webpack_require__(31);
+const project_model_1 = __webpack_require__(32);
 let PosReportsModule = class PosReportsModule {
 };
 exports.PosReportsModule = PosReportsModule;
 exports.PosReportsModule = PosReportsModule = __decorate([
     (0, common_1.Module)({
-        imports: [database_module_1.DatabaseModule, sequelize_1.SequelizeModule.forFeature([product_model_1.Product, batch_model_1.Batch, sale_item_model_1.SaleItem, sale_model_1.Sale])],
+        imports: [database_module_1.DatabaseModule, sequelize_1.SequelizeModule.forFeature([product_model_1.Product, batch_model_1.Batch, sale_item_model_1.SaleItem, sale_model_1.Sale, service_model_1.Service, project_model_1.Project])],
         controllers: [pos_reports_controller_1.PosReportsController],
         providers: [pos_reports_service_1.PosReportsService],
     })
@@ -12984,7 +13394,7 @@ exports.PosReportsModule = PosReportsModule = __decorate([
 
 
 /***/ }),
-/* 158 */
+/* 164 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -13000,13 +13410,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosReportsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_reports_service_1 = __webpack_require__(159);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_reports_service_1 = __webpack_require__(165);
+const pos_patterns_1 = __webpack_require__(116);
 let PosReportsController = class PosReportsController {
     service;
     constructor(service) {
@@ -13113,6 +13523,22 @@ let PosReportsController = class PosReportsController {
             throw new microservices_1.RpcException({ message: error.message || 'REPORT_PRODUCT_WISE_SALES_ERROR', status: 400 });
         }
     }
+    async getServiceWiseSales(filter) {
+        try {
+            return await this.service.getServiceWiseSales(filter);
+        }
+        catch (error) {
+            throw new microservices_1.RpcException({ message: error.message || 'REPORT_SERVICE_WISE_SALES_ERROR', status: 400 });
+        }
+    }
+    async getProjectWiseSales(filter) {
+        try {
+            return await this.service.getProjectWiseSales(filter);
+        }
+        catch (error) {
+            throw new microservices_1.RpcException({ message: error.message || 'REPORT_PROJECT_WISE_SALES_ERROR', status: 400 });
+        }
+    }
     async getExpiryReport(days) {
         try {
             return await this.service.getExpiryReport(days || 30);
@@ -13207,11 +13633,25 @@ __decorate([
     __metadata("design:returntype", typeof (_o = typeof Promise !== "undefined" && Promise) === "function" ? _o : Object)
 ], PosReportsController.prototype, "getProductWiseSales", null);
 __decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.REPORT.SERVICE_WISE_SALES),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_p = typeof Promise !== "undefined" && Promise) === "function" ? _p : Object)
+], PosReportsController.prototype, "getServiceWiseSales", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.REPORT.PROJECT_WISE_SALES),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_q = typeof Promise !== "undefined" && Promise) === "function" ? _q : Object)
+], PosReportsController.prototype, "getProjectWiseSales", null);
+__decorate([
     (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.REPORT.EXPIRY_REPORT),
     __param(0, (0, microservices_1.Payload)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", typeof (_p = typeof Promise !== "undefined" && Promise) === "function" ? _p : Object)
+    __metadata("design:returntype", typeof (_r = typeof Promise !== "undefined" && Promise) === "function" ? _r : Object)
 ], PosReportsController.prototype, "getExpiryReport", null);
 exports.PosReportsController = PosReportsController = __decorate([
     (0, common_1.Controller)(),
@@ -13220,7 +13660,7 @@ exports.PosReportsController = PosReportsController = __decorate([
 
 
 /***/ }),
-/* 159 */
+/* 165 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -13276,21 +13716,23 @@ var _a, _b, _c, _d, _e, _f, _g;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosReportsService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const ExcelJS = __importStar(__webpack_require__(160));
-const pdfkit_1 = __importDefault(__webpack_require__(161));
+const sequelize_1 = __webpack_require__(106);
+const ExcelJS = __importStar(__webpack_require__(166));
+const pdfkit_1 = __importDefault(__webpack_require__(167));
 const sequelize_2 = __webpack_require__(8);
-const sale_repository_1 = __webpack_require__(72);
-const expense_repository_1 = __webpack_require__(76);
-const sale_return_repository_1 = __webpack_require__(74);
-const customer_repository_1 = __webpack_require__(69);
-const supplier_repository_1 = __webpack_require__(66);
-const udhaar_transaction_repository_1 = __webpack_require__(71);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
+const sale_repository_1 = __webpack_require__(75);
+const expense_repository_1 = __webpack_require__(79);
+const sale_return_repository_1 = __webpack_require__(77);
+const customer_repository_1 = __webpack_require__(72);
+const supplier_repository_1 = __webpack_require__(69);
+const udhaar_transaction_repository_1 = __webpack_require__(74);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
 const sale_item_model_1 = __webpack_require__(29);
 const customer_model_1 = __webpack_require__(27);
 const product_model_1 = __webpack_require__(17);
 const batch_model_1 = __webpack_require__(18);
+const service_model_1 = __webpack_require__(31);
+const project_model_1 = __webpack_require__(32);
 const supplier_payment_model_1 = __webpack_require__(26);
 const purchase_model_1 = __webpack_require__(20);
 let PosReportsService = class PosReportsService {
@@ -13304,7 +13746,9 @@ let PosReportsService = class PosReportsService {
     productModel;
     batchModel;
     saleItemModel;
-    constructor(saleRepository, expenseRepository, saleReturnRepository, customerRepository, supplierRepository, udhaarRepository, supplierLedgerRepository, productModel, batchModel, saleItemModel) {
+    serviceModel;
+    projectModel;
+    constructor(saleRepository, expenseRepository, saleReturnRepository, customerRepository, supplierRepository, udhaarRepository, supplierLedgerRepository, productModel, batchModel, saleItemModel, serviceModel, projectModel) {
         this.saleRepository = saleRepository;
         this.expenseRepository = expenseRepository;
         this.saleReturnRepository = saleReturnRepository;
@@ -13315,6 +13759,8 @@ let PosReportsService = class PosReportsService {
         this.productModel = productModel;
         this.batchModel = batchModel;
         this.saleItemModel = saleItemModel;
+        this.serviceModel = serviceModel;
+        this.projectModel = projectModel;
     }
     async getDailySummary(date) {
         try {
@@ -13331,6 +13777,8 @@ let PosReportsService = class PosReportsService {
             });
             let totalRevenue = 0;
             let totalCogs = 0;
+            let serviceRevenue = 0;
+            let productRevenue = 0;
             const paymentMap = {};
             for (const sale of sales) {
                 totalRevenue += Number(sale.total);
@@ -13338,10 +13786,16 @@ let PosReportsService = class PosReportsService {
                 paymentMap[method] = (paymentMap[method] ?? 0) + Number(sale.total);
                 const items = sale.saleItems || [];
                 for (const item of items) {
-                    const costPrice = item.batch?.purchasePrice != null
-                        ? Number(item.batch.purchasePrice)
-                        : Number(item.unitPrice);
-                    totalCogs += costPrice * Number(item.qty);
+                    if (item.itemType === 'service') {
+                        serviceRevenue += Number(item.total);
+                    }
+                    else {
+                        productRevenue += Number(item.total);
+                        const costPrice = item.costPrice != null
+                            ? Number(item.costPrice)
+                            : (item.batch?.purchasePrice != null ? Number(item.batch.purchasePrice) : Number(item.unitPrice));
+                        totalCogs += costPrice * Number(item.qty);
+                    }
                 }
             }
             const totalExpenses = expenses.reduce((sum, e) => sum + Number(e.amount), 0);
@@ -13365,6 +13819,8 @@ let PosReportsService = class PosReportsService {
                 date,
                 totalSales: sales.length,
                 totalRevenue,
+                productRevenue,
+                serviceRevenue,
                 totalCogs,
                 grossProfit,
                 totalExpenses,
@@ -13416,15 +13872,23 @@ let PosReportsService = class PosReportsService {
             });
             let totalRevenue = 0;
             let totalCogs = 0;
+            let serviceRevenue = 0;
+            let productRevenue = 0;
             for (const sale of sales) {
                 totalRevenue += Number(sale.total);
                 const items = sale.saleItems || [];
                 for (const item of items) {
-                    if (item.costAmount != null) {
-                        totalCogs += Number(item.costAmount);
+                    if (item.itemType === 'service') {
+                        serviceRevenue += Number(item.total);
                     }
                     else {
-                        totalCogs += Number(item.unitPrice) * Number(item.qty);
+                        productRevenue += Number(item.total);
+                        if (item.costAmount != null) {
+                            totalCogs += Number(item.costAmount);
+                        }
+                        else {
+                            totalCogs += Number(item.unitPrice) * Number(item.qty);
+                        }
                     }
                 }
             }
@@ -13434,6 +13898,8 @@ let PosReportsService = class PosReportsService {
             const netProfit = grossProfit - totalExpenses;
             return {
                 totalRevenue,
+                productRevenue,
+                serviceRevenue,
                 totalCogs,
                 grossProfit,
                 totalExpenses,
@@ -13766,6 +14232,86 @@ let PosReportsService = class PosReportsService {
             throw new common_1.BadRequestException(error);
         }
     }
+    async getServiceWiseSales(filter) {
+        try {
+            const sequelize = this.saleItemModel.sequelize;
+            const [rows] = await sequelize.query(`SELECT
+                    si.service_id       AS serviceId,
+                    sv.name,
+                    sv.unit_of_measure  AS unitOfMeasure,
+                    SUM(si.qty)         AS totalQty,
+                    SUM(si.total)       AS totalRevenue,
+                    SUM(si.discount)    AS totalDiscount,
+                    SUM(si.tax_amount)  AS totalTax,
+                    SUM(si.total)       AS totalProfit
+                FROM sale_items si
+                INNER JOIN sales s    ON s.id = si.sale_id
+                INNER JOIN services sv ON sv.id = si.service_id
+                WHERE s.is_held = 0
+                  AND si.item_type = 'service'
+                  AND s.created_at BETWEEN :fromDate AND :toDate
+                GROUP BY si.service_id, sv.id, sv.name, sv.unit_of_measure
+                ORDER BY totalRevenue DESC`, {
+                replacements: {
+                    fromDate: `${filter.fromDate} 00:00:00`,
+                    toDate: `${filter.toDate} 23:59:59`,
+                },
+            });
+            return rows.map(r => ({
+                serviceId: Number(r.serviceId),
+                name: r.name ?? 'Unknown',
+                unitOfMeasure: r.unitOfMeasure ?? '',
+                totalQty: Number(r.totalQty ?? 0),
+                totalRevenue: Number(r.totalRevenue ?? 0),
+                totalDiscount: Number(r.totalDiscount ?? 0),
+                totalTax: Number(r.totalTax ?? 0),
+                totalProfit: Number(r.totalProfit ?? 0),
+            }));
+        }
+        catch (error) {
+            throw new common_1.BadRequestException(error);
+        }
+    }
+    async getProjectWiseSales(filter) {
+        try {
+            const sequelize = this.saleItemModel.sequelize;
+            const [rows] = await sequelize.query(`SELECT
+                    si.project_id       AS projectId,
+                    pr.name,
+                    SUM(si.qty)         AS totalQty,
+                    SUM(si.total)       AS totalRevenue,
+                    SUM(si.discount)    AS totalDiscount,
+                    SUM(si.tax_amount)  AS totalTax,
+                    SUM(COALESCE(si.cost_amount, 0))   AS totalCogs,
+                    SUM(COALESCE(si.profit_amount, 0)) AS totalProfit
+                FROM sale_items si
+                INNER JOIN sales s    ON s.id = si.sale_id
+                INNER JOIN projects pr ON pr.id = si.project_id
+                WHERE s.is_held = 0
+                  AND si.project_id IS NOT NULL
+                  AND s.created_at BETWEEN :fromDate AND :toDate
+                GROUP BY si.project_id, pr.id, pr.name
+                ORDER BY totalRevenue DESC`, {
+                replacements: {
+                    fromDate: `${filter.fromDate} 00:00:00`,
+                    toDate: `${filter.toDate} 23:59:59`,
+                },
+            });
+            return rows.map(r => ({
+                projectId: Number(r.projectId),
+                name: r.name ?? 'Unknown',
+                totalQty: Number(r.totalQty ?? 0),
+                totalRevenue: Number(r.totalRevenue ?? 0),
+                totalDiscount: Number(r.totalDiscount ?? 0),
+                totalTax: Number(r.totalTax ?? 0),
+                totalCogs: Number(r.totalCogs ?? 0),
+                totalProfit: Number(r.totalProfit ?? 0),
+            }));
+        }
+        catch (error) {
+            throw new common_1.BadRequestException(error);
+        }
+    }
     async getExpiryReport(days = 30) {
         try {
             const targetDate = new Date();
@@ -13791,24 +14337,26 @@ exports.PosReportsService = PosReportsService = __decorate([
     __param(7, (0, sequelize_2.InjectModel)(product_model_1.Product)),
     __param(8, (0, sequelize_2.InjectModel)(batch_model_1.Batch)),
     __param(9, (0, sequelize_2.InjectModel)(sale_item_model_1.SaleItem)),
-    __metadata("design:paramtypes", [typeof (_a = typeof sale_repository_1.SaleRepository !== "undefined" && sale_repository_1.SaleRepository) === "function" ? _a : Object, typeof (_b = typeof expense_repository_1.ExpenseRepository !== "undefined" && expense_repository_1.ExpenseRepository) === "function" ? _b : Object, typeof (_c = typeof sale_return_repository_1.SaleReturnRepository !== "undefined" && sale_return_repository_1.SaleReturnRepository) === "function" ? _c : Object, typeof (_d = typeof customer_repository_1.CustomerRepository !== "undefined" && customer_repository_1.CustomerRepository) === "function" ? _d : Object, typeof (_e = typeof supplier_repository_1.SupplierRepository !== "undefined" && supplier_repository_1.SupplierRepository) === "function" ? _e : Object, typeof (_f = typeof udhaar_transaction_repository_1.UdhaarTransactionRepository !== "undefined" && udhaar_transaction_repository_1.UdhaarTransactionRepository) === "function" ? _f : Object, typeof (_g = typeof supplier_ledger_transaction_repository_1.SupplierLedgerTransactionRepository !== "undefined" && supplier_ledger_transaction_repository_1.SupplierLedgerTransactionRepository) === "function" ? _g : Object, Object, Object, Object])
+    __param(10, (0, sequelize_2.InjectModel)(service_model_1.Service)),
+    __param(11, (0, sequelize_2.InjectModel)(project_model_1.Project)),
+    __metadata("design:paramtypes", [typeof (_a = typeof sale_repository_1.SaleRepository !== "undefined" && sale_repository_1.SaleRepository) === "function" ? _a : Object, typeof (_b = typeof expense_repository_1.ExpenseRepository !== "undefined" && expense_repository_1.ExpenseRepository) === "function" ? _b : Object, typeof (_c = typeof sale_return_repository_1.SaleReturnRepository !== "undefined" && sale_return_repository_1.SaleReturnRepository) === "function" ? _c : Object, typeof (_d = typeof customer_repository_1.CustomerRepository !== "undefined" && customer_repository_1.CustomerRepository) === "function" ? _d : Object, typeof (_e = typeof supplier_repository_1.SupplierRepository !== "undefined" && supplier_repository_1.SupplierRepository) === "function" ? _e : Object, typeof (_f = typeof udhaar_transaction_repository_1.UdhaarTransactionRepository !== "undefined" && udhaar_transaction_repository_1.UdhaarTransactionRepository) === "function" ? _f : Object, typeof (_g = typeof supplier_ledger_transaction_repository_1.SupplierLedgerTransactionRepository !== "undefined" && supplier_ledger_transaction_repository_1.SupplierLedgerTransactionRepository) === "function" ? _g : Object, Object, Object, Object, Object, Object])
 ], PosReportsService);
 
 
 /***/ }),
-/* 160 */
+/* 166 */
 /***/ ((module) => {
 
 module.exports = require("exceljs");
 
 /***/ }),
-/* 161 */
+/* 167 */
 /***/ ((module) => {
 
 module.exports = require("pdfkit");
 
 /***/ }),
-/* 162 */
+/* 168 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -13822,8 +14370,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDiscountRulesModule = void 0;
 const common_1 = __webpack_require__(6);
 const database_module_1 = __webpack_require__(7);
-const pos_discount_rules_controller_1 = __webpack_require__(163);
-const pos_discount_rules_service_1 = __webpack_require__(164);
+const pos_discount_rules_controller_1 = __webpack_require__(169);
+const pos_discount_rules_service_1 = __webpack_require__(170);
 let PosDiscountRulesModule = class PosDiscountRulesModule {
 };
 exports.PosDiscountRulesModule = PosDiscountRulesModule;
@@ -13837,7 +14385,7 @@ exports.PosDiscountRulesModule = PosDiscountRulesModule = __decorate([
 
 
 /***/ }),
-/* 163 */
+/* 169 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -13858,8 +14406,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDiscountRulesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_discount_rules_service_1 = __webpack_require__(164);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_discount_rules_service_1 = __webpack_require__(170);
+const pos_patterns_1 = __webpack_require__(116);
 let PosDiscountRulesController = class PosDiscountRulesController {
     service;
     constructor(service) {
@@ -13949,7 +14497,7 @@ exports.PosDiscountRulesController = PosDiscountRulesController = __decorate([
 
 
 /***/ }),
-/* 164 */
+/* 170 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -13966,8 +14514,8 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDiscountRulesService = void 0;
 const common_1 = __webpack_require__(6);
-const discount_rule_repository_1 = __webpack_require__(80);
-const pos_gateway_1 = __webpack_require__(101);
+const discount_rule_repository_1 = __webpack_require__(83);
+const pos_gateway_1 = __webpack_require__(107);
 let PosDiscountRulesService = class PosDiscountRulesService {
     discountRuleRepository;
     posGateway;
@@ -14061,7 +14609,7 @@ exports.PosDiscountRulesService = PosDiscountRulesService = __decorate([
 
 
 /***/ }),
-/* 165 */
+/* 171 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14074,8 +14622,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierPaymentsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_supplier_payments_controller_1 = __webpack_require__(166);
-const pos_supplier_payments_service_1 = __webpack_require__(167);
+const pos_supplier_payments_controller_1 = __webpack_require__(172);
+const pos_supplier_payments_service_1 = __webpack_require__(173);
 const database_module_1 = __webpack_require__(7);
 let PosSupplierPaymentsModule = class PosSupplierPaymentsModule {
 };
@@ -14090,7 +14638,7 @@ exports.PosSupplierPaymentsModule = PosSupplierPaymentsModule = __decorate([
 
 
 /***/ }),
-/* 166 */
+/* 172 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14111,8 +14659,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierPaymentsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_supplier_payments_service_1 = __webpack_require__(167);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_supplier_payments_service_1 = __webpack_require__(173);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSupplierPaymentsController = class PosSupplierPaymentsController {
     service;
     constructor(service) {
@@ -14157,7 +14705,7 @@ exports.PosSupplierPaymentsController = PosSupplierPaymentsController = __decora
 
 
 /***/ }),
-/* 167 */
+/* 173 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14174,13 +14722,13 @@ var _a, _b, _c, _d;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierPaymentsService = void 0;
 const common_1 = __webpack_require__(6);
-const supplier_payment_repository_1 = __webpack_require__(83);
-const supplier_repository_1 = __webpack_require__(66);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
+const supplier_payment_repository_1 = __webpack_require__(86);
+const supplier_repository_1 = __webpack_require__(69);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
 const supplier_model_1 = __webpack_require__(19);
 const purchase_model_1 = __webpack_require__(20);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosSupplierPaymentsService = class PosSupplierPaymentsService {
     repo;
     supplierRepository;
@@ -14254,7 +14802,7 @@ exports.PosSupplierPaymentsService = PosSupplierPaymentsService = __decorate([
 
 
 /***/ }),
-/* 168 */
+/* 174 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14267,14 +14815,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchaseReturnsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_purchase_returns_controller_1 = __webpack_require__(169);
-const pos_purchase_returns_service_1 = __webpack_require__(170);
+const pos_purchase_returns_controller_1 = __webpack_require__(175);
+const pos_purchase_returns_service_1 = __webpack_require__(176);
 const database_module_1 = __webpack_require__(7);
-const purchase_return_repository_1 = __webpack_require__(84);
-const batch_repository_1 = __webpack_require__(65);
-const supplier_repository_1 = __webpack_require__(66);
-const audit_log_repository_1 = __webpack_require__(77);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
+const purchase_return_repository_1 = __webpack_require__(87);
+const batch_repository_1 = __webpack_require__(68);
+const supplier_repository_1 = __webpack_require__(69);
+const audit_log_repository_1 = __webpack_require__(80);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
 let PosPurchaseReturnsModule = class PosPurchaseReturnsModule {
 };
 exports.PosPurchaseReturnsModule = PosPurchaseReturnsModule;
@@ -14295,7 +14843,7 @@ exports.PosPurchaseReturnsModule = PosPurchaseReturnsModule = __decorate([
 
 
 /***/ }),
-/* 169 */
+/* 175 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14316,8 +14864,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchaseReturnsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_purchase_returns_service_1 = __webpack_require__(170);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_purchase_returns_service_1 = __webpack_require__(176);
+const pos_patterns_1 = __webpack_require__(116);
 let PosPurchaseReturnsController = class PosPurchaseReturnsController {
     service;
     constructor(service) {
@@ -14377,7 +14925,7 @@ exports.PosPurchaseReturnsController = PosPurchaseReturnsController = __decorate
 
 
 /***/ }),
-/* 170 */
+/* 176 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14395,16 +14943,16 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPurchaseReturnsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
-const purchase_return_repository_1 = __webpack_require__(84);
-const batch_repository_1 = __webpack_require__(65);
-const supplier_repository_1 = __webpack_require__(66);
-const audit_log_repository_1 = __webpack_require__(77);
-const supplier_ledger_transaction_repository_1 = __webpack_require__(82);
+const purchase_return_repository_1 = __webpack_require__(87);
+const batch_repository_1 = __webpack_require__(68);
+const supplier_repository_1 = __webpack_require__(69);
+const audit_log_repository_1 = __webpack_require__(80);
+const supplier_ledger_transaction_repository_1 = __webpack_require__(85);
 const supplier_model_1 = __webpack_require__(19);
 const product_model_1 = __webpack_require__(17);
 const purchase_model_1 = __webpack_require__(20);
 const batch_model_1 = __webpack_require__(18);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosPurchaseReturnsService = class PosPurchaseReturnsService {
     repo;
     batchRepository;
@@ -14524,7 +15072,7 @@ exports.PosPurchaseReturnsService = PosPurchaseReturnsService = __decorate([
 
 
 /***/ }),
-/* 171 */
+/* 177 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14537,10 +15085,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosLoyaltyModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_loyalty_controller_1 = __webpack_require__(172);
-const pos_loyalty_service_1 = __webpack_require__(173);
+const pos_loyalty_controller_1 = __webpack_require__(178);
+const pos_loyalty_service_1 = __webpack_require__(179);
 const database_module_1 = __webpack_require__(7);
-const customer_repository_1 = __webpack_require__(69);
+const customer_repository_1 = __webpack_require__(72);
 let PosLoyaltyModule = class PosLoyaltyModule {
 };
 exports.PosLoyaltyModule = PosLoyaltyModule;
@@ -14554,7 +15102,7 @@ exports.PosLoyaltyModule = PosLoyaltyModule = __decorate([
 
 
 /***/ }),
-/* 172 */
+/* 178 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14575,8 +15123,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosLoyaltyController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_loyalty_service_1 = __webpack_require__(173);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_loyalty_service_1 = __webpack_require__(179);
+const pos_patterns_1 = __webpack_require__(116);
 let PosLoyaltyController = class PosLoyaltyController {
     service;
     constructor(service) {
@@ -14621,7 +15169,7 @@ exports.PosLoyaltyController = PosLoyaltyController = __decorate([
 
 
 /***/ }),
-/* 173 */
+/* 179 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14638,11 +15186,11 @@ var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosLoyaltyService = void 0;
 const common_1 = __webpack_require__(6);
-const loyalty_points_log_repository_1 = __webpack_require__(81);
-const customer_repository_1 = __webpack_require__(69);
+const loyalty_points_log_repository_1 = __webpack_require__(84);
+const customer_repository_1 = __webpack_require__(72);
 const customer_model_1 = __webpack_require__(27);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosLoyaltyService = class PosLoyaltyService {
     repo;
     customerRepository;
@@ -14708,7 +15256,7 @@ exports.PosLoyaltyService = PosLoyaltyService = __decorate([
 
 
 /***/ }),
-/* 174 */
+/* 180 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14721,8 +15269,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosAuditLogsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_audit_logs_controller_1 = __webpack_require__(175);
-const pos_audit_logs_service_1 = __webpack_require__(176);
+const pos_audit_logs_controller_1 = __webpack_require__(181);
+const pos_audit_logs_service_1 = __webpack_require__(182);
 const database_module_1 = __webpack_require__(7);
 let PosAuditLogsModule = class PosAuditLogsModule {
 };
@@ -14737,7 +15285,7 @@ exports.PosAuditLogsModule = PosAuditLogsModule = __decorate([
 
 
 /***/ }),
-/* 175 */
+/* 181 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14758,8 +15306,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosAuditLogsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_audit_logs_service_1 = __webpack_require__(176);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_audit_logs_service_1 = __webpack_require__(182);
+const pos_patterns_1 = __webpack_require__(116);
 let PosAuditLogsController = class PosAuditLogsController {
     service;
     constructor(service) {
@@ -14804,7 +15352,7 @@ exports.PosAuditLogsController = PosAuditLogsController = __decorate([
 
 
 /***/ }),
-/* 176 */
+/* 182 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14821,8 +15369,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosAuditLogsService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const audit_log_repository_1 = __webpack_require__(77);
+const sequelize_1 = __webpack_require__(106);
+const audit_log_repository_1 = __webpack_require__(80);
 const pos_user_model_1 = __webpack_require__(12);
 let PosAuditLogsService = class PosAuditLogsService {
     repo;
@@ -14895,7 +15443,7 @@ exports.PosAuditLogsService = PosAuditLogsService = __decorate([
 
 
 /***/ }),
-/* 177 */
+/* 183 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14908,8 +15456,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolesModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_roles_controller_1 = __webpack_require__(178);
-const pos_roles_service_1 = __webpack_require__(179);
+const pos_roles_controller_1 = __webpack_require__(184);
+const pos_roles_service_1 = __webpack_require__(185);
 const database_module_1 = __webpack_require__(7);
 let PosRolesModule = class PosRolesModule {
 };
@@ -14924,7 +15472,7 @@ exports.PosRolesModule = PosRolesModule = __decorate([
 
 
 /***/ }),
-/* 178 */
+/* 184 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -14945,8 +15493,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_roles_service_1 = __webpack_require__(179);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_roles_service_1 = __webpack_require__(185);
+const pos_patterns_1 = __webpack_require__(116);
 let PosRolesController = class PosRolesController {
     service;
     constructor(service) {
@@ -15020,7 +15568,7 @@ exports.PosRolesController = PosRolesController = __decorate([
 
 
 /***/ }),
-/* 179 */
+/* 185 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15037,8 +15585,8 @@ var _a, _b;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolesService = void 0;
 const common_1 = __webpack_require__(6);
-const pos_role_repository_1 = __webpack_require__(85);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_role_repository_1 = __webpack_require__(88);
+const pos_gateway_1 = __webpack_require__(107);
 let PosRolesService = class PosRolesService {
     repo;
     posGateway;
@@ -15095,7 +15643,7 @@ exports.PosRolesService = PosRolesService = __decorate([
 
 
 /***/ }),
-/* 180 */
+/* 186 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15108,8 +15656,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_permissions_controller_1 = __webpack_require__(181);
-const pos_permissions_service_1 = __webpack_require__(182);
+const pos_permissions_controller_1 = __webpack_require__(187);
+const pos_permissions_service_1 = __webpack_require__(188);
 const database_module_1 = __webpack_require__(7);
 let PosPermissionsModule = class PosPermissionsModule {
 };
@@ -15124,7 +15672,7 @@ exports.PosPermissionsModule = PosPermissionsModule = __decorate([
 
 
 /***/ }),
-/* 181 */
+/* 187 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15145,8 +15693,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_permissions_service_1 = __webpack_require__(182);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_permissions_service_1 = __webpack_require__(188);
+const pos_patterns_1 = __webpack_require__(116);
 let PosPermissionsController = class PosPermissionsController {
     service;
     constructor(service) {
@@ -15205,7 +15753,7 @@ exports.PosPermissionsController = PosPermissionsController = __decorate([
 
 
 /***/ }),
-/* 182 */
+/* 188 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15222,7 +15770,7 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosPermissionsService = void 0;
 const common_1 = __webpack_require__(6);
-const pos_permission_repository_1 = __webpack_require__(86);
+const pos_permission_repository_1 = __webpack_require__(89);
 let PosPermissionsService = class PosPermissionsService {
     repo;
     constructor(repo) {
@@ -15264,7 +15812,7 @@ exports.PosPermissionsService = PosPermissionsService = __decorate([
 
 
 /***/ }),
-/* 183 */
+/* 189 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15277,8 +15825,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermissionsModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_role_permissions_controller_1 = __webpack_require__(184);
-const pos_role_permissions_service_1 = __webpack_require__(185);
+const pos_role_permissions_controller_1 = __webpack_require__(190);
+const pos_role_permissions_service_1 = __webpack_require__(191);
 const database_module_1 = __webpack_require__(7);
 let PosRolePermissionsModule = class PosRolePermissionsModule {
 };
@@ -15293,7 +15841,7 @@ exports.PosRolePermissionsModule = PosRolePermissionsModule = __decorate([
 
 
 /***/ }),
-/* 184 */
+/* 190 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15314,8 +15862,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermissionsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_role_permissions_service_1 = __webpack_require__(185);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_role_permissions_service_1 = __webpack_require__(191);
+const pos_patterns_1 = __webpack_require__(116);
 let PosRolePermissionsController = class PosRolePermissionsController {
     service;
     constructor(service) {
@@ -15375,7 +15923,7 @@ exports.PosRolePermissionsController = PosRolePermissionsController = __decorate
 
 
 /***/ }),
-/* 185 */
+/* 191 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15392,8 +15940,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosRolePermissionsService = void 0;
 const common_1 = __webpack_require__(6);
-const pos_role_permission_repository_1 = __webpack_require__(87);
-const pos_permission_model_1 = __webpack_require__(47);
+const pos_role_permission_repository_1 = __webpack_require__(90);
+const pos_permission_model_1 = __webpack_require__(49);
 let PosRolePermissionsService = class PosRolePermissionsService {
     repo;
     constructor(repo) {
@@ -15437,7 +15985,7 @@ exports.PosRolePermissionsService = PosRolePermissionsService = __decorate([
 
 
 /***/ }),
-/* 186 */
+/* 192 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15450,8 +15998,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRolesModule = void 0;
 const common_1 = __webpack_require__(6);
-const pos_user_roles_controller_1 = __webpack_require__(187);
-const pos_user_roles_service_1 = __webpack_require__(188);
+const pos_user_roles_controller_1 = __webpack_require__(193);
+const pos_user_roles_service_1 = __webpack_require__(194);
 const database_module_1 = __webpack_require__(7);
 let PosUserRolesModule = class PosUserRolesModule {
 };
@@ -15466,7 +16014,7 @@ exports.PosUserRolesModule = PosUserRolesModule = __decorate([
 
 
 /***/ }),
-/* 187 */
+/* 193 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15487,8 +16035,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRolesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_user_roles_service_1 = __webpack_require__(188);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_user_roles_service_1 = __webpack_require__(194);
+const pos_patterns_1 = __webpack_require__(116);
 let PosUserRolesController = class PosUserRolesController {
     service;
     constructor(service) {
@@ -15548,7 +16096,7 @@ exports.PosUserRolesController = PosUserRolesController = __decorate([
 
 
 /***/ }),
-/* 188 */
+/* 194 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15565,8 +16113,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosUserRolesService = void 0;
 const common_1 = __webpack_require__(6);
-const pos_user_role_repository_1 = __webpack_require__(88);
-const pos_role_model_1 = __webpack_require__(46);
+const pos_user_role_repository_1 = __webpack_require__(91);
+const pos_role_model_1 = __webpack_require__(48);
 let PosUserRolesService = class PosUserRolesService {
     repo;
     constructor(repo) {
@@ -15610,7 +16158,7 @@ exports.PosUserRolesService = PosUserRolesService = __decorate([
 
 
 /***/ }),
-/* 189 */
+/* 195 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15626,8 +16174,8 @@ const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const product_variant_model_1 = __webpack_require__(22);
 const product_model_1 = __webpack_require__(17);
-const pos_product_variants_controller_1 = __webpack_require__(190);
-const pos_product_variants_service_1 = __webpack_require__(191);
+const pos_product_variants_controller_1 = __webpack_require__(196);
+const pos_product_variants_service_1 = __webpack_require__(197);
 let PosProductVariantsModule = class PosProductVariantsModule {
 };
 exports.PosProductVariantsModule = PosProductVariantsModule;
@@ -15641,7 +16189,7 @@ exports.PosProductVariantsModule = PosProductVariantsModule = __decorate([
 
 
 /***/ }),
-/* 190 */
+/* 196 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15662,8 +16210,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProductVariantsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_product_variants_service_1 = __webpack_require__(191);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_product_variants_service_1 = __webpack_require__(197);
+const pos_patterns_1 = __webpack_require__(116);
 let PosProductVariantsController = class PosProductVariantsController {
     service;
     constructor(service) {
@@ -15753,7 +16301,7 @@ exports.PosProductVariantsController = PosProductVariantsController = __decorate
 
 
 /***/ }),
-/* 191 */
+/* 197 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15777,7 +16325,7 @@ const sequelize_1 = __webpack_require__(8);
 const product_variant_model_1 = __webpack_require__(22);
 const product_model_1 = __webpack_require__(17);
 const unit_model_1 = __webpack_require__(15);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosProductVariantsService = class PosProductVariantsService {
     model;
     posGateway;
@@ -15866,7 +16414,7 @@ exports.PosProductVariantsService = PosProductVariantsService = __decorate([
 
 
 /***/ }),
-/* 192 */
+/* 198 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15880,10 +16428,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierOrdersModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
-const pos_supplier_orders_controller_1 = __webpack_require__(193);
-const pos_supplier_orders_service_1 = __webpack_require__(194);
+const pos_supplier_orders_controller_1 = __webpack_require__(199);
+const pos_supplier_orders_service_1 = __webpack_require__(200);
 const database_module_1 = __webpack_require__(7);
-const supplier_order_model_1 = __webpack_require__(52);
+const supplier_order_model_1 = __webpack_require__(54);
 let PosSupplierOrdersModule = class PosSupplierOrdersModule {
 };
 exports.PosSupplierOrdersModule = PosSupplierOrdersModule;
@@ -15897,7 +16445,7 @@ exports.PosSupplierOrdersModule = PosSupplierOrdersModule = __decorate([
 
 
 /***/ }),
-/* 193 */
+/* 199 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -15918,8 +16466,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierOrdersController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_supplier_orders_service_1 = __webpack_require__(194);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_supplier_orders_service_1 = __webpack_require__(200);
+const pos_patterns_1 = __webpack_require__(116);
 let PosSupplierOrdersController = class PosSupplierOrdersController {
     service;
     constructor(service) {
@@ -16024,7 +16572,7 @@ exports.PosSupplierOrdersController = PosSupplierOrdersController = __decorate([
 
 
 /***/ }),
-/* 194 */
+/* 200 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16042,11 +16590,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosSupplierOrdersService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
-const supplier_order_repository_1 = __webpack_require__(90);
-const supplier_order_model_1 = __webpack_require__(52);
+const supplier_order_repository_1 = __webpack_require__(93);
+const supplier_order_model_1 = __webpack_require__(54);
 const supplier_model_1 = __webpack_require__(19);
 const pos_user_model_1 = __webpack_require__(12);
-const pos_gateway_1 = __webpack_require__(101);
+const pos_gateway_1 = __webpack_require__(107);
 let PosSupplierOrdersService = class PosSupplierOrdersService {
     repo;
     itemRepo;
@@ -16202,7 +16750,7 @@ exports.PosSupplierOrdersService = PosSupplierOrdersService = __decorate([
 
 
 /***/ }),
-/* 195 */
+/* 201 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16217,9 +16765,9 @@ exports.PosProjectsModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const database_module_1 = __webpack_require__(7);
-const project_model_1 = __webpack_require__(53);
-const pos_projects_controller_1 = __webpack_require__(196);
-const pos_projects_service_1 = __webpack_require__(197);
+const project_model_1 = __webpack_require__(32);
+const pos_projects_controller_1 = __webpack_require__(202);
+const pos_projects_service_1 = __webpack_require__(203);
 let PosProjectsModule = class PosProjectsModule {
 };
 exports.PosProjectsModule = PosProjectsModule;
@@ -16233,7 +16781,7 @@ exports.PosProjectsModule = PosProjectsModule = __decorate([
 
 
 /***/ }),
-/* 196 */
+/* 202 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16254,8 +16802,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProjectsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_projects_service_1 = __webpack_require__(197);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_projects_service_1 = __webpack_require__(203);
+const pos_patterns_1 = __webpack_require__(116);
 let PosProjectsController = class PosProjectsController {
     service;
     constructor(service) {
@@ -16345,7 +16893,7 @@ exports.PosProjectsController = PosProjectsController = __decorate([
 
 
 /***/ }),
-/* 197 */
+/* 203 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16362,8 +16910,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosProjectsService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const project_repository_1 = __webpack_require__(91);
+const sequelize_1 = __webpack_require__(106);
+const project_repository_1 = __webpack_require__(94);
 const customer_model_1 = __webpack_require__(27);
 const supplier_model_1 = __webpack_require__(19);
 let PosProjectsService = class PosProjectsService {
@@ -16458,7 +17006,7 @@ exports.PosProjectsService = PosProjectsService = __decorate([
 
 
 /***/ }),
-/* 198 */
+/* 204 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16473,9 +17021,9 @@ exports.PosServicesModule = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const database_module_1 = __webpack_require__(7);
-const service_model_1 = __webpack_require__(54);
-const pos_services_controller_1 = __webpack_require__(199);
-const pos_services_service_1 = __webpack_require__(200);
+const service_model_1 = __webpack_require__(31);
+const pos_services_controller_1 = __webpack_require__(205);
+const pos_services_service_1 = __webpack_require__(206);
 let PosServicesModule = class PosServicesModule {
 };
 exports.PosServicesModule = PosServicesModule;
@@ -16489,7 +17037,7 @@ exports.PosServicesModule = PosServicesModule = __decorate([
 
 
 /***/ }),
-/* 199 */
+/* 205 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16510,8 +17058,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosServicesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_services_service_1 = __webpack_require__(200);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_services_service_1 = __webpack_require__(206);
+const pos_patterns_1 = __webpack_require__(116);
 let PosServicesController = class PosServicesController {
     service;
     constructor(service) {
@@ -16601,7 +17149,7 @@ exports.PosServicesController = PosServicesController = __decorate([
 
 
 /***/ }),
-/* 200 */
+/* 206 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16618,8 +17166,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosServicesService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const service_repository_1 = __webpack_require__(92);
+const sequelize_1 = __webpack_require__(106);
+const service_repository_1 = __webpack_require__(95);
 const supplier_model_1 = __webpack_require__(19);
 let PosServicesService = class PosServicesService {
     repo;
@@ -16705,7 +17253,7 @@ exports.PosServicesService = PosServicesService = __decorate([
 
 
 /***/ }),
-/* 201 */
+/* 207 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16721,9 +17269,9 @@ const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const database_module_1 = __webpack_require__(7);
 const quotation_model_1 = __webpack_require__(55);
-const quotation_repository_1 = __webpack_require__(93);
-const pos_quotations_controller_1 = __webpack_require__(202);
-const pos_quotations_service_1 = __webpack_require__(203);
+const quotation_repository_1 = __webpack_require__(96);
+const pos_quotations_controller_1 = __webpack_require__(208);
+const pos_quotations_service_1 = __webpack_require__(209);
 let PosQuotationsModule = class PosQuotationsModule {
 };
 exports.PosQuotationsModule = PosQuotationsModule;
@@ -16737,7 +17285,7 @@ exports.PosQuotationsModule = PosQuotationsModule = __decorate([
 
 
 /***/ }),
-/* 202 */
+/* 208 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16758,8 +17306,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosQuotationsController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_quotations_service_1 = __webpack_require__(203);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_quotations_service_1 = __webpack_require__(209);
+const pos_patterns_1 = __webpack_require__(116);
 let PosQuotationsController = class PosQuotationsController {
     service;
     constructor(service) {
@@ -16909,7 +17457,7 @@ exports.PosQuotationsController = PosQuotationsController = __decorate([
 
 
 /***/ }),
-/* 203 */
+/* 209 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -16927,7 +17475,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosQuotationsService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
-const quotation_repository_1 = __webpack_require__(93);
+const quotation_repository_1 = __webpack_require__(96);
 const quotation_model_1 = __webpack_require__(55);
 const customer_model_1 = __webpack_require__(27);
 const company_model_1 = __webpack_require__(56);
@@ -17225,7 +17773,7 @@ exports.PosQuotationsService = PosQuotationsService = __decorate([
 
 
 /***/ }),
-/* 204 */
+/* 210 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17244,10 +17792,10 @@ const delivery_order_model_1 = __webpack_require__(58);
 const quotation_model_1 = __webpack_require__(55);
 const company_model_1 = __webpack_require__(56);
 const supplier_model_1 = __webpack_require__(19);
-const delivery_order_repository_1 = __webpack_require__(95);
-const quotation_repository_1 = __webpack_require__(93);
-const pos_delivery_orders_controller_1 = __webpack_require__(205);
-const pos_delivery_orders_service_1 = __webpack_require__(206);
+const delivery_order_repository_1 = __webpack_require__(98);
+const quotation_repository_1 = __webpack_require__(96);
+const pos_delivery_orders_controller_1 = __webpack_require__(211);
+const pos_delivery_orders_service_1 = __webpack_require__(212);
 let PosDeliveryOrdersModule = class PosDeliveryOrdersModule {
 };
 exports.PosDeliveryOrdersModule = PosDeliveryOrdersModule;
@@ -17261,7 +17809,7 @@ exports.PosDeliveryOrdersModule = PosDeliveryOrdersModule = __decorate([
 
 
 /***/ }),
-/* 205 */
+/* 211 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17282,8 +17830,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosDeliveryOrdersController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_delivery_orders_service_1 = __webpack_require__(206);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_delivery_orders_service_1 = __webpack_require__(212);
+const pos_patterns_1 = __webpack_require__(116);
 let PosDeliveryOrdersController = class PosDeliveryOrdersController {
     service;
     constructor(service) {
@@ -17373,7 +17921,7 @@ exports.PosDeliveryOrdersController = PosDeliveryOrdersController = __decorate([
 
 
 /***/ }),
-/* 206 */
+/* 212 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17395,8 +17943,8 @@ exports.PosDeliveryOrdersService = void 0;
 const common_1 = __webpack_require__(6);
 const sequelize_typescript_1 = __webpack_require__(13);
 const sequelize_1 = __webpack_require__(8);
-const delivery_order_repository_1 = __webpack_require__(95);
-const quotation_repository_1 = __webpack_require__(93);
+const delivery_order_repository_1 = __webpack_require__(98);
+const quotation_repository_1 = __webpack_require__(96);
 const delivery_order_model_1 = __webpack_require__(58);
 const customer_model_1 = __webpack_require__(27);
 const supplier_model_1 = __webpack_require__(19);
@@ -17552,7 +18100,7 @@ exports.PosDeliveryOrdersService = PosDeliveryOrdersService = __decorate([
 
 
 /***/ }),
-/* 207 */
+/* 213 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17568,9 +18116,9 @@ const common_1 = __webpack_require__(6);
 const sequelize_1 = __webpack_require__(8);
 const database_module_1 = __webpack_require__(7);
 const company_model_1 = __webpack_require__(56);
-const company_repository_1 = __webpack_require__(96);
-const pos_companies_controller_1 = __webpack_require__(208);
-const pos_companies_service_1 = __webpack_require__(209);
+const company_repository_1 = __webpack_require__(99);
+const pos_companies_controller_1 = __webpack_require__(214);
+const pos_companies_service_1 = __webpack_require__(215);
 let PosCompaniesModule = class PosCompaniesModule {
 };
 exports.PosCompaniesModule = PosCompaniesModule;
@@ -17584,7 +18132,7 @@ exports.PosCompaniesModule = PosCompaniesModule = __decorate([
 
 
 /***/ }),
-/* 208 */
+/* 214 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17605,8 +18153,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCompaniesController = void 0;
 const common_1 = __webpack_require__(6);
 const microservices_1 = __webpack_require__(4);
-const pos_companies_service_1 = __webpack_require__(209);
-const pos_patterns_1 = __webpack_require__(110);
+const pos_companies_service_1 = __webpack_require__(215);
+const pos_patterns_1 = __webpack_require__(116);
 let PosCompaniesController = class PosCompaniesController {
     service;
     constructor(service) {
@@ -17696,7 +18244,7 @@ exports.PosCompaniesController = PosCompaniesController = __decorate([
 
 
 /***/ }),
-/* 209 */
+/* 215 */
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -17713,8 +18261,8 @@ var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PosCompaniesService = void 0;
 const common_1 = __webpack_require__(6);
-const sequelize_1 = __webpack_require__(100);
-const company_repository_1 = __webpack_require__(96);
+const sequelize_1 = __webpack_require__(106);
+const company_repository_1 = __webpack_require__(99);
 let PosCompaniesService = class PosCompaniesService {
     repo;
     constructor(repo) {
@@ -17818,13 +18366,739 @@ exports.PosCompaniesService = PosCompaniesService = __decorate([
 
 
 /***/ }),
-/* 210 */
+/* 216 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PosLedgerModule = void 0;
+const common_1 = __webpack_require__(6);
+const sequelize_1 = __webpack_require__(8);
+const pos_ledger_controller_1 = __webpack_require__(217);
+const pos_ledger_service_1 = __webpack_require__(218);
+const database_module_1 = __webpack_require__(7);
+const chart_of_account_model_1 = __webpack_require__(59);
+const journal_entry_model_1 = __webpack_require__(60);
+const journal_line_model_1 = __webpack_require__(61);
+const sale_model_1 = __webpack_require__(28);
+const sale_item_model_1 = __webpack_require__(29);
+const purchase_model_1 = __webpack_require__(20);
+const expense_model_1 = __webpack_require__(39);
+const customer_payment_model_1 = __webpack_require__(37);
+const supplier_payment_model_1 = __webpack_require__(26);
+let PosLedgerModule = class PosLedgerModule {
+};
+exports.PosLedgerModule = PosLedgerModule;
+exports.PosLedgerModule = PosLedgerModule = __decorate([
+    (0, common_1.Module)({
+        imports: [
+            database_module_1.DatabaseModule,
+            sequelize_1.SequelizeModule.forFeature([
+                chart_of_account_model_1.ChartOfAccount, journal_entry_model_1.JournalEntry, journal_line_model_1.JournalLine,
+                sale_model_1.Sale, sale_item_model_1.SaleItem, purchase_model_1.Purchase, expense_model_1.Expense, customer_payment_model_1.CustomerPayment, supplier_payment_model_1.SupplierPayment,
+            ]),
+        ],
+        controllers: [pos_ledger_controller_1.PosLedgerController],
+        providers: [pos_ledger_service_1.PosLedgerService],
+    })
+], PosLedgerModule);
+
+
+/***/ }),
+/* 217 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PosLedgerController = void 0;
+const common_1 = __webpack_require__(6);
+const microservices_1 = __webpack_require__(4);
+const pos_ledger_service_1 = __webpack_require__(218);
+const pos_patterns_1 = __webpack_require__(116);
+let PosLedgerController = class PosLedgerController {
+    service;
+    constructor(service) {
+        this.service = service;
+    }
+    async chartGetAll() {
+        try {
+            return await this.service.getChartOfAccounts();
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_CHART_GET_ALL_ERROR', status: 400 });
+        }
+    }
+    async chartCreate(data) {
+        try {
+            return await this.service.createAccount(data);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_CHART_CREATE_ERROR', status: 400 });
+        }
+    }
+    async chartUpdate(data) {
+        try {
+            return await this.service.updateAccount(data.id, data.payload);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_CHART_UPDATE_ERROR', status: 400 });
+        }
+    }
+    async chartDelete(id) {
+        try {
+            return await this.service.deleteAccount(id);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_CHART_DELETE_ERROR', status: 400 });
+        }
+    }
+    async journalGetAll(filters) {
+        try {
+            return await this.service.getJournalEntries(filters);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_JOURNAL_GET_ALL_ERROR', status: 400 });
+        }
+    }
+    async journalGetOne(id) {
+        try {
+            return await this.service.getJournalEntryById(id);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_JOURNAL_GET_ONE_ERROR', status: 400 });
+        }
+    }
+    async journalCreate(data) {
+        try {
+            return await this.service.createManualEntry(data);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_JOURNAL_CREATE_ERROR', status: 400 });
+        }
+    }
+    async journalSync(data) {
+        try {
+            return await this.service.syncJournalEntries(data?.fromDate, data?.toDate);
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_JOURNAL_SYNC_ERROR', status: 400 });
+        }
+    }
+    async trialBalance() {
+        try {
+            return await this.service.getTrialBalance();
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_TRIAL_BALANCE_ERROR', status: 400 });
+        }
+    }
+    async accountSummary() {
+        try {
+            return await this.service.getAccountSummary();
+        }
+        catch (e) {
+            throw new microservices_1.RpcException({ message: e.message || 'LEDGER_ACCOUNT_SUMMARY_ERROR', status: 400 });
+        }
+    }
+};
+exports.PosLedgerController = PosLedgerController;
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_GET_ALL),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", typeof (_b = typeof Promise !== "undefined" && Promise) === "function" ? _b : Object)
+], PosLedgerController.prototype, "chartGetAll", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_CREATE),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
+], PosLedgerController.prototype, "chartCreate", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_UPDATE),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
+], PosLedgerController.prototype, "chartUpdate", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.CHART_DELETE),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
+], PosLedgerController.prototype, "chartDelete", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_GET_ALL),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
+], PosLedgerController.prototype, "journalGetAll", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_GET_ONE),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", typeof (_g = typeof Promise !== "undefined" && Promise) === "function" ? _g : Object)
+], PosLedgerController.prototype, "journalGetOne", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_CREATE),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_h = typeof Promise !== "undefined" && Promise) === "function" ? _h : Object)
+], PosLedgerController.prototype, "journalCreate", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.JOURNAL_SYNC),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", typeof (_j = typeof Promise !== "undefined" && Promise) === "function" ? _j : Object)
+], PosLedgerController.prototype, "journalSync", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.TRIAL_BALANCE),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", typeof (_k = typeof Promise !== "undefined" && Promise) === "function" ? _k : Object)
+], PosLedgerController.prototype, "trialBalance", null);
+__decorate([
+    (0, microservices_1.MessagePattern)(pos_patterns_1.POS_PATTERNS.LEDGER.ACCOUNT_SUMMARY),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", typeof (_l = typeof Promise !== "undefined" && Promise) === "function" ? _l : Object)
+], PosLedgerController.prototype, "accountSummary", null);
+exports.PosLedgerController = PosLedgerController = __decorate([
+    (0, common_1.Controller)(),
+    __metadata("design:paramtypes", [typeof (_a = typeof pos_ledger_service_1.PosLedgerService !== "undefined" && pos_ledger_service_1.PosLedgerService) === "function" ? _a : Object])
+], PosLedgerController);
+
+
+/***/ }),
+/* 218 */
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var _a, _b, _c, _d;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PosLedgerService = void 0;
+const common_1 = __webpack_require__(6);
+const sequelize_1 = __webpack_require__(106);
+const sequelize_typescript_1 = __webpack_require__(13);
+const sequelize_2 = __webpack_require__(8);
+const chart_of_account_repository_1 = __webpack_require__(100);
+const journal_entry_repository_1 = __webpack_require__(101);
+const journal_line_repository_1 = __webpack_require__(102);
+const chart_of_account_model_1 = __webpack_require__(59);
+const journal_entry_model_1 = __webpack_require__(60);
+const journal_line_model_1 = __webpack_require__(61);
+const sale_model_1 = __webpack_require__(28);
+const sale_item_model_1 = __webpack_require__(29);
+const purchase_model_1 = __webpack_require__(20);
+const expense_model_1 = __webpack_require__(39);
+const customer_payment_model_1 = __webpack_require__(37);
+const supplier_payment_model_1 = __webpack_require__(26);
+const DEFAULT_ACCOUNTS = [
+    { code: '1010', name: 'Cash', type: 'asset', category: 'Current Asset', description: 'Cash On Hand And In Bank' },
+    { code: '1020', name: 'Accounts Receivable', type: 'asset', category: 'Current Asset', description: 'Money Owed By Customers' },
+    { code: '1030', name: 'Inventory', type: 'asset', category: 'Current Asset', description: 'Products In Stock For Resale' },
+    { code: '2010', name: 'Accounts Payable', type: 'liability', category: 'Current Liability', description: 'Money Owed To Suppliers' },
+    { code: '3010', name: 'Owner Equity', type: 'equity', category: 'Owner Equity', description: 'Owner Investment In Business' },
+    { code: '3020', name: 'Retained Earnings', type: 'equity', category: 'Retained Earnings', description: 'Accumulated Profits/Losses' },
+    { code: '4010', name: 'Sales Revenue', type: 'revenue', category: 'Operating Revenue', description: 'Revenue From Product Sales' },
+    { code: '4020', name: 'Sales Returns', type: 'revenue', category: 'Contra Revenue', description: 'Returns And Refunds To Customers' },
+    { code: '5010', name: 'Cost Of Goods Sold', type: 'expense', category: 'Cost Of Sales', description: 'Direct Cost Of Products Sold' },
+    { code: '5020', name: 'Operating Expenses', type: 'expense', category: 'Operating Expense', description: 'Rent, Salary, Utilities, Misc' },
+];
+let PosLedgerService = class PosLedgerService {
+    chartRepo;
+    entryRepo;
+    lineRepo;
+    sequelize;
+    saleModel;
+    saleItemModel;
+    purchaseModel;
+    expenseModel;
+    custPayModel;
+    suppPayModel;
+    coaModel;
+    jeModel;
+    jlModel;
+    constructor(chartRepo, entryRepo, lineRepo, sequelize, saleModel, saleItemModel, purchaseModel, expenseModel, custPayModel, suppPayModel, coaModel, jeModel, jlModel) {
+        this.chartRepo = chartRepo;
+        this.entryRepo = entryRepo;
+        this.lineRepo = lineRepo;
+        this.sequelize = sequelize;
+        this.saleModel = saleModel;
+        this.saleItemModel = saleItemModel;
+        this.purchaseModel = purchaseModel;
+        this.expenseModel = expenseModel;
+        this.custPayModel = custPayModel;
+        this.suppPayModel = suppPayModel;
+        this.coaModel = coaModel;
+        this.jeModel = jeModel;
+        this.jlModel = jlModel;
+    }
+    async onModuleInit() {
+        try {
+            const count = await this.coaModel.count();
+            if (count === 0) {
+                await this.coaModel.bulkCreate(DEFAULT_ACCOUNTS);
+            }
+        }
+        catch { }
+    }
+    async getAccountMap() {
+        const accounts = await this.chartRepo.findAll({ where: { isActive: true } });
+        const map = new Map();
+        accounts.forEach(a => map.set(a.code, a.id));
+        return map;
+    }
+    makeJournalId(prefix, refId) {
+        return `JE-${prefix}-${String(refId).padStart(12, '0')}`;
+    }
+    async getChartOfAccounts() {
+        try {
+            const accounts = await this.chartRepo.findAll({ order: [['code', 'ASC']] });
+            return accounts.map(a => a.toJSON());
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async createAccount(data) {
+        try {
+            const existing = await this.chartRepo.findOne({ where: { code: data.code } });
+            if (existing)
+                throw new common_1.BadRequestException('ACCOUNT_CODE_EXISTS');
+            const account = await this.chartRepo.create(data);
+            return account.toJSON();
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async updateAccount(id, data) {
+        try {
+            const updated = await this.chartRepo.update({ where: { id } }, data);
+            return updated.toJSON();
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async deleteAccount(id) {
+        try {
+            const lineCount = await this.jlModel.count({ where: { accountId: id } });
+            if (lineCount > 0)
+                throw new common_1.BadRequestException('ACCOUNT_HAS_TRANSACTIONS');
+            return await this.chartRepo.delete({ where: { id } });
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async getJournalEntries(filters) {
+        try {
+            const page = Number(filters.page) || 1;
+            const limit = Number(filters.size) || 50;
+            const offset = (page - 1) * limit;
+            const where = { status: 'posted' };
+            if (filters.type)
+                where.type = filters.type;
+            if (filters.fromDate || filters.toDate) {
+                where.date = {};
+                if (filters.fromDate)
+                    where.date[sequelize_1.Op.gte] = filters.fromDate;
+                if (filters.toDate)
+                    where.date[sequelize_1.Op.lte] = filters.toDate;
+            }
+            const result = await this.entryRepo.findAndCountAll({
+                where,
+                include: [{
+                        model: journal_line_model_1.JournalLine,
+                        include: [{ model: chart_of_account_model_1.ChartOfAccount, attributes: ['id', 'code', 'name', 'type'] }],
+                    }],
+                order: [['date', 'DESC'], ['createdAt', 'DESC']],
+                offset,
+                limit,
+            });
+            return {
+                data: result.rows.map(r => r.toJSON()),
+                page,
+                totalPages: Math.ceil(result.count / limit),
+                totalItems: result.count,
+            };
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async getJournalEntryById(id) {
+        try {
+            const entry = await this.entryRepo.findOne({
+                where: { id },
+                include: [{
+                        model: journal_line_model_1.JournalLine,
+                        include: [{ model: chart_of_account_model_1.ChartOfAccount, attributes: ['id', 'code', 'name', 'type'] }],
+                    }],
+            });
+            if (!entry)
+                throw new common_1.BadRequestException('JOURNAL_ENTRY_NOT_FOUND');
+            return entry.toJSON();
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async createManualEntry(data) {
+        const t = await this.sequelize.transaction();
+        try {
+            const totalDebit = data.lines.reduce((s, l) => s + Number(l.debit), 0);
+            const totalCredit = data.lines.reduce((s, l) => s + Number(l.credit), 0);
+            if (Math.abs(totalDebit - totalCredit) > 0.01) {
+                throw new common_1.BadRequestException('JOURNAL_NOT_BALANCED: debits must equal credits');
+            }
+            const journalId = `JE-MAN-${Date.now()}`;
+            const entry = await this.entryRepo.create({
+                journalId, date: data.date, type: 'manual',
+                reference: data.reference, description: data.description,
+                status: 'posted', createdBy: data.createdBy,
+            });
+            await this.lineRepo.bulkCreate(data.lines.map(l => ({ entryId: entry.id, ...l })));
+            await t.commit();
+            return this.getJournalEntryById(entry.id);
+        }
+        catch (e) {
+            await t.rollback();
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async syncJournalEntries(fromDate, toDate) {
+        const t = await this.sequelize.transaction();
+        try {
+            const accountMap = await this.getAccountMap();
+            const get = (code) => accountMap.get(code);
+            let synced = 0;
+            let skipped = 0;
+            const dateFilter = {};
+            if (fromDate)
+                dateFilter[sequelize_1.Op.gte] = `${fromDate} 00:00:00`;
+            if (toDate)
+                dateFilter[sequelize_1.Op.lte] = `${toDate} 23:59:59`;
+            const where = Object.keys(dateFilter).length ? { createdAt: dateFilter } : {};
+            const sales = await this.saleModel.findAll({
+                where: { ...where, isHeld: false },
+                include: [{ model: sale_item_model_1.SaleItem }],
+            });
+            for (const sale of sales) {
+                const jid = this.makeJournalId('INV', sale.id);
+                const exists = await this.jeModel.findOne({ where: { journalId: jid } });
+                if (exists) {
+                    skipped++;
+                    continue;
+                }
+                const total = Number(sale.total);
+                const cogs = sale.saleItems?.reduce((s, i) => s + Number(i.costAmount ?? 0), 0) ?? 0;
+                const taxAmt = Number(sale.taxAmount ?? 0);
+                const revenue = total - taxAmt;
+                const isPaid = ['cash', 'easypaisa', 'jazzcash', 'card'].includes(sale.paymentType);
+                const isUdhaar = sale.paymentType === 'udhaar';
+                const entry = await this.entryRepo.create({
+                    journalId: jid,
+                    date: sale.createdAt.toISOString().split('T')[0],
+                    type: 'sale',
+                    reference: `Invoice ${jid}`,
+                    description: `Sale On Account ${jid}`,
+                    status: 'posted',
+                    createdBy: sale.createdBy,
+                });
+                const lines = [];
+                if (isPaid && get('1010'))
+                    lines.push({ entryId: entry.id, accountId: get('1010'), debit: total, credit: 0, description: `Cash/Bank Received` });
+                if (isUdhaar && get('1020'))
+                    lines.push({ entryId: entry.id, accountId: get('1020'), debit: total, credit: 0, description: `Sale On Account ${jid}` });
+                if (get('4010'))
+                    lines.push({ entryId: entry.id, accountId: get('4010'), debit: 0, credit: revenue, description: `Sales Revenue ${jid}` });
+                if (cogs > 0) {
+                    if (get('5010'))
+                        lines.push({ entryId: entry.id, accountId: get('5010'), debit: cogs, credit: 0, description: `COGS ${jid}` });
+                    if (get('1030'))
+                        lines.push({ entryId: entry.id, accountId: get('1030'), debit: 0, credit: cogs, description: `Inventory Sold ${jid}` });
+                }
+                if (lines.length) {
+                    await this.lineRepo.bulkCreate(lines);
+                    synced++;
+                }
+                else {
+                    await entry.destroy();
+                    skipped++;
+                }
+            }
+            const purchases = await this.purchaseModel.findAll({ where });
+            for (const purchase of purchases) {
+                const jid = this.makeJournalId('PUR', purchase.id);
+                const exists = await this.jeModel.findOne({ where: { journalId: jid } });
+                if (exists) {
+                    skipped++;
+                    continue;
+                }
+                const total = Number(purchase.totalAmount);
+                const paid = Number(purchase.paidAmount);
+                const entry = await this.entryRepo.create({
+                    journalId: jid,
+                    date: purchase.purchaseDate || purchase.createdAt.toISOString().split('T')[0],
+                    type: 'purchase',
+                    reference: purchase.invoiceRef || jid,
+                    description: `Purchase ${jid}`,
+                    status: 'posted',
+                    createdBy: purchase.createdBy,
+                });
+                const lines = [];
+                if (get('1030'))
+                    lines.push({ entryId: entry.id, accountId: get('1030'), debit: total, credit: 0, description: `Inventory Purchased ${jid}` });
+                const unpaid = total - paid;
+                if (unpaid > 0 && get('2010'))
+                    lines.push({ entryId: entry.id, accountId: get('2010'), debit: 0, credit: unpaid, description: `Accounts Payable ${jid}` });
+                if (paid > 0 && get('1010'))
+                    lines.push({ entryId: entry.id, accountId: get('1010'), debit: 0, credit: paid, description: `Cash Paid ${jid}` });
+                if (lines.length) {
+                    await this.lineRepo.bulkCreate(lines);
+                    synced++;
+                }
+                else {
+                    await entry.destroy();
+                    skipped++;
+                }
+            }
+            const expenses = await this.expenseModel.findAll({
+                where: Object.keys(dateFilter).length ? { createdAt: dateFilter } : {},
+            });
+            for (const expense of expenses) {
+                const jid = this.makeJournalId('EXP', expense.id);
+                const exists = await this.jeModel.findOne({ where: { journalId: jid } });
+                if (exists) {
+                    skipped++;
+                    continue;
+                }
+                const entry = await this.entryRepo.create({
+                    journalId: jid,
+                    date: expense.expenseDate,
+                    type: 'expense',
+                    reference: jid,
+                    description: `${expense.category}: ${expense.description || ''}`,
+                    status: 'posted',
+                    createdBy: expense.createdBy,
+                });
+                const lines = [];
+                if (get('5020'))
+                    lines.push({ entryId: entry.id, accountId: get('5020'), debit: Number(expense.amount), credit: 0, description: expense.description || expense.category });
+                if (get('1010'))
+                    lines.push({ entryId: entry.id, accountId: get('1010'), debit: 0, credit: Number(expense.amount), description: `Cash Paid For ${expense.category}` });
+                if (lines.length) {
+                    await this.lineRepo.bulkCreate(lines);
+                    synced++;
+                }
+                else {
+                    await entry.destroy();
+                    skipped++;
+                }
+            }
+            const custPayments = await this.custPayModel.findAll({ where });
+            for (const pay of custPayments) {
+                const jid = this.makeJournalId('CPAY', pay.id);
+                const exists = await this.jeModel.findOne({ where: { journalId: jid } });
+                if (exists) {
+                    skipped++;
+                    continue;
+                }
+                const entry = await this.entryRepo.create({
+                    journalId: jid,
+                    date: pay.paymentDate,
+                    type: 'payment',
+                    reference: pay.referenceNo || jid,
+                    description: `Customer Payment ${jid}`,
+                    status: 'posted',
+                });
+                const lines = [];
+                if (get('1010'))
+                    lines.push({ entryId: entry.id, accountId: get('1010'), debit: Number(pay.amount), credit: 0, description: `Cash/Bank Received` });
+                if (get('1020'))
+                    lines.push({ entryId: entry.id, accountId: get('1020'), debit: 0, credit: Number(pay.amount), description: `Payment Applied To Receivable` });
+                if (lines.length) {
+                    await this.lineRepo.bulkCreate(lines);
+                    synced++;
+                }
+                else {
+                    await entry.destroy();
+                    skipped++;
+                }
+            }
+            const suppPayments = await this.suppPayModel.findAll({ where });
+            for (const pay of suppPayments) {
+                const jid = this.makeJournalId('SPAY', pay.id);
+                const exists = await this.jeModel.findOne({ where: { journalId: jid } });
+                if (exists) {
+                    skipped++;
+                    continue;
+                }
+                const entry = await this.entryRepo.create({
+                    journalId: jid,
+                    date: pay.paymentDate,
+                    type: 'payment',
+                    reference: pay.referenceNo || jid,
+                    description: `Supplier Payment ${jid}`,
+                    status: 'posted',
+                });
+                const lines = [];
+                if (get('2010'))
+                    lines.push({ entryId: entry.id, accountId: get('2010'), debit: Number(pay.amount), credit: 0, description: `AP Cleared` });
+                if (get('1010'))
+                    lines.push({ entryId: entry.id, accountId: get('1010'), debit: 0, credit: Number(pay.amount), description: `Cash Paid To Supplier` });
+                if (lines.length) {
+                    await this.lineRepo.bulkCreate(lines);
+                    synced++;
+                }
+                else {
+                    await entry.destroy();
+                    skipped++;
+                }
+            }
+            await t.commit();
+            return { synced, skipped };
+        }
+        catch (e) {
+            await t.rollback();
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async getTrialBalance() {
+        try {
+            const accounts = await this.chartRepo.findAll({
+                where: { isActive: true },
+                order: [['code', 'ASC']],
+            });
+            const rows = [];
+            let totalDebit = 0;
+            let totalCredit = 0;
+            for (const account of accounts) {
+                const [result] = await this.sequelize.query(`SELECT COALESCE(SUM(debit),0) AS totalDebit, COALESCE(SUM(credit),0) AS totalCredit
+                     FROM journal_lines jl
+                     INNER JOIN journal_entries je ON je.id = jl.entry_id
+                     WHERE jl.account_id = :accountId AND je.status = 'posted'`, { replacements: { accountId: account.id } });
+                const dr = Number(result[0]?.totalDebit ?? 0);
+                const cr = Number(result[0]?.totalCredit ?? 0);
+                if (dr === 0 && cr === 0)
+                    continue;
+                const isDebitNormal = ['asset', 'expense'].includes(account.type);
+                const balance = isDebitNormal ? dr - cr : cr - dr;
+                const debitBalance = isDebitNormal ? (balance > 0 ? balance : 0) : (balance < 0 ? -balance : 0);
+                const creditBalance = !isDebitNormal ? (balance > 0 ? balance : 0) : (balance < 0 ? -balance : 0);
+                totalDebit += debitBalance;
+                totalCredit += creditBalance;
+                rows.push({
+                    accountId: account.id, code: account.code, name: account.name,
+                    type: account.type, category: account.category,
+                    debitBalance, creditBalance,
+                });
+            }
+            return {
+                rows,
+                totalDebit,
+                totalCredit,
+                difference: Math.abs(totalDebit - totalCredit),
+                isBalanced: Math.abs(totalDebit - totalCredit) < 0.01,
+                asOf: new Date().toISOString().split('T')[0],
+            };
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+    async getAccountSummary() {
+        try {
+            const accounts = await this.chartRepo.findAll({
+                where: { isActive: true },
+                order: [['code', 'ASC']],
+            });
+            const summary = [];
+            for (const account of accounts) {
+                const [result] = await this.sequelize.query(`SELECT COALESCE(SUM(debit),0) AS totalDebit, COALESCE(SUM(credit),0) AS totalCredit
+                     FROM journal_lines jl
+                     INNER JOIN journal_entries je ON je.id = jl.entry_id
+                     WHERE jl.account_id = :accountId AND je.status = 'posted'`, { replacements: { accountId: account.id } });
+                const dr = Number(result[0]?.totalDebit ?? 0);
+                const cr = Number(result[0]?.totalCredit ?? 0);
+                const isDebitNormal = ['asset', 'expense'].includes(account.type);
+                const balance = isDebitNormal ? dr - cr : cr - dr;
+                summary.push({ ...account.toJSON(), balance, totalDebit: dr, totalCredit: cr });
+            }
+            const revenue = summary.find(a => a.code === '4010')?.balance ?? 0;
+            const cogs = summary.find(a => a.code === '5010')?.balance ?? 0;
+            const grossProfit = revenue - cogs;
+            return { accounts: summary, grossProfit };
+        }
+        catch (e) {
+            throw new common_1.BadRequestException(e);
+        }
+    }
+};
+exports.PosLedgerService = PosLedgerService;
+exports.PosLedgerService = PosLedgerService = __decorate([
+    (0, common_1.Injectable)(),
+    __param(4, (0, sequelize_2.InjectModel)(sale_model_1.Sale)),
+    __param(5, (0, sequelize_2.InjectModel)(sale_item_model_1.SaleItem)),
+    __param(6, (0, sequelize_2.InjectModel)(purchase_model_1.Purchase)),
+    __param(7, (0, sequelize_2.InjectModel)(expense_model_1.Expense)),
+    __param(8, (0, sequelize_2.InjectModel)(customer_payment_model_1.CustomerPayment)),
+    __param(9, (0, sequelize_2.InjectModel)(supplier_payment_model_1.SupplierPayment)),
+    __param(10, (0, sequelize_2.InjectModel)(chart_of_account_model_1.ChartOfAccount)),
+    __param(11, (0, sequelize_2.InjectModel)(journal_entry_model_1.JournalEntry)),
+    __param(12, (0, sequelize_2.InjectModel)(journal_line_model_1.JournalLine)),
+    __metadata("design:paramtypes", [typeof (_a = typeof chart_of_account_repository_1.ChartOfAccountRepository !== "undefined" && chart_of_account_repository_1.ChartOfAccountRepository) === "function" ? _a : Object, typeof (_b = typeof journal_entry_repository_1.JournalEntryRepository !== "undefined" && journal_entry_repository_1.JournalEntryRepository) === "function" ? _b : Object, typeof (_c = typeof journal_line_repository_1.JournalLineRepository !== "undefined" && journal_line_repository_1.JournalLineRepository) === "function" ? _c : Object, typeof (_d = typeof sequelize_typescript_1.Sequelize !== "undefined" && sequelize_typescript_1.Sequelize) === "function" ? _d : Object, Object, Object, Object, Object, Object, Object, Object, Object, Object])
+], PosLedgerService);
+
+
+/***/ }),
+/* 219 */
 /***/ ((module) => {
 
 module.exports = require("xlsx");
 
 /***/ }),
-/* 211 */
+/* 220 */
 /***/ ((module) => {
 
 module.exports = require("csv-parse/sync");
