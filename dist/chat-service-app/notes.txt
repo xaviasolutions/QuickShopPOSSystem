@@ -1,0 +1,5 @@
+Remaining things:
+
+1. To get all direct messages.
+2. To get all chat history of rooms and direct messages.
+3. attachment work.
