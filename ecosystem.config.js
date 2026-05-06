@@ -23,10 +23,10 @@ const base = {
   POS_WS_PORT: '3058',
   FRONTEND_PORT: '3056',
   SMTP_HOST: 'smtp.gmail.com',
-  SMTP_PORT: '587',
-  SMTP_USER: 'ranadeveloperoffical@gmail.com',
-  SMTP_PASS: 'ugwj newo paay hxhz',
-  SMTP_FROM: 'ranadeveloperoffical@gmail.com',
+  SMTP_PORT: '465',
+  SMTP_USER: 'xaviasolutions1@gmail.com',
+  SMTP_PASS: 'qtpa rqco mskk gwxf',
+  SMTP_FROM: 'xaviasolutions1@gmail.com',
 };
 
 // ── env: local (Windows - no SSL, http, local DB) ────────────────────────────
